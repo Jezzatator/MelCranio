@@ -1,3 +1,4 @@
+import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <h2 className="text-xl">
         Kinésithérapeute spécialisé en thérapie craniosacrale
       </h2>
+      <Craniosacral />
     </div>
   );
 }

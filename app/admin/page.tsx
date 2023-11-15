@@ -1,7 +1,8 @@
 import React from "react";
+import SignUp from "./SignUp";
 
 const Admin = () => {
-  return <div>Admin</div>;
+  return <SignUp />;
 };
 
 export default Admin;

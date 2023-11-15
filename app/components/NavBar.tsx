@@ -9,28 +9,28 @@ const NavBar = () => {
     },
     {
       label: "À Propos",
-      href: "/about",
+      href: "#About",
     },
     {
       label: "La Craniosacral",
-      href: "/craniosacral",
+      href: "#Craniosacral",
     },
     {
       label: "Le Lieux",
-      href: "/lieux",
+      href: "#Lieux",
     },
     {
       label: "Prendre rendez-vous",
-      href: "/rendezvous",
+      href: "#Rendezvous",
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: "#Contact",
     },
   ];
 
   return (
-    <nav className="flex space-x-8 mb-5 px-5 h-20 items-center">
+    <nav className="flex space-x-8 mb-5 px-5 h-20 items-center w-full fixed top-0 bg-[var(--background)] border-b border-amber-950">
       <Link className="" href="/">
         Logo
       </Link>
