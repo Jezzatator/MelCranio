@@ -7,7 +7,19 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    colors: {
+      '--background': '#F9F0EEFF',
+      '--calm-gren': '#B8C5BDFF',
+      '--pi-pink': '#D9BCD1FF',
+      '--bi-blue': '#C0D6D8FF',
+      '--craton-gey': '#746164FF',
+      '--stone-blue': '#083344',
+    },
     extend: {
+      fontFamily: {
+        alegreyaSans: ['Alegreya Sans', "sans-serif"],
+        robotoFlex: ['Roboto Flex', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

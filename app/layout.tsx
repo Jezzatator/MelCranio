@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        <main>{children}</main>
+        <main className="font-robotoFlex">{children}</main>
         <Footer />
       </body>
     </html>

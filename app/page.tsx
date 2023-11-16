@@ -9,6 +9,9 @@ export default function Home() {
         Kinésithérapeute spécialisé en thérapie craniosacrale
       </h2>
       <Craniosacral />
+      <Craniosacral />
+      <Craniosacral />
+      <Craniosacral />
     </div>
   );
 }
