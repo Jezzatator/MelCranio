@@ -30,7 +30,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex space-x-8 mb-5 px-5 h-20 items-center w-full fixed top-0 bg-[var(--background)] border-b border-amber-950 z-40">
+    <nav className="flex space-x-8 mb-5 px-5 h-20 items-center w-full fixed top-0 bg-[var(--background)] border-b border-amber-950 z-40 font-alegreyaSans">
       <Link className="" href="/">
         Logo
       </Link>

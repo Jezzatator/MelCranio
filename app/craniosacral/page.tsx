@@ -11,7 +11,7 @@ const Craniosacral = () => {
           <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold">
             Qu'est-ce que la Thérapie Craniosacrale?
           </h2>
-          <p className="text-center md:text-left mb-4">
+          <p className="text-center md:text-left mb-4 leading-8">
             La thérapie craniosacrale libère les tensions du corps pour
             favoriser la détente et la guérison. Elle explore la connexion
             subtile entre le crâne, la colonne vertébrale, et le sacrum.
@@ -22,7 +22,7 @@ const Craniosacral = () => {
           <h2 className="text-l p-4 text-centermd:text-left font-semibold">
             Comprendre le Système Craniosacral
           </h2>
-          <p className="text-center md:text-left mb-4">
+          <p className="text-center md:text-left mb-4 leading-8">
             Découvrez le système craniosacral, un réseau délicat composé du
             crâne, de la colonne vertébrale et du sacrum. Ce système, abritant
             le fluide céphalorachidien essentiel, joue un rôle crucial dans le
@@ -34,7 +34,7 @@ const Craniosacral = () => {
           <h2 className="text-l p-4 text-center md:text-left font-semibold">
             Déroulement d'une Séance de Thérapie Craniosacrale
           </h2>
-          <p className="text-center md:text-left mb-4">
+          <p className="text-center md:text-left mb-4 leading-8">
             Pendant une séance de thérapie craniosacrale, le kinésithérapeute
             utilise des techniques douces, non invasives, pour évaluer et
             améliorer le mouvement du liquide céphalorachidien. Cette approche
@@ -42,7 +42,7 @@ const Craniosacral = () => {
             restaurer la mobilité naturelle des structures crâniennes et
             vertébrales.
           </p>
-          <p className="text-center md:text-left mb-4">
+          <p className="text-center md:text-left mb-4 leading-8">
             Au fil de la séance, le patient ressent souvent une profonde
             relaxation, ce qui favorise la réduction du stress et de l'anxiété.
             La thérapie craniosacrale peut également aider à soulager les maux
@@ -63,11 +63,11 @@ const Craniosacral = () => {
         }}
       >
         <div
-          className="basis-1/3 p-4 backdrop-blur-xl z-20"
+          className="basis-1/3 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)]"
           style={{ backgroundColor: "rgba(247, 240, 239, 0.3)" }}
         >
           <ul className="text-left space-y-3 p-4 z-30">
-            <h3 className="text-2xl py-8">
+            <h3 className="text-2xl py-8 font-alegreyaSans">
               Bénéfices de la Thérapie Craniosacrale
             </h3>
             <li className="px-2">
