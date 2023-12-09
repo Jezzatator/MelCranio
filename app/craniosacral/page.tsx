@@ -3,15 +3,15 @@ import React from "react";
 
 const Craniosacral = () => {
   return (
-    <div className="px-20 py-20 text-amber-950">
+    <div className=" text-amber-950">
       {/* Craniosacral introduction */}
 
-      <div className="flex flex-row m-5 pb-20">
-        <div className="basis-2/3 text-left px-5">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold">
+      <div className="flex flex-row text-left  pb-20 px-20 py-20">
+        <div className="px-5 pr-40 basis-2/3">
+          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreyaSans">
             Qu&apos;est-ce que la Thérapie Craniosacrale?
           </h2>
-          <p className="text-center md:text-left mb-4 leading-8">
+          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             La thérapie craniosacrale libère les tensions du corps pour
             favoriser la détente et la guérison. Elle explore la connexion
             subtile entre le crâne, la colonne vertébrale, et le sacrum.
@@ -22,7 +22,7 @@ const Craniosacral = () => {
           <h2 className="text-l p-4 text-centermd:text-left font-semibold">
             Comprendre le Système Craniosacral
           </h2>
-          <p className="text-center md:text-left mb-4 leading-8">
+          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             Découvrez le système craniosacral, un réseau délicat composé du
             crâne, de la colonne vertébrale et du sacrum. Ce système, abritant
             le fluide céphalorachidien essentiel, joue un rôle crucial dans le
@@ -34,7 +34,7 @@ const Craniosacral = () => {
           <h2 className="text-l p-4 text-center md:text-left font-semibold">
             Déroulement d&apos;une Séance de Thérapie Craniosacrale
           </h2>
-          <p className="text-center md:text-left mb-4 leading-8">
+          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             Pendant une séance de thérapie craniosacrale, le kinésithérapeute
             utilise des techniques douces, non invasives, pour évaluer et
             améliorer le mouvement du liquide céphalorachidien. Cette approche
@@ -42,7 +42,7 @@ const Craniosacral = () => {
             restaurer la mobilité naturelle des structures crâniennes et
             vertébrales.
           </p>
-          <p className="text-center md:text-left mb-4 leading-8n©">
+          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             Au fil de la séance, le patient ressent souvent une profonde
             relaxation, ce qui favorise la réduction du stress et de
             l&apos;anxiété. La thérapie craniosacrale peut également aider à
