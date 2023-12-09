@@ -16,7 +16,7 @@ const NavBar = () => {
       href: "#Craniosacral",
     },
     {
-      label: "Le Lieux",
+      label: "Les Lieux",
       href: "#Lieux",
     },
     {

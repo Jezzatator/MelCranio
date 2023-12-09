@@ -1,6 +1,7 @@
 import About from "./about/page";
 import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
+import Lieux from "./places/page";
 
 export default function Home() {
   return (
@@ -13,8 +14,7 @@ export default function Home() {
       </h2>
       <About />
       <Craniosacral />
-      <Craniosacral />
-      <Craniosacral />
+      <Lieux />
     </div>
   );
 }

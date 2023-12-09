@@ -42,7 +42,7 @@ const Craniosacral = () => {
             restaurer la mobilité naturelle des structures crâniennes et
             vertébrales.
           </p>
-          <p className="text-center md:text-left mb-4 leading-8">
+          <p className="text-center md:text-left mb-4 leading-8n©">
             Au fil de la séance, le patient ressent souvent une profonde
             relaxation, ce qui favorise la réduction du stress et de l'anxiété.
             La thérapie craniosacrale peut également aider à soulager les maux
