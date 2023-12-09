@@ -2,7 +2,7 @@
 
 import React from "react";
 import { createClient } from "@supabase/supabase-js";
-import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
+import { Auth } from "@supabase/auth-ui-react";
 import { useRouter } from "next/navigation";
 
 const SupaURL: string =
