@@ -27,7 +27,7 @@ const Login = () => {
     <div>
       <Auth
         supabaseClient={supabase}
-        appearance={{ theme: ThemeSupa }}
+        //appearance={{ theme: ThemeSupa }}
         theme="dark"
       />
     </div>
