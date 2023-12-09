@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950">
+      <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950 mt-10">
         <div
           className="p-5 basis-1/3 bg-cover rounded-full drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96"
           style={{

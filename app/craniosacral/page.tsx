@@ -3,7 +3,7 @@ import React from "react";
 
 const Craniosacral = () => {
   return (
-    <div className=" text-amber-950">
+    <div className=" text-amber-950 mt-10">
       {/* Craniosacral introduction */}
 
       <div className="flex flex-row text-left  pb-20 px-20 py-20">

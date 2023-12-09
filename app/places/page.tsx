@@ -2,7 +2,7 @@ import React from "react";
 
 const Lieux = () => {
   return (
-    <div className="px-20 py-20 text-amber-950">
+    <div className="px-20 py-20 text-amber-950 mt-10">
       {/* Craniosacral introduction */}
 
       <div className="flex flex-row m-5 pb-20">
