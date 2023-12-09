@@ -9,7 +9,7 @@ const Craniosacral = () => {
       <div className="flex flex-row m-5 pb-20">
         <div className="basis-2/3 text-left px-5">
           <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold">
-            Qu'est-ce que la Thérapie Craniosacrale?
+            Qu&apos;est-ce que la Thérapie Craniosacrale?
           </h2>
           <p className="text-center md:text-left mb-4 leading-8">
             La thérapie craniosacrale libère les tensions du corps pour
@@ -32,7 +32,7 @@ const Craniosacral = () => {
           {/* Session Details */}
 
           <h2 className="text-l p-4 text-center md:text-left font-semibold">
-            Déroulement d'une Séance de Thérapie Craniosacrale
+            Déroulement d&apos;une Séance de Thérapie Craniosacrale
           </h2>
           <p className="text-center md:text-left mb-4 leading-8">
             Pendant une séance de thérapie craniosacrale, le kinésithérapeute
@@ -44,10 +44,10 @@ const Craniosacral = () => {
           </p>
           <p className="text-center md:text-left mb-4 leading-8n©">
             Au fil de la séance, le patient ressent souvent une profonde
-            relaxation, ce qui favorise la réduction du stress et de l'anxiété.
-            La thérapie craniosacrale peut également aider à soulager les maux
-            de tête, les douleurs physiques, et à améliorer la qualité du
-            sommeil.
+            relaxation, ce qui favorise la réduction du stress et de
+            l&apos;anxiété. La thérapie craniosacrale peut également aider à
+            soulager les maux de tête, les douleurs physiques, et à améliorer la
+            qualité du sommeil.
           </p>
         </div>
 
@@ -72,10 +72,10 @@ const Craniosacral = () => {
             </h3>
             <li className="px-2">
               <p className="font-semibold">
-                Réduction du stress et de l'anxiété :
+                Réduction du stress et de l&apos;anxiété :
               </p>
               En favorisant la relaxation, la thérapie craniosacrale contribue à
-              réduire les niveaux de stress et d'anxiété.
+              réduire les niveaux de stress et d&apos;anxiété.
             </li>
             <li className="px-2">
               <p className="font-semibold"> Amélioration du sommeil : </p>La
@@ -99,8 +99,8 @@ const Craniosacral = () => {
             <li className="px-2">
               <p className="font-semibold">Équilibre émotionnel et mental : </p>
               En libérant les tensions physiques, la thérapie craniosacrale peut
-              également avoir des effets positifs sur l'équilibre émotionnel et
-              mental.
+              également avoir des effets positifs sur l&apos;équilibre
+              émotionnel et mental.
             </li>
           </ul>
         </div>

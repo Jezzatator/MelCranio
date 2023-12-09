@@ -15,16 +15,17 @@ const About = () => {
           À Propos de moi
         </h2>
         <p className="text-xl text-center md:text-right mb-4 pt-20 pl-10 leading-8">
-          Depuis trois ans, je m'investis avec passion au sein de l'équipe de
-          Julie Leisner, au cabinet PhysioBalance à Thalwil. À l'été dernier
-          2023, j'ai complété avec succès un programme de trois ans pour obtenir
-          la reconnaissance suisse en Thérapie Craniosacrale.
+          Depuis trois ans, je m&apos;investis avec passion au sein de
+          l&apos;équipe de Julie Leisner, au cabinet PhysioBalance à Thalwil. À
+          l&apos;été dernier 2023, j&apos;ai complété avec succès un programme
+          de trois ans pour obtenir la reconnaissance suisse en Thérapie
+          Craniosacrale.
         </p>
         <p className="text-xl text-center md:text-right mb-4 pt-5 pl-10 leading-8">
-          Je suis convaincue de l'importance de faire évoluer continuellement
-          cette méthode, surtout à la lumière des défis posés par la pandémie,
-          qui ont mis en lumière la relation étroite entre les tensions
-          mentales, émotionnelles et les souffrances physiques.
+          Je suis convaincue de l&apos;importance de faire évoluer
+          continuellement cette méthode, surtout à la lumière des défis posés
+          par la pandémie, qui ont mis en lumière la relation étroite entre les
+          tensions mentales, émotionnelles et les souffrances physiques.
         </p>
       </div>
     </div>
