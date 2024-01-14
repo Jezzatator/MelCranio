@@ -8,12 +8,12 @@ const NavBar = () => {
       href: "/",
     },
     {
-      label: "À Propos",
-      href: "#About",
-    },
-    {
       label: "La Craniosacral",
       href: "#Craniosacral",
+    },
+    {
+      label: "À Propos",
+      href: "#About",
     },
     {
       label: "Les Lieux",
