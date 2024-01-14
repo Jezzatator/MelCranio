@@ -2,13 +2,13 @@ import About from "./about/page";
 import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 import Lieux from "./places/page";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiResponse } from "next";
 
-async function getData() {
+async function getData(): Promise<any> {
   const apiKey = "Bearer " + process.env.FULL_ACCESS_KEY;
 
   try {
-    const res: NextApiResponse = await fetch(
+    const res: Response = await fetch(
       "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=ca",
       {
         method: "GET",
@@ -27,7 +27,7 @@ async function getData() {
     const data = await res.json();
     return data;
   } catch (error) {
-    console.error("Error fetching data");
+    console.error("Error fetching data:", error);
     throw error;
   }
 }
