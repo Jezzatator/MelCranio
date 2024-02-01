@@ -30,7 +30,9 @@ async function Home() {
           }}
         ></div>
       </div>
-      <div id="Craniosacral">{/* <Craniosacral /> */}</div>
+      <div id="Craniosacral">
+        <Craniosacral />
+      </div>
       <div id="About">
         <About />
       </div>
