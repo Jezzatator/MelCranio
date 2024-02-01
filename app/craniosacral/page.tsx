@@ -7,7 +7,7 @@ async function getData(): Promise<any> {
 
   try {
     const res: Response = await fetch(
-      "https://mel-cranio-jeremiepatot.koyeb.app/api/la-cranios?locale=fr",
+      process.env.STRAPI_URL + "la-cranios?locale=fr",
       {
         method: "GET",
         headers: {
@@ -131,25 +131,31 @@ export default async function Craniosacral() {
               </li>
               <li className="px-2">
                 <p className="font-semibold">
-                  Soulagement des maux de tête et des migraines :
+                  {/* Soulagement des maux de tête et des migraines : */}
+                  {lacranioData.beneficesContent[4].children[0].text}
                 </p>
-                En libérant les tensions au niveau du crâne, elle peut atténuer
-                les maux de tête et les migraines.
+                {/* En libérant les tensions au niveau du crâne, elle peut atténuer
+                les maux de tête et les migraines. */}
+                {lacranioData.beneficesContent[5].children[0].text}
               </li>
               <li className="px-2">
                 <p className="font-semibold">
-                  Renforcement du système immunitaire :
+                  {/* Renforcement du système immunitaire : */}
+                  {lacranioData.beneficesContent[6].children[0].text}
                 </p>
-                En optimisant le fonctionnement du système craniosacral, cette
-                approche peut contribuer à renforcer le système immunitaire.
+                {/* En optimisant le fonctionnement du système craniosacral, cette
+                approche peut contribuer à renforcer le système immunitaire. */}
+                {lacranioData.beneficesContent[7].children[0].text}
               </li>
               <li className="px-2">
                 <p className="font-semibold">
-                  Équilibre émotionnel et mental :{" "}
+                  {/* Équilibre émotionnel et mental :{" "} */}
+                  {lacranioData.beneficesContent[8].children[0].text}
                 </p>
-                En libérant les tensions physiques, la thérapie craniosacrale
+                {/* En libérant les tensions physiques, la thérapie craniosacrale
                 peut également avoir des effets positifs sur l&apos;équilibre
-                émotionnel et mental.
+                émotionnel et mental. */}
+                {lacranioData.beneficesContent[9].children[0].text}
               </li>
             </ul>
           </div>

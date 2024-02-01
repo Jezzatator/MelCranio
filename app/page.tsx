@@ -46,16 +46,13 @@ async function Home() {
 async function getData() {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
-  const res = await fetch(
-    "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: apiKey,
-      },
-    }
-  );
+  const res = await fetch(process.env.STRAPI_URL + "homes?locale=fr", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: apiKey,
+    },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data. Status: " + res.status);
