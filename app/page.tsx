@@ -1,5 +1,5 @@
 import About from "./about/page";
-import Craniosacral from "./craniosacral/page";
+// import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 import Lieux from "./places/page";
 import { NextApiResponse } from "next";
@@ -30,9 +30,7 @@ async function Home() {
           }}
         ></div>
       </div>
-      <div id="Craniosacral">
-        <Craniosacral />
-      </div>
+      <div id="Craniosacral">{/* <Craniosacral /> */}</div>
       <div id="About">
         <About />
       </div>
@@ -42,46 +40,6 @@ async function Home() {
     </div>
   );
 }
-
-// export async function getStaticProps() {
-//   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-//   try {
-//     const res = await fetch(
-//       "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
-//       {
-//         method: "GET",
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: apiKey,
-//         },
-//       }
-//     );
-
-//     const homeResponse = await fetcher(
-//       "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
-//       {
-//         method: "GET",
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: apiKey,
-//         },
-//       }
-//     );
-//     return {
-//       props: {
-//         page: homeResponse,
-//       },
-//     };
-//   } catch (error) {
-//     console.error("Error fetching home data:", error);
-//     return {
-//       props: {
-//         page: [],
-//       },
-//     };
-//   }
-// }
 
 async function getData() {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
