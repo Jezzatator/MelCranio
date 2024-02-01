@@ -3,37 +3,10 @@ import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 import Lieux from "./places/page";
 import { NextApiResponse } from "next";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 
-async function getData(): Promise<any> {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  try {
-    const res: Response = await fetch(
-      "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: apiKey,
-        },
-      }
-    );
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-}
-
-export default async function Home() {
+async function Home() {
   const data = await getData();
-  console.log(data.data[0].attributes.subNameFirstCard);
 
   return (
     <div className="px-20 py-80 text-amber-950 mt-20 ">
@@ -69,3 +42,69 @@ export default async function Home() {
     </div>
   );
 }
+
+// export async function getStaticProps() {
+//   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
+
+//   try {
+//     const res = await fetch(
+//       "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
+//       {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//           Authorization: apiKey,
+//         },
+//       }
+//     );
+
+//     const homeResponse = await fetcher(
+//       "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
+//       {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//           Authorization: apiKey,
+//         },
+//       }
+//     );
+//     return {
+//       props: {
+//         page: homeResponse,
+//       },
+//     };
+//   } catch (error) {
+//     console.error("Error fetching home data:", error);
+//     return {
+//       props: {
+//         page: [],
+//       },
+//     };
+//   }
+// }
+
+async function getData() {
+  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
+
+  const res = await fetch(
+    "https://mel-cranio-jeremiepatot.koyeb.app/api/homes?locale=fr",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: apiKey,
+      },
+    }
+  );
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default Home;
