@@ -5,6 +5,24 @@ import Lieux from "./places/page";
 import { NextApiResponse } from "next";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
 
+async function getData() {
+  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
+
+  const res = await fetch(process.env.STRAPI_URL + "homes?locale=fr", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: apiKey,
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data. Status: " + res.status);
+  }
+
+  return res.json();
+}
+
 async function Home() {
   const data = await getData();
 
@@ -41,24 +59,6 @@ async function Home() {
       </div>
     </div>
   );
-}
-
-async function getData() {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  const res = await fetch(process.env.STRAPI_URL + "homes?locale=fr", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: apiKey,
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data. Status: " + res.status);
-  }
-
-  return res.json();
 }
 
 export default Home;
