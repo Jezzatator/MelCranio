@@ -1,5 +1,5 @@
 import About from "./about/page";
-// import Craniosacral from "./craniosacral/page";
+import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 import Lieux from "./places/page";
 import { NextApiResponse } from "next";
