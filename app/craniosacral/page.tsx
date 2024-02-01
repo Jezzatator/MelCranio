@@ -32,7 +32,7 @@ async function getData(): Promise<any> {
 export default async function Craniosacral() {
   const data = await getData();
   const lacranioData = data.data[0].attributes;
-  console.log(data.data[0].attributes.TitleCranio);
+
   return (
     <div className=" text-amber-950 pt-20">
       {/* Craniosacral introduction */}
