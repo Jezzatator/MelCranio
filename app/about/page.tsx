@@ -8,7 +8,7 @@ async function getData(): Promise<any> {
 
   try {
     const res: Response = await fetch(
-      process.env.STRAPI_URL + "abouts?locale=fr",
+      process.env.STRAPI_URL + "abouts?locale=es",
       {
         method: "GET",
         headers: {

@@ -1,4 +1,5 @@
 import About from "./about/page";
+import Contact from "./contact/page";
 import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 import Lieux from "./places/page";
@@ -19,13 +20,12 @@ async function getData() {
   if (!res.ok) {
     throw new Error("Failed to fetch data. Status: " + res.status);
   }
-
   return res.json();
 }
 
-async function Home() {
+export default async function Home() {
   const data = await getData();
-
+  console.log("Home data: " + data);
   return (
     <div className="px-20 py-80 text-amber-950 mt-20 ">
       <div
@@ -57,8 +57,9 @@ async function Home() {
       <div id="Lieux">
         <Lieux />
       </div>
+      {/* <div id="Contact">
+        <Contact />
+      </div> */}
     </div>
   );
 }
-
-export default Home;
