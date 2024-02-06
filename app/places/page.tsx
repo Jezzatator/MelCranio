@@ -25,8 +25,8 @@ const Lieux = () => {
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(43,64,67,1)]"
-                style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}
+                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(43,64,67,0.2)]"
+                style={{ backgroundColor: "rgba(43,64,67, 0.3)" }}
               >
                 <h2 className="text-l p-4 text-centermd:text-left font-semibold">
                   PhysioBalance - Thalwil
@@ -59,7 +59,7 @@ const Lieux = () => {
             >
               <div
                 className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
-                style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}
+                style={{ backgroundColor: "rgba(157,167,70, 0.3)" }}
               >
                 <h2 className="text-l p-4 text-center md:text-left font-semibold">
                   Can de la Flor - Ibiza
@@ -92,7 +92,7 @@ const Lieux = () => {
             >
               <div
                 className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
-                style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}
+                style={{ backgroundColor: "rgba(26,74,90, 0.3)" }}
               >
                 <h2 className="text-l p-4 text-center md:text-left font-semibold">
                   Praxisgemeinschaft am Schaffhauserplatz - Zurich
