@@ -5,6 +5,7 @@ import "./frontpage.css";
 import Lieux from "./places/page";
 import { NextApiResponse } from "next";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import Prices from "./prices/pages";
 
 async function getData() {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -57,9 +58,12 @@ export default async function Home() {
       <div id="Lieux">
         <Lieux />
       </div>
-      {/* <div id="Contact">
+      <div id="Tarifs">
+        <Prices />
+      </div>
+      <div id="Contact">
         <Contact />
-      </div> */}
+      </div>
     </div>
   );
 }

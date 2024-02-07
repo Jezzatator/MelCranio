@@ -8,7 +8,7 @@ const NavBar = () => {
       href: "/",
     },
     {
-      label: "La Craniosacral",
+      label: "La Thérapie",
       href: "#Craniosacral",
     },
     {
@@ -20,8 +20,8 @@ const NavBar = () => {
       href: "#Lieux",
     },
     {
-      label: "Prendre rendez-vous",
-      href: "#Rendezvous",
+      label: "Tarifs",
+      href: "#Tarifs",
     },
     {
       label: "Contact",

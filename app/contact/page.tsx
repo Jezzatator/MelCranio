@@ -103,7 +103,7 @@ if (window.addEventListener) {
     `;
 
   return (
-    <div className="flex justify-center items-center h-full w-full">
+    <div className="flex justify-center items-center h-full w-full mt-10">
       <div
         className="w-full h-full"
         dangerouslySetInnerHTML={{ __html: rawHTML }}

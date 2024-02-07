@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col items-center border-t border-amber-950 text-center text-white dark:bg-neutral-600">
+    <footer className="flex flex-col items-center border-t border-amber-950 text-center text-white dark:bg-neutral-600 mb-10">
       <div className="container pt-9">
         <div className="mb-9 flex justify-center">
           {links.map((link) => (
