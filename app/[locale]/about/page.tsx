@@ -3,12 +3,12 @@ import Timeline from "../components/TimeLine";
 import { NextApiResponse } from "next";
 import { Content } from "next/font/google";
 
-async function getData(locale: string | string[]): Promise<any> {
+async function getData(): Promise<any> {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   try {
     const res: Response = await fetch(
-      process.env.STRAPI_URL + `abouts?locale=${locale}`,
+      process.env.STRAPI_URL + "abouts?locale=es",
       {
         method: "GET",
         headers: {
@@ -30,9 +30,8 @@ async function getData(locale: string | string[]): Promise<any> {
   }
 }
 
-const About = async ({ locale }) => {
-  const wrappedLocale = locale == "undefinedhomes" ? "en" : locale;
-  const data = await getData(wrappedLocale);
+const About = async () => {
+  const data = await getData();
   const aboutData = data.data[0].attributes;
 
   return (

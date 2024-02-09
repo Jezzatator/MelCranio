@@ -7,7 +7,7 @@ async function getData(locale: string | string[]): Promise<any> {
 
   try {
     const res: Response = await fetch(
-      process.env.STRAPI_URL + `la-cranios?locale=${locale}`,
+      process.env.STRAPI_URL + `a-cranios?${locale}=fr`,
       {
         method: "GET",
         headers: {
@@ -29,9 +29,8 @@ async function getData(locale: string | string[]): Promise<any> {
   }
 }
 
-export default async function Craniosacral({ locale }) {
-  const wrappedLocale = locale == "undefinedhomes" ? "en" : locale;
-  const data = await getData(wrappedLocale);
+export default async function Craniosacral({ params: { locale } }) {
+  const data = await getData(locale);
   const lacranioData = data.data[0].attributes;
 
   return (

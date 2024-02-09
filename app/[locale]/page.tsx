@@ -1,10 +1,12 @@
-import About from "./about/page";
-import Contact from "./contact/page";
-import Craniosacral from "./craniosacral/page";
+"use client";
+import About from "../about/page";
+import Contact from "../contact/page";
+import Craniosacral from "../craniosacral/page";
 import "./frontpage.css";
-import Lieux from "./places/page";
+import Lieux from "../places/page";
 import { NextApiResponse } from "next";
-import Prices from "./prices/pages";
+import Prices from "../prices/pages";
+import { useRouter } from "next/router";
 
 async function getData(locale: string | string[]) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -23,8 +25,10 @@ async function getData(locale: string | string[]) {
   return res.json();
 }
 
-export default async function Home() {
-  const data = await getData("fr");
+export default async function Home({ params: { locale } }) {
+  const wrappedLocale = locale == "undefinedhomes" ? "en" : locale;
+  const data = await getData("en");
+  console.log("Home locale: " + wrappedLocale);
   console.log("Home data: " + data);
   return (
     <div className="px-20 pt-80 text-amber-950 mt-20 pb-10 ">
@@ -49,10 +53,10 @@ export default async function Home() {
         ></div>
       </div>
       <div id="Craniosacral">
-        <Craniosacral />
+        <Craniosacral locale={locale} />
       </div>
       <div id="About">
-        <About />
+        <About locale={locale} />
       </div>
       <div id="Lieux">
         <Lieux />
