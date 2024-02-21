@@ -2,13 +2,15 @@ import React from "react";
 import Timeline from "../components/TimeLine";
 import { NextApiResponse } from "next";
 import { Content } from "next/font/google";
+import { i18n, type Locale } from "../../../src/i18nConfig";
+import { AboutModel, Attributes } from "../../../src/strapi/About";
 
-async function getData(): Promise<any> {
+async function getData(locale: Locale): Promise<any> {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   try {
     const res: Response = await fetch(
-      process.env.STRAPI_URL + "abouts?locale=es",
+      process.env.STRAPI_URL + `abouts?locale=${locale}`,
       {
         method: "GET",
         headers: {
@@ -23,6 +25,7 @@ async function getData(): Promise<any> {
     }
 
     const data = await res.json();
+    console.log("Res.jsn: " + data);
     return data;
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -30,9 +33,13 @@ async function getData(): Promise<any> {
   }
 }
 
-const About = async () => {
-  const data = await getData();
-  const aboutData = data.data[0].attributes;
+const About = async ({ locale }: { locale: Locale }) => {
+  console.log("LOCALE about: " + locale);
+  const data: AboutModel = await getData(locale);
+
+  console.log("Data about en: " + data.data[0]);
+
+  const aboutData: Attributes = data.data[0]?.attributes;
 
   return (
     <div className="pt-20">
@@ -41,10 +48,10 @@ const About = async () => {
         <div className=" px-5 basis-2/3">
           <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreyaSans mb-10">
             {/* À Propos de Moi */}
-            {aboutData.TitleAbout}
+            {data.data[0]?.attributes.TitleAbout}
           </h2>
 
-          {aboutData.Content.map(
+          {data.data[0]?.attributes.Content.map(
             (
               paragraph: {
                 children: {

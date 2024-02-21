@@ -1,5 +1,5 @@
 
-export interface About {
+export interface AboutModel {
     data: Datum[];
     meta: Meta;
 }
@@ -52,11 +52,11 @@ export interface Pagination {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toAbout(json: string): About {
+    public static toAbout(json: string): AboutModel {
         return cast(JSON.parse(json), r("About"));
     }
 
-    public static aboutToJson(value: About): string {
+    public static aboutToJson(value: AboutModel): string {
         return JSON.stringify(uncast(value, r("About")), null, 2);
     }
 }

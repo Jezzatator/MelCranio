@@ -7,7 +7,7 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export interface Cranio {
+export interface CranioModel {
     data: Datum[];
     meta: Meta;
 }
@@ -64,11 +64,11 @@ export interface Pagination {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toCranio(json: string): Cranio {
+    public static toCranio(json: string): CranioModel {
         return cast(JSON.parse(json), r("Cranio"));
     }
 
-    public static cranioToJson(value: Cranio): string {
+    public static cranioToJson(value: CranioModel): string {
         return JSON.stringify(uncast(value, r("Cranio")), null, 2);
     }
 }

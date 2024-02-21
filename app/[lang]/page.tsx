@@ -1,11 +1,11 @@
 // "use client";
-import About from "../about/page";
-import Contact from "../contact/page";
-import Craniosacral from "../craniosacral/page";
+import About from "./about/page";
+import Contact from "./contact/page";
+import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
-import Lieux from "../places/page";
+import Lieux from "./places/page";
 import { NextApiResponse } from "next";
-import Prices from "../prices/pages";
+import Prices from "./prices/pages";
 import { useRouter } from "next/router";
 import { Locale } from "../../src/i18nConfig";
 
