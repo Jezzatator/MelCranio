@@ -32,11 +32,11 @@ async function getData(locale: Locale): Promise<any> {
   }
 }
 
-const About = async ({
+export default async function About({
   locale,
 }: {
   locale: "de" | "fr" | "en" | "es" | "ca";
-}) => {
+}) {
   console.log("LOCALE about: " + locale);
   const data: AboutModel = await getData(locale);
 
@@ -121,6 +121,4 @@ const About = async ({
       </div>
     </div>
   );
-};
-
-export default About;
+}
