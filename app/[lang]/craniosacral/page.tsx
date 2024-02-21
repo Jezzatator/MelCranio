@@ -31,15 +31,12 @@ async function getData(locale: Locale): Promise<any> {
 }
 
 export default async function Craniosacral({
-  params,
-  searchParams,
+  params: { lang },
 }: {
-  params: { locale: Locale };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { lang: Locale };
 }) {
-  const { locale } = params;
-  console.log("LOCALE cranio: " + locale);
-  const data = await getData(locale);
+  console.log("LOCALE cranio: " + lang);
+  const data = await getData(lang);
   const lacranioData = data.data[0].attributes;
 
   return (

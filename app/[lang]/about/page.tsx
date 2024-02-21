@@ -32,9 +32,13 @@ async function getData(locale: Locale): Promise<any> {
   }
 }
 
-export default async function About({ locale }: { locale: Locale }) {
-  console.log("LOCALE about: " + locale);
-  const data: AboutModel = await getData(locale);
+export default async function About({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  console.log("LOCALE about: " + lang);
+  const data: AboutModel = await getData(lang);
 
   console.log("Data about en: " + data.data[0]);
 
