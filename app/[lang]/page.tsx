@@ -58,10 +58,18 @@ export default async function Home({
         ></div>
       </div>
       <div id="Craniosacral">
-        <Craniosacral locale={lang} />
+        <Craniosacral
+          params={{
+            lang: lang,
+          }}
+        />
       </div>
       <div id="About">
-        <About locale={lang} />
+        <About
+          params={{
+            lang: lang,
+          }}
+        />
       </div>
       <div id="Lieux">
         <Lieux />
