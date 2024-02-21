@@ -32,7 +32,11 @@ async function getData(locale: Locale): Promise<any> {
   }
 }
 
-const About = async ({ locale }: { locale: Locale }) => {
+const About = async ({
+  locale,
+}: {
+  locale: "de" | "fr" | "en" | "es" | "ca";
+}) => {
   console.log("LOCALE about: " + locale);
   const data: AboutModel = await getData(locale);
 
