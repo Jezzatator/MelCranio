@@ -31,9 +31,12 @@ async function getData(locale: string | string[]): Promise<any> {
 }
 
 const About = async ({ locale }) => {
-  const wrappedLocale = locale == "undefinedhomes" ? "en" : locale;
+  let wrappedLocale = locale == undefined ? "fr" : locale;
+  wrappedLocale = wrappedLocale === "undefinedhomes" ? "en" : wrappedLocale;
   const data = await getData(wrappedLocale);
-  const aboutData = data.data[0].attributes;
+  const aboutData = data.data[0].attributes
+    ? data.data[0].attributes
+    : data.data[0];
 
   return (
     <div className="pt-20">
