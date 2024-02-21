@@ -53,7 +53,10 @@ const Footer = () => {
         </a>
       </div>
       <div className="w-full text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
-        <a className="text-amber-950 dark:text-neutral-400" href="/admin">
+        <a
+          className="text-amber-950 dark:text-neutral-400"
+          href="https://mel-cranio-jeremiepatot.koyeb.app/admin"
+        >
           Administrateur
         </a>
       </div>

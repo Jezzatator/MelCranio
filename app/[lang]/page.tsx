@@ -9,7 +9,7 @@ import Prices from "../prices/pages";
 import { useRouter } from "next/router";
 import { Locale } from "../../src/i18nConfig";
 
-async function getData(locale: string | string[]) {
+async function getData(locale: Locale) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   const res = await fetch(process.env.STRAPI_URL + `homes?locale=${locale}`, {
@@ -57,12 +57,12 @@ export default async function Home({
           }}
         ></div>
       </div>
-      {/* <div id="Craniosacral">
+      <div id="Craniosacral">
         <Craniosacral locale={lang} />
-      </div> */}
-      {/* <div id="About">
-        <About locale={locale} />
-      </div> */}
+      </div>
+      <div id="About">
+        <About locale={lang} />
+      </div>
       <div id="Lieux">
         <Lieux />
       </div>
