@@ -25,7 +25,6 @@ async function getData(locale: Locale): Promise<any> {
     }
 
     const data = await res.json();
-    console.log("Res.jsn: " + data);
     return data;
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -33,7 +32,7 @@ async function getData(locale: Locale): Promise<any> {
   }
 }
 
-const About = async ({ locale }: { locale: Locale }) => {
+const About = async ({ locale }: { locale: Locale }): Promise<JSX.Element> => {
   console.log("LOCALE about: " + locale);
   const data: AboutModel = await getData(locale);
 
