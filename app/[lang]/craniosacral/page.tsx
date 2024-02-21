@@ -30,7 +30,14 @@ async function getData(locale: Locale): Promise<any> {
   }
 }
 
-export default async function Craniosacral({ locale }: { locale: Locale }) {
+export default async function Craniosacral({
+  params,
+  searchParams,
+}: {
+  params: { locale: Locale };
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const { locale } = params;
   console.log("LOCALE cranio: " + locale);
   const data = await getData(locale);
   const lacranioData = data.data[0].attributes;
