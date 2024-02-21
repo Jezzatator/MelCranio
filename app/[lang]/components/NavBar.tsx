@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 const NavBar = () => {
   const links = [
@@ -45,7 +44,6 @@ const NavBar = () => {
             {link.label}
           </Link>
         ))}
-        {/* <LanguageSwitcher /> */}
       </ul>
     </nav>
   );
