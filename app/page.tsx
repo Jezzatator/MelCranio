@@ -1,4 +1,3 @@
-// "use client";
 import About from "./about/page";
 import Contact from "./contact/page";
 import Craniosacral from "./craniosacral/page";
@@ -6,10 +5,8 @@ import "./frontpage.css";
 import Lieux from "./places/page";
 import { NextApiResponse } from "next";
 import Prices from "./prices/pages";
-import { useRouter } from "next/router";
-import { Locale } from "./../src/i18nConfig";
 
-async function getData(locale: Locale) {
+async function getData(locale: string | string[]) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   const res = await fetch(process.env.STRAPI_URL + `homes?locale=${locale}`, {
@@ -26,17 +23,11 @@ async function getData(locale: Locale) {
   return res.json();
 }
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  //const wrappedLocale = lang == "undefinedhomes" ? "en" : lang;
-  const data = await getData(lang);
-  console.log("Home locale: " + lang);
+export default async function Home() {
+  const data = await getData("fr");
   console.log("Home data: " + data);
   return (
-    <section className="px-20 pt-80 text-amber-950 mt-20 pb-10 ">
+    <div className="px-20 pt-80 text-amber-950 mt-20 pb-10 ">
       <div
         className="flex flew-row mb-80 items-stretch content-around"
         id="Home"
@@ -58,10 +49,10 @@ export default async function Home({
         ></div>
       </div>
       <div id="Craniosacral">
-        <Craniosacral locale={lang} />
+        <Craniosacral />
       </div>
       <div id="About">
-        <About locale={lang} />
+        <About />
       </div>
       <div id="Lieux">
         <Lieux />
@@ -72,6 +63,6 @@ export default async function Home({
       <div id="Contact">
         <Contact />
       </div>
-    </section>
+    </div>
   );
 }
