@@ -1,40 +1,42 @@
+import { Locale } from "@/src/i18nConfig";
 import Link from "next/link";
 import React from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const NavBar = () => {
+const NavBar = ({ params }: { params: Locale }) => {
   const links = [
     {
       label: "Accueil",
-      href: "/",
+      href: `/${params ? params : ""}`,
     },
     {
       label: "La Thérapie",
-      href: "#Craniosacral",
+      href: `#Craniosacral`,
     },
     {
       label: "À Propos",
-      href: "#About",
+      href: `#About`,
     },
     {
       label: "Les Lieux",
-      href: "#Lieux",
+      href: `#Lieux`,
     },
     {
       label: "Tarifs",
-      href: "#Tarifs",
+      href: `#Tarifs`,
     },
     {
       label: "Contact",
-      href: "#Contact",
+      href: `#Contact`,
     },
   ];
 
   return (
-    <nav className="flex space-x-8 mb-5 px-5 h-20 items-center w-full fixed top-0 bg-[var(--background)] border-b border-amber-950 z-40 font-alegreyaSans">
+    <nav className="flex justify-between items-center h-20 px-5 fixed top-0 w-full bg-[var(--background)] border-b border-amber-950 z-40 font-alegreyaSans">
       <Link className="" href="/">
         Logo
       </Link>
-      <ul className="flex grow justify-end space-x-20 text-rights px-10">
+      <ul className="flex items-center space-x-20 text-rights px-10">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -44,6 +46,7 @@ const NavBar = () => {
             {link.label}
           </Link>
         ))}
+        <LanguageSwitcher currentLocale={params} />
       </ul>
     </nav>
   );

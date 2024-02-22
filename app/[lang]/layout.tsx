@@ -28,7 +28,7 @@ export default function LocaleLayout({
   return (
     <html lang={params.lang}>
       <body className={inter.className}>
-        <NavBar />
+        <NavBar params={params.lang} />
         <main className="font-robotoFlex">{children}</main>
         <Footer />
         <Analytics />
