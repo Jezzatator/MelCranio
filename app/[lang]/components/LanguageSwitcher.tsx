@@ -12,24 +12,29 @@ const LanguageSwitcher = ({ currentLocale }: { currentLocale: Locale }) => {
   };
   return (
     <div>
-      <select
-        id="language-select"
-        className="text-amber-950 hover:text-cyan-950 transition-colors bg-transparent outline-none rounded-md p-2"
-        value={currentLocale}
-        onChange={handleChange}
-      >
-        <option key={currentLocale} value={currentLocale}>
-          {currentLocale}
-        </option>
-        {i18n.locales.map(
-          (locale) =>
-            locale !== currentLocale && (
-              <option key={locale} value={locale}>
-                {locale}
-              </option>
-            )
-        )}
-      </select>
+      <form className="max-w-sm mx-auto">
+        <label for="underline_select" className="sr-only">
+          Underline select
+        </label>
+        <select
+          id="underline_select"
+          className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+          value={currentLocale}
+          onChange={handleChange}
+        >
+          <option key={currentLocale} value={currentLocale} selected>
+            {currentLocale}
+          </option>
+          {i18n.locales.map(
+            (locale) =>
+              locale !== currentLocale && (
+                <option key={locale} value={locale}>
+                  {locale}
+                </option>
+              )
+          )}
+        </select>
+      </form>
     </div>
   );
 };
