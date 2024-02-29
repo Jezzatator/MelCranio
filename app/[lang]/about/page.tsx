@@ -116,7 +116,11 @@ export default async function About({
           </p> */}
         </div>
         <div className="p-5 basis-2/3">
-          <Timeline />
+          <Timeline
+            params={{
+              data: aboutData,
+            }}
+          />
         </div>
       </div>
     </div>
