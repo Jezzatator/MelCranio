@@ -1,6 +1,43 @@
 import React from "react";
+import { i18n, type Locale } from "../../../src/i18nConfig";
+import { NextApiResponse } from "next";
 
-const Lieux = () => {
+async function getData(locale: Locale): Promise<any> {
+  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
+
+  try {
+    const res: Response = await fetch(
+      process.env.STRAPI_URL + `abouts?locale=${locale}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: apiKey,
+        },
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+}
+
+export default async function Lieux() {
+//   {
+//   params: { lang },
+// }: {
+//   params: { lang: Locale };
+// }
+  // const data: AboutModel = await getData(lang);
+  // const aboutData: Attributes = data.data[0]?.attributes;
+
   return (
     <div className="px-20 py-20 text-amber-950 mt-10">
       {/* Craniosacral introduction */}
@@ -156,6 +193,4 @@ const Lieux = () => {
       </div>
     </div>
   );
-};
-
-export default Lieux;
+}

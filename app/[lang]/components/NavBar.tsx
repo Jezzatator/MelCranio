@@ -3,30 +3,52 @@ import Link from "next/link";
 import React from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const NavBar = ({ params }: { params: Locale }) => {
+async function getData(locale: Locale) {
+  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
+
+  const res = await fetch(
+    process.env.STRAPI_URL + `nav-bars?locale=${locale}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: apiKey,
+      },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data. Status: " + res.status);
+  }
+  return res.json();
+}
+
+export default async function NavBar({ params }: { params: Locale }) {
+  const data = await getData(params);
+
   const links = [
     {
-      label: "Accueil",
+      label: data.data[0].attributes.Accueil,
       href: `/${params ? params : ""}`,
     },
     {
-      label: "La Thérapie",
+      label: data.data[0].attributes.LaTherapie,
       href: `#Craniosacral`,
     },
     {
-      label: "À Propos",
+      label: data.data[0].attributes.APropos,
       href: `#About`,
     },
     {
-      label: "Les Lieux",
+      label: data.data[0].attributes.LesLieux,
       href: `#Lieux`,
     },
     {
-      label: "Tarifs",
+      label: data.data[0].attributes.Tarifs,
       href: `#Tarifs`,
     },
     {
-      label: "Contact",
+      label: data.data[0].attributes.Contact,
       href: `#Contact`,
     },
   ];
@@ -50,6 +72,4 @@ const NavBar = ({ params }: { params: Locale }) => {
       </ul>
     </nav>
   );
-};
-
-export default NavBar;
+}
