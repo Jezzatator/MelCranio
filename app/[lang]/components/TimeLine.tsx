@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { AboutModel, Attributes } from "../../../src/strapi/About";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,7 +8,7 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 
-export default async function Timeline() {
+export default function Timeline() {
   return (
     <VerticalTimeline layout="1-column-left" className="text-amber-950">
       <VerticalTimelineElement

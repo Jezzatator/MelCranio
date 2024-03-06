@@ -144,11 +144,7 @@ export default async function Lieux({
                   {/* Praxisgemeinschaft am Schaffhauserplatz - Zurich */}
                 </h2>
                 <p className="text-center md:text-left mb-4 leading-8">
-                  In incididunt et non pariatur pariatur ullamco consequat in
-                  labore sunt aliquip et. Aliquip non dolor consequat
-                  reprehenderit dolore laboris nostrud amet ex ullamco sed non
-                  fugiat ex. Minim amet commodo qui incididunt sit est
-                  reprehenderit ea cillum ullamco.
+                  {placeData.DescriptionLieu3}
                 </p>
                 <p className="text-center md:text-left mb-4 leading-8">
                   {placeData.LienLieu3}
