@@ -67,10 +67,7 @@ export default async function Prices({
           <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             {pricesData.DescAssurSuisse}
 
-            {/* Sunt sint laboris in elit id ex lorem irure excepteur pariatur dolor
-            quis do magna ad. Adipiscing sit duis occaecat consectetur ex
-            reprehenderit nisi do nulla incididunt ut culpa eu lorem laborum
-            culpa deserunt nulla. */}
+            {/* 3 paragrpahes 1 payeur privé 2 Assurance 3 Assos */}
           </p>
           {/* <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             Sunt sint laboris in elit id ex lorem irure excepteur pariatur dolor

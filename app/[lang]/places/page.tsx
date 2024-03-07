@@ -60,7 +60,7 @@ export default async function Lieux({
             <div
               className="bg-cover bg-center flex z-0 container"
               style={{
-                backgroundImage: "url('/static/physiobalance-icone.webp')",
+                backgroundImage: "url('/static/schaffhauserplatz.jpg')",
               }}
             >
               <div
@@ -82,11 +82,9 @@ export default async function Lieux({
                 </p>
                 <p className="text-center md:text-left mb-4 leading-8">
                   {" "}
-                  {placeData.LienLieu1}
+                  {placeData.PourPlusDInformations}
                   {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                  <a href="http://www.physiobalance-thalwil.ch">
-                    physiobalance-thalwil.ch
-                  </a>
+                  <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                 </p>
               </div>
             </div>
@@ -96,7 +94,7 @@ export default async function Lieux({
             <div
               className="bg-cover bg-center flex z-0 container"
               style={{
-                backgroundImage: "url('/static/candelaflor.jpg')",
+                backgroundImage: "url('/static/physiobalance-icone.webp')",
               }}
             >
               <div
@@ -118,11 +116,9 @@ export default async function Lieux({
                   la nature paisible de l&apos;île. */}
                 </p>
                 <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.LienLieu2}
+                  {placeData.PourPlusDInformations}
                   {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                  <a href="https://www.canva.com/design/DAFyFmuCcDY/7zZdio2th-Xok8mTbjIBdQ/view?utm_content=DAFyFmuCcDY&utm_campaign=designshare&utm_medium=link&utm_source=viewer">
-                    Can de la Flor
-                  </a>
+                  <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
                 </p>
               </div>
             </div>
@@ -132,7 +128,7 @@ export default async function Lieux({
             <div
               className="bg-cover bg-center flex z-0 container"
               style={{
-                backgroundImage: "url('/static/schaffhauserplatz.jpg')",
+                backgroundImage: "url('/static/candelaflor.jpg')",
               }}
             >
               <div
@@ -147,11 +143,12 @@ export default async function Lieux({
                   {placeData.DescriptionLieu3}
                 </p>
                 <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.LienLieu3}
-                  {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                  <a href="https://www.praxisgemeinschaft-schaffhauserplatz.ch/">
-                    Praxisgemeinschaft
-                  </a>
+                  {placeData.PourPlusDInformations}
+                  {/* Pour plus d&apos;information rendez-vous sur :{" "}
+                  + Lien pour prendre RDV  lien sur iMessage 
+                  Lieu 3 en premier 
+                  */}
+                  <a href={placeData.LienLieu3}>Can de la Flor</a>
                 </p>
               </div>
             </div>

@@ -45,7 +45,7 @@ export default async function Craniosacral({
 
       <div className="flex flex-row text-left  pb-20 px-20 py-20">
         <div className="px-5 pr-40 basis-1/2">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreyaSans">
+          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreya italic">
             {/* Qu&apos;est-ce que la Thérapie Craniosacrale? */}
             {lacranioData.TitleCranio}
           </h2>
@@ -58,7 +58,7 @@ export default async function Craniosacral({
 
           {/* System Explanation */}
 
-          <h2 className="text-l p-4 text-centermd:text-left font-semibold pt-20">
+          <h2 className="text-l p-4 text-centermd:text-left font-semibold pt-20 font-alegreya italic">
             {/* Comprendre le Système Craniosacral */}
             {lacranioData.titleH2}
           </h2>
@@ -74,7 +74,7 @@ export default async function Craniosacral({
         <div className="px-5 pl-20 basis-1/2">
           {/* Session Details */}
 
-          <h2 className="text-l p-4 text-centermd:text-left font-semibold">
+          <h2 className="text-l p-4 text-centermd:text-left font-semibold font-alegreya italic">
             {/* Déroulement d&apos;une Séance de Thérapie Craniosacrale */}
             {lacranioData.titleH22}
           </h2>
@@ -113,7 +113,7 @@ export default async function Craniosacral({
             style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}
           >
             <ul className="text-left space-y-3 p-4 z-30">
-              <h3 className="text-2xl py-8 font-alegreyaSans">
+              <h3 className="text-2xl py-8 font-alegreya italic">
                 {/* Bénéfices de la Thérapie Craniosacrale */}
                 {lacranioData.beneficesTitle}
               </h3>

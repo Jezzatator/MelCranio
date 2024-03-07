@@ -42,10 +42,10 @@ export default async function Home({
         id="Home"
       >
         <div className="basis-2/3">
-          <h1 className="uppercase text-8xl py-10 font-alegreyaSans">
+          <h1 className="uppercase text-8xl py-10 font-alegreya ">
             Mélissa Patot
           </h1>
-          <h2 className="text-xl pl-2 font-alegreyaSans">
+          <h2 className="text-xl pl-2 font-alegreya">
             {/* Kinésithérapeute spécialisé en thérapie craniosacrale */}
             {data.data[0].attributes.subNameFirstCard}
           </h2>

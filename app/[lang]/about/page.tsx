@@ -49,7 +49,7 @@ export default async function About({
       {/* <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950 mt-10"></div> */}
       <div className="text-left flex flex-row Deuxieme Card Parcourd px-20 py-20">
         <div className=" px-5 basis-2/3">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreyaSans mb-10">
+          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreya mb-10">
             {/* À Propos de Moi */}
             {data.data[0]?.attributes.TitleAbout}
           </h2>

@@ -18,6 +18,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         alegreyaSans: ['Alegreya Sans', "sans-serif"],
+        alegreya: ['Alegreya', "serif"],
         robotoFlex: ['Roboto Flex', 'sans-serif'],
       },
       backgroundImage: {

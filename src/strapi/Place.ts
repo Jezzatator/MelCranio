@@ -34,6 +34,7 @@ export interface Attributes {
     updatedAt:         Date;
     publishedAt:       Date;
     locale:            string;
+    PourPlusDInformations:  string;
 }
 
 export interface Meta {
