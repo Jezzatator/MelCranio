@@ -22,7 +22,7 @@ export interface Attributes {
     DescTarifs:       string;
     PrixTarifs:       PrixTarif[];
     TitreAssurSuisse: string;
-    DescAssurSuisse:  string;
+    DescAssurSuiss:  string;
     createdAt:        Date;
     updatedAt:        Date;
     publishedAt:      Date;
