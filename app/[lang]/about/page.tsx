@@ -4,6 +4,7 @@ import { NextApiResponse } from "next";
 import { Content } from "next/font/google";
 import { i18n, type Locale } from "../../../src/i18nConfig";
 import { AboutModel, Attributes } from "../../../src/strapi/About";
+import SectionTitle from "../components/SectionTitle";
 
 async function getData(locale: Locale): Promise<any> {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -49,10 +50,7 @@ export default async function About({
       {/* <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950 mt-10"></div> */}
       <div className="text-left flex flex-row Deuxieme Card Parcourd px-20 py-20">
         <div className=" px-5 basis-2/3">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreya italic mb-10">
-            {/* À Propos de Moi */}
-            {data.data[0]?.attributes.TitleAbout}
-          </h2>
+          <SectionTitle title={data.data[0]?.attributes.TitleAbout} />
 
           {data.data[0]?.attributes.Content.map(
             (

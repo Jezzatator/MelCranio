@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { NextApiResponse } from "next";
 import { i18n, type Locale } from "../../../src/i18nConfig";
+import SectionTitle from "../components/SectionTitle";
 
 async function getData(locale: Locale): Promise<any> {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -45,10 +46,7 @@ export default async function Craniosacral({
 
       <div className="flex flex-row text-left  pb-20 px-20 py-20">
         <div className="px-5 pr-40 basis-1/2">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreya italic">
-            {/* Qu&apos;est-ce que la Thérapie Craniosacrale? */}
-            {lacranioData.TitleCranio}
-          </h2>
+          <SectionTitle title={lacranioData.TitleCranio} />
           <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             {/* La thérapie craniosacrale libère les tensions du corps pour
             favoriser la détente et la guérison. Elle explore la connexion

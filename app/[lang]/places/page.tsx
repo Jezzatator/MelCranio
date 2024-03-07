@@ -2,6 +2,7 @@ import React from "react";
 import { i18n, type Locale } from "../../../src/i18nConfig";
 import { NextApiResponse } from "next";
 import { Place, Attributes } from "../../../src/strapi/Place";
+import SectionTitle from "../components/SectionTitle";
 
 async function getData(locale: Locale): Promise<any> {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -44,10 +45,7 @@ export default async function Lieux({
 
       <div className="flex flex-row m-5 pb-20">
         <div className="w-full text-left px-5">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreya italic mb-10">
-            {placeData.LesLieux}
-            {/* Les lieux */}
-          </h2>
+          <SectionTitle title={placeData.LesLieux} />
           <p className="text-center md:text-left mb-4 leading-8">
             {placeData.SoustitreLesLieux}
             {/* Vous avez la possibilité de bénéficier de séances à trois endroits
