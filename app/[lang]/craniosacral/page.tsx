@@ -3,6 +3,7 @@ import React from "react";
 import { NextApiResponse } from "next";
 import { i18n, type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
+import H3Title from "../components/H3Title";
 
 async function getData(locale: Locale): Promise<any> {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -56,10 +57,9 @@ export default async function Craniosacral({
 
           {/* System Explanation */}
 
-          <h2 className="text-l p-4 text-centermd:text-left font-semibold pt-20 font-alegreya italic">
-            {/* Comprendre le Système Craniosacral */}
-            {lacranioData.titleH2}
-          </h2>
+          {/* Comprendre le Système Craniosacral */}
+          <H3Title title={lacranioData.titleH2} />
+
           <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             {/* Découvrez le système craniosacral, un réseau délicat composé du
             crâne, de la colonne vertébrale et du sacrum. Ce système, abritant
@@ -72,10 +72,9 @@ export default async function Craniosacral({
         <div className="px-5 pl-20 basis-1/2">
           {/* Session Details */}
 
-          <h2 className="text-l p-4 text-centermd:text-left font-semibold font-alegreya italic">
-            {/* Déroulement d&apos;une Séance de Thérapie Craniosacrale */}
-            {lacranioData.titleH22}
-          </h2>
+          {/* Déroulement d&apos;une Séance de Thérapie Craniosacrale */}
+          <H3Title title={lacranioData.titleH22} />
+
           <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             {/* Pendant une séance de thérapie craniosacrale, le ou la thérapeute
             utilise des techniques douces, non invasives, pour évaluer et
@@ -111,10 +110,12 @@ export default async function Craniosacral({
             style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}
           >
             <ul className="text-left space-y-3 p-4 z-30">
-              <h3 className="text-2xl py-8 font-alegreya italic">
-                {/* Bénéfices de la Thérapie Craniosacrale */}
+              {/* Bénéfices de la Thérapie Craniosacrale */}
+
+              {/* <h3 className="text-2xl py-8 font-alegreya italic">
                 {lacranioData.beneficesTitle}
-              </h3>
+              </h3> */}
+              <H3Title title={lacranioData.beneficesTitle} />
               <li className="px-2">
                 <p className="font-semibold">
                   {/* Réduction du stress et de l&apos;anxiété : */}
