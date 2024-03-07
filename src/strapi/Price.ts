@@ -20,16 +20,16 @@ export interface Datum {
 export interface Attributes {
     TitreTarifs:      string;
     DescTarifs:       string;
-    PrixTarifs:       PrixTarif[];
+    PrixTarifs:       DescAssurSuiss[];
     TitreAssurSuisse: string;
-    DescAssurSuiss:  string;
     createdAt:        Date;
     updatedAt:        Date;
     publishedAt:      Date;
     locale:           string;
+    DescAssurSuiss:   DescAssurSuiss[];
 }
 
-export interface PrixTarif {
+export interface DescAssurSuiss {
     type:     string;
     children: Child[];
 }
@@ -226,15 +226,15 @@ const typeMap: any = {
     "Attributes": o([
         { json: "TitreTarifs", js: "TitreTarifs", typ: "" },
         { json: "DescTarifs", js: "DescTarifs", typ: "" },
-        { json: "PrixTarifs", js: "PrixTarifs", typ: a(r("PrixTarif")) },
+        { json: "PrixTarifs", js: "PrixTarifs", typ: a(r("DescAssurSuiss")) },
         { json: "TitreAssurSuisse", js: "TitreAssurSuisse", typ: "" },
-        { json: "DescAssurSuisse", js: "DescAssurSuisse", typ: "" },
         { json: "createdAt", js: "createdAt", typ: Date },
         { json: "updatedAt", js: "updatedAt", typ: Date },
         { json: "publishedAt", js: "publishedAt", typ: Date },
         { json: "locale", js: "locale", typ: "" },
+        { json: "DescAssurSuiss", js: "DescAssurSuiss", typ: a(r("DescAssurSuiss")) },
     ], false),
-    "PrixTarif": o([
+    "DescAssurSuiss": o([
         { json: "type", js: "type", typ: "" },
         { json: "children", js: "children", typ: a(r("Child")) },
     ], false),
