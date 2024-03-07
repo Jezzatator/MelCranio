@@ -59,11 +59,19 @@ export default async function Prices({
         </div>
         <div className="px-5 pr-40 basis-1/2">
           <SectionTitle title={pricesData.TitreAssurSuisse} />
-          {pricesData.DescAssurSuiss.map((parap) => (
-            <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
-              {parap.children[0].text}
-            </p>
-          ))}
+
+          {pricesData.DescAssurSuiss.map((parap) =>
+            parap.children[0].url ? (
+              <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+                {parap.children[0].text}{" "}
+                <a href={parap.children[0].url}>{parap.children[0].url}</a>
+              </p>
+            ) : (
+              <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+                {parap.children[0].text}
+              </p>
+            )
+          )}
 
           {/* 3 paragrpahes 1 payeur privé 2 Assurance 3 Assos */}
           {/* <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">

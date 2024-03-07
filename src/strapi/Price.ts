@@ -20,7 +20,7 @@ export interface Datum {
 export interface Attributes {
     TitreTarifs:      string;
     DescTarifs:       string;
-    PrixTarifs:       DescAssurSuiss[];
+    PrixTarifs:       PrixTarif[];
     TitreAssurSuisse: string;
     createdAt:        Date;
     updatedAt:        Date;
@@ -31,12 +31,24 @@ export interface Attributes {
 
 export interface DescAssurSuiss {
     type:     string;
-    children: Child[];
+    children: DescAssurSuissChild[];
 }
 
-export interface Child {
+export interface DescAssurSuissChild {
+    text?:     string;
+    type:      string;
+    url?:      string;
+    children?: ChildChild[];
+}
+
+export interface ChildChild {
     text: string;
     type: string;
+}
+
+export interface PrixTarif {
+    type:     string;
+    children: ChildChild[];
 }
 
 export interface Meta {
@@ -226,7 +238,7 @@ const typeMap: any = {
     "Attributes": o([
         { json: "TitreTarifs", js: "TitreTarifs", typ: "" },
         { json: "DescTarifs", js: "DescTarifs", typ: "" },
-        { json: "PrixTarifs", js: "PrixTarifs", typ: a(r("DescAssurSuiss")) },
+        { json: "PrixTarifs", js: "PrixTarifs", typ: a(r("PrixTarif")) },
         { json: "TitreAssurSuisse", js: "TitreAssurSuisse", typ: "" },
         { json: "createdAt", js: "createdAt", typ: Date },
         { json: "updatedAt", js: "updatedAt", typ: Date },
@@ -236,11 +248,21 @@ const typeMap: any = {
     ], false),
     "DescAssurSuiss": o([
         { json: "type", js: "type", typ: "" },
-        { json: "children", js: "children", typ: a(r("Child")) },
+        { json: "children", js: "children", typ: a(r("DescAssurSuissChild")) },
     ], false),
-    "Child": o([
+    "DescAssurSuissChild": o([
+        { json: "text", js: "text", typ: u(undefined, "") },
+        { json: "type", js: "type", typ: "" },
+        { json: "url", js: "url", typ: u(undefined, "") },
+        { json: "children", js: "children", typ: u(undefined, a(r("ChildChild"))) },
+    ], false),
+    "ChildChild": o([
         { json: "text", js: "text", typ: "" },
         { json: "type", js: "type", typ: "" },
+    ], false),
+    "PrixTarif": o([
+        { json: "type", js: "type", typ: "" },
+        { json: "children", js: "children", typ: a(r("ChildChild")) },
     ], false),
     "Meta": o([
         { json: "pagination", js: "pagination", typ: r("Pagination") },
