@@ -74,7 +74,7 @@ export default async function Prices({
                   ) : null
                 )}
                 {linkObject && (
-                  <a href={linkObject.url}>{linkObject.children[0].text}</a>
+                  <a href={linkObject.url}>{linkObject.children?.[0].text}</a>
                 )}
               </p>
             );
