@@ -64,7 +64,9 @@ export default async function Prices({
             parap.children[0].url ? (
               <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
                 {parap.children[0].text}{" "}
-                <a href={parap.children[0].url}>{parap.children[0].url}</a>
+                <a href={parap.children[0].url}>
+                  {parap.children[0].children?.[0].text}
+                </a>
               </p>
             ) : (
               <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
