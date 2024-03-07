@@ -59,22 +59,26 @@ export default async function Prices({
         </div>
         <div className="px-5 pr-40 basis-1/2">
           <SectionTitle title={pricesData.TitreAssurSuisse} />
-          {pricesData.DescAssurSuiss.map((parap) =>
-            parap.children[0].url ? (
+          {pricesData.DescAssurSuiss.map((parap) => {
+            const linkObject = parap.children.find(
+              (child) => child.type === "link"
+            );
+            return (
               <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
-                {parap.children[0].text}
-                {parap.children[0].children && (
-                  <a href={parap.children[0].children[0].text}>
-                    {parap.children[0].children[0].text}
-                  </a>
+                {parap.children.map((child, index) =>
+                  child.type === "text" ? (
+                    <React.Fragment key={index}>
+                      {child.text}
+                      {index < parap.children.length - 1 && " "}
+                    </React.Fragment>
+                  ) : null
+                )}
+                {linkObject && (
+                  <a href={linkObject.url}>{linkObject.children[0].text}</a>
                 )}
               </p>
-            ) : (
-              <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
-                {parap.children[0].text}
-              </p>
-            )
-          )}
+            );
+          })}
 
           {/* 3 paragrpahes 1 payeur privé 2 Assurance 3 Assos */}
           {/* <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
