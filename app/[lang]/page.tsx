@@ -50,12 +50,12 @@ export default async function Home({
             {data.data[0].attributes.subNameFirstCard}
           </h2>
         </div>
-        <div
+        {/* <div
           className="p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 basis-2/5 mr-52"
           style={{
             backgroundImage: "url('/static/image0.jpeg')",
           }}
-        ></div>
+        ></div> */}
       </div>
       <div id="Craniosacral">
         <Craniosacral

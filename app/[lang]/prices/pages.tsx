@@ -46,9 +46,8 @@ export default async function Prices({
           <SectionTitle title={pricesData.TitreTarifs} />
           <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
             {pricesData.DescTarifs}
-            {/* Les tarfis peuvent changer suivant la localité, se renseinger lors
-            de la prise de rendez-vous. */}
           </p>
+
           <ul className="text-center md:text-left mb-4 pl-20 leading-8 text-lg">
             {pricesData.PrixTarifs.map((parap) => (
               <li className="pt-2">{parap.children[0].text} </li>
