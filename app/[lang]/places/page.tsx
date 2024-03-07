@@ -86,6 +86,11 @@ export default async function Lieux({
                   {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
                   <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                 </p>
+                <p className="text-center md:text-left mb-4 leading-8">
+                  <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
+                    {placeData.PourPrendreRdz}
+                  </a>
+                </p>
               </div>
             </div>
           </div>
