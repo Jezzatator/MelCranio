@@ -44,7 +44,7 @@ export default async function Lieux({
 
       <div className="flex flex-row m-5 pb-20">
         <div className="w-full text-left px-5">
-          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold">
+          <h2 className="text-2xl p-4 md:p-0 text-center md:text-left font-bold font-alegreya italic mb-10">
             {placeData.LesLieux}
             {/* Les lieux */}
           </h2>
@@ -64,10 +64,10 @@ export default async function Lieux({
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(43,64,67,0.2)]"
-                style={{ backgroundColor: "rgba(43,64,67, 0.3)" }}
+                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
+                style={{ backgroundColor: "rgba(26,74,90, 0.3)" }}
               >
-                <h2 className="text-l p-4 text-centermd:text-left font-semibold">
+                <h2 className="text-l p-4 text-center md:text-left font-semibold">
                   {placeData.TitreLieu1}
                   {/* PhysioBalance - Thalwil */}
                 </h2>
@@ -103,8 +103,8 @@ export default async function Lieux({
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
-                style={{ backgroundColor: "rgba(157,167,70, 0.3)" }}
+                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(82, 104, 109,0.2)]"
+                style={{ backgroundColor: "rgba(82, 104, 109, 0.3)" }}
               >
                 <h2 className="text-l p-4 text-center md:text-left font-semibold">
                   {placeData.TitreLieu2}
@@ -137,8 +137,8 @@ export default async function Lieux({
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
-                style={{ backgroundColor: "rgba(26,74,90, 0.3)" }}
+                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
+                style={{ backgroundColor: "rgba(157,167,70, 0.3)" }}
               >
                 <h2 className="text-l p-4 text-center md:text-left font-semibold">
                   {placeData.TitreLieu3}
