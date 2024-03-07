@@ -60,7 +60,7 @@ export default async function Prices({
         <div className="px-5 pr-40 basis-1/2">
           <SectionTitle title={pricesData.TitreAssurSuisse} />
           <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
-            {pricesData.DescAssurSuisse}
+            {pricesData.DescAssurSuiss}
 
             {/* 3 paragrpahes 1 payeur privé 2 Assurance 3 Assos */}
           </p>
