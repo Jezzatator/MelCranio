@@ -6,7 +6,7 @@ import { i18n, type Locale } from "../../../src/i18nConfig";
 import { AboutModel, Attributes } from "../../../src/strapi/About";
 import SectionTitle from "../components/SectionTitle";
 
-async function getData(locale: Locale): Promise<any> {
+async function getData(locale: Locale) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   try {
@@ -25,8 +25,7 @@ async function getData(locale: Locale): Promise<any> {
       throw new Error("Failed to fetch data");
     }
 
-    const data = await res.json();
-    return data;
+    return (await res.json()) as AboutModel;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;

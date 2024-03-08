@@ -4,8 +4,9 @@ import { NextApiResponse } from "next";
 import { i18n, type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
 import H3Title from "../components/H3Title";
+import { CranioModel } from "@/src/strapi/Cranio";
 
-async function getData(locale: Locale): Promise<any> {
+async function getData(locale: Locale) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   try {
@@ -24,8 +25,7 @@ async function getData(locale: Locale): Promise<any> {
       throw new Error("Failed to fetch data");
     }
 
-    const data = await res.json();
-    return data;
+    return (await res.json()) as CranioModel;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;
@@ -45,10 +45,10 @@ export default async function Craniosacral({
     <div className=" text-amber-950 pt-20">
       {/* Craniosacral introduction */}
 
-      <div className="flex flex-row text-left  pb-20 px-20 py-20">
-        <div className="px-5 pr-40 basis-1/2">
+      <div className="flex flex-col lg:flex-row text-left lg:pb-20 lg:px-20 lg:py-20">
+        <div className="lg:px-5 w-screen lg:pr-40 lg:w-1/2">
           <SectionTitle title={lacranioData.TitleCranio} />
-          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+          <p className="text-justify lg:text-left lg:mb-4 lg:pt-5 lg:pl-10 leading-8 text-lg">
             {/* La thérapie craniosacrale libère les tensions du corps pour
             favoriser la détente et la guérison. Elle explore la connexion
             subtile entre le crâne, la colonne vertébrale, et le sacrum. */}
@@ -60,7 +60,7 @@ export default async function Craniosacral({
           {/* Comprendre le Système Craniosacral */}
           <H3Title title={lacranioData.titleH2} />
 
-          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+          <p className="text-justify lg:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
             {/* Découvrez le système craniosacral, un réseau délicat composé du
             crâne, de la colonne vertébrale et du sacrum. Ce système, abritant
             le fluide céphalorachidien essentiel, joue un rôle crucial dans le
@@ -69,25 +69,25 @@ export default async function Craniosacral({
           </p>
         </div>
 
-        <div className="px-5 pl-20 basis-1/2">
+        <div className="lg:px-5 w-screen lg:pl-20 lg:w-1/2">
           {/* Session Details */}
 
           {/* Déroulement d&apos;une Séance de Thérapie Craniosacrale */}
           <H3Title title={lacranioData.titleH22} />
 
-          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+          <p className="text-justify lg:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
             {/* Pendant une séance de thérapie craniosacrale, le ou la thérapeute
             utilise des techniques douces, non invasives, pour évaluer et
             améliorer le mouvement du liquide céphalorachidien. */}
             {lacranioData.contentTH22[0].children[0].text}
           </p>
-          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+          <p className="text-justify  lg:text-left lg:mb-4 pt-5 lg:pl-10 leading-8 text-lg">
             {/* Cette approche délicate permet de libérer les blocages, réduire les
             tensions et restaurer la mobilité naturelle des structures
             crâniennes et vertébrales. */}
             {lacranioData.contentTH22[1].children[0].text}
           </p>
-          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+          <p className="text-justify  lg:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
             {/* Au fil de la séance, le patient ressent souvent une profonde
             relaxation, ce qui favorise la réduction du stress et de
             l&apos;anxiété. La thérapie craniosacrale peut également aider à
@@ -97,6 +97,7 @@ export default async function Craniosacral({
           </p>
         </div>
       </div>
+
       {/* Benefits Section */}
       <div className="pt-10 text-[#F7F0EE]">
         <div
@@ -111,10 +112,6 @@ export default async function Craniosacral({
           >
             <ul className="text-left space-y-3 p-4 z-30">
               {/* Bénéfices de la Thérapie Craniosacrale */}
-
-              {/* <h3 className="text-2xl py-8 font-alegreya italic">
-                {lacranioData.beneficesTitle}
-              </h3> */}
               <H3Title title={lacranioData.beneficesTitle} />
               <li className="px-2">
                 <p className="font-semibold">

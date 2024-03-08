@@ -4,7 +4,7 @@ import { NextApiResponse } from "next";
 import { Place, Attributes } from "../../../src/strapi/Place";
 import SectionTitle from "../components/SectionTitle";
 
-async function getData(locale: Locale): Promise<any> {
+async function getData(locale: Locale) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   try {
@@ -23,8 +23,7 @@ async function getData(locale: Locale): Promise<any> {
       throw new Error("Failed to fetch data");
     }
 
-    const data = await res.json();
-    return data;
+    return (await res.json()) as Place;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;
@@ -36,7 +35,7 @@ export default async function Lieux({
 }: {
   params: { lang: Locale };
 }) {
-  const data: Place = await getData(lang);
+  const data = await getData(lang);
   const placeData = data.data[0]?.attributes;
 
   return (
