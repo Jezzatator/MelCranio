@@ -1,44 +1,23 @@
 import React from "react";
 import Timeline from "../components/TimeLine";
-import { NextApiResponse } from "next";
-import { Content } from "next/font/google";
-import { i18n, type Locale } from "../../../src/i18nConfig";
+
+import { type Locale } from "../../../src/i18nConfig";
 import { AboutModel, Attributes } from "../../../src/strapi/About";
 import SectionTitle from "../components/SectionTitle";
-
-async function getData(locale: Locale) {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  try {
-    const res: Response = await fetch(
-      process.env.STRAPI_URL + `abouts?locale=${locale}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: apiKey,
-        },
-      }
-    );
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return (await res.json()) as AboutModel;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-}
+import { RequeteStrapi } from "@/src/strapi/Request";
+import { getData } from "@/src/strapi/FetchData";
 
 export default async function About({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
+  const request: RequeteStrapi<AboutModel> = {
+    endpoint: "abouts",
+  };
+
   console.log("LOCALE about: " + lang);
-  const data: AboutModel = await getData(lang);
+  const data = await getData(request, lang);
 
   console.log("Data about en: " + data.data[0]);
 

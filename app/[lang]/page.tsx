@@ -1,38 +1,23 @@
-// "use client";
 import About from "./about/page";
 import Contact from "./contact/page";
 import Craniosacral from "./craniosacral/page";
 import "./frontpage.css";
 import Lieux from "./places/page";
-import { NextApiResponse } from "next";
 import Prices from "./prices/pages";
-import { useRouter } from "next/router";
 import { Locale } from "../../src/i18nConfig";
-
-async function getData(locale: Locale) {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  const res = await fetch(process.env.STRAPI_URL + `homes?locale=${locale}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: apiKey,
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data. Status: " + res.status);
-  }
-  return res.json();
-}
+import { HomeModel } from "@/src/strapi/Home";
+import { RequeteStrapi } from "@/src/strapi/Request";
+import { getData } from "@/src/strapi/FetchData";
 
 export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  //const wrappedLocale = lang == "undefinedhomes" ? "en" : lang;
-  const data = await getData(lang);
+  const request: RequeteStrapi<HomeModel> = {
+    endpoint: "homes",
+  };
+  const data = await getData(request, lang);
   console.log("Home locale: " + lang);
   console.log("Home data: " + data);
   return (

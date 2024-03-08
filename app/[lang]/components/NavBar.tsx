@@ -2,31 +2,15 @@ import { Locale } from "@/src/i18nConfig";
 import Link from "next/link";
 import React from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-
-async function getData(locale: Locale) {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  const res = await fetch(
-    process.env.STRAPI_URL + `nav-bars?locale=${locale}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: apiKey,
-      },
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data. Status: " + res.status);
-  }
-  return res.json();
-}
+import { RequeteStrapi } from "@/src/strapi/Request";
+import { NavBarModel } from "@/src/strapi/NavBarModel";
+import { getData } from "@/src/strapi/FetchData";
 
 export default async function NavBar({ params }: { params: Locale }) {
-  const data = await getData(params);
-  //const [isOpen, setIsOpen] = useState(false);
+  const request: RequeteStrapi<NavBarModel> = {
+    endpoint: "nav-bars",
+  };
+  const data = await getData(request, params);
 
   const links = [
     {

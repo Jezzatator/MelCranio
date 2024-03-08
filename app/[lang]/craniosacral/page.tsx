@@ -1,36 +1,10 @@
-import Image from "next/image";
 import React from "react";
-import { NextApiResponse } from "next";
-import { i18n, type Locale } from "../../../src/i18nConfig";
+import { type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
 import H3Title from "../components/H3Title";
 import { CranioModel } from "@/src/strapi/Cranio";
-
-async function getData<T>(locale: Locale) {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  try {
-    const res: Response = await fetch(
-      process.env.STRAPI_URL + `la-cranios?locale=${locale}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: apiKey,
-        },
-      }
-    );
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return (await res.json()) as T;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-}
+import { RequeteStrapi } from "@/src/strapi/Request";
+import { getData } from "@/src/strapi/FetchData";
 
 export default async function Craniosacral({
   params: { lang },
@@ -38,7 +12,12 @@ export default async function Craniosacral({
   params: { lang: Locale };
 }) {
   console.log("LOCALE cranio: " + lang);
-  const data = await getData<CranioModel>(lang);
+
+  const request: RequeteStrapi<CranioModel> = {
+    endpoint: "la-cranios",
+  };
+  const data = await getData(request, lang);
+
   const lacranioData = data.data[0].attributes;
 
   return (

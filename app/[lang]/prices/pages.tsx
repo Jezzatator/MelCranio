@@ -1,42 +1,19 @@
 import React from "react";
-import { NextApiResponse } from "next";
-import { i18n, type Locale } from "../../../src/i18nConfig";
+import { type Locale } from "../../../src/i18nConfig";
 import { Price, Attributes } from "../../../src/strapi/Price";
 import SectionTitle from "../components/SectionTitle";
-
-async function getData(locale: Locale): Promise<any> {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  try {
-    const res: Response = await fetch(
-      process.env.STRAPI_URL + `tarifs?locale=${locale}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: apiKey,
-        },
-      }
-    );
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-}
+import { getData } from "@/src/strapi/FetchData";
+import { RequeteStrapi } from "@/src/strapi/Request";
 
 export default async function Prices({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const data: Price = await getData(lang);
+  const request: RequeteStrapi<Price> = {
+    endpoint: "tarifs",
+  };
+  const data = await getData(request, lang);
   const pricesData: Attributes = data.data[0]?.attributes;
 
   return (

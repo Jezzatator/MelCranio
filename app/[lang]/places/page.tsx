@@ -1,41 +1,20 @@
 import React from "react";
-import { i18n, type Locale } from "../../../src/i18nConfig";
-import { NextApiResponse } from "next";
-import { Place, Attributes } from "../../../src/strapi/Place";
+import { type Locale } from "../../../src/i18nConfig";
+import { Place } from "../../../src/strapi/Place";
 import SectionTitle from "../components/SectionTitle";
-
-async function getData(locale: Locale) {
-  const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
-
-  try {
-    const res: Response = await fetch(
-      process.env.STRAPI_URL + `lieuxes?locale=${locale}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: apiKey,
-        },
-      }
-    );
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return (await res.json()) as Place;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
-  }
-}
+import { RequeteStrapi } from "@/src/strapi/Request";
+import { getData } from "@/src/strapi/FetchData";
 
 export default async function Lieux({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const data = await getData(lang);
+  const request: RequeteStrapi<Place> = {
+    endpoint: "lieuxes",
+  };
+
+  const data = await getData(request, lang);
   const placeData = data.data[0]?.attributes;
 
   return (
