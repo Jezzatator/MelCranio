@@ -2,6 +2,7 @@ import { Locale } from "@/src/i18nConfig";
 import Link from "next/link";
 import React from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 async function getData(locale: Locale) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
@@ -25,6 +26,7 @@ async function getData(locale: Locale) {
 
 export default async function NavBar({ params }: { params: Locale }) {
   const data = await getData(params);
+  //const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     {
@@ -54,22 +56,27 @@ export default async function NavBar({ params }: { params: Locale }) {
   ];
 
   return (
-    <nav className="flex justify-between items-center h-20 px-5 fixed top-0 w-full bg-[var(--background)] border-b border-amber-950 z-40 font-alegreyaSans">
-      <Link className="" href="/">
-        Logo
-      </Link>
-      <ul className="flex items-center space-x-20 text-rights px-10">
-        {links.map((link) => (
-          <Link
-            key={link.href}
-            className="text-amber-950 hover:text-cyan-950 transition-colors"
-            href={link.href}
-          >
-            {link.label}
-          </Link>
-        ))}
-        <LanguageSwitcher currentLocale={params} />
-      </ul>
+    <nav className="nav px-5 pt-5 fixed top-0 w-screen bg-[var(--background)] border-b border-amber-950 z-40 font-alegreyaSans">
+      <div className="flex flex-row justify-between items-center lg:h-20">
+        {/* Logo */}
+        <Link className="" href="/">
+          Logo
+        </Link>
+
+        {/* Nav links */}
+        <ul className="flex flex-col justify-around lg:flex-row items-center space-x-20 text-rights lg:px-10">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              className="text-amber-950 hover:text-cyan-950 transition-colors"
+              href={link.href}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <LanguageSwitcher currentLocale={params} />
+        </ul>
+      </div>
     </nav>
   );
 }

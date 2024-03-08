@@ -6,7 +6,7 @@ import SectionTitle from "../components/SectionTitle";
 import H3Title from "../components/H3Title";
 import { CranioModel } from "@/src/strapi/Cranio";
 
-async function getData(locale: Locale) {
+async function getData<T>(locale: Locale) {
   const apiKey = "Bearer " + process.env.READ_ONLY_KEY;
 
   try {
@@ -25,7 +25,7 @@ async function getData(locale: Locale) {
       throw new Error("Failed to fetch data");
     }
 
-    return (await res.json()) as CranioModel;
+    return (await res.json()) as T;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;
@@ -38,15 +38,15 @@ export default async function Craniosacral({
   params: { lang: Locale };
 }) {
   console.log("LOCALE cranio: " + lang);
-  const data = await getData(lang);
+  const data = await getData<CranioModel>(lang);
   const lacranioData = data.data[0].attributes;
 
   return (
     <div className=" text-amber-950 pt-20">
       {/* Craniosacral introduction */}
 
-      <div className="flex flex-col lg:flex-row text-left lg:pb-20 lg:px-20 lg:py-20">
-        <div className="lg:px-5 w-screen lg:pr-40 lg:w-1/2">
+      <div className="flex flex-col lg:flex-row text-left lg:pb-20 md:px-10 md:py-10 lg:px-20 lg:py-20">
+        <div className="lg:px-5 lg:pr-40 lg:w-1/2">
           <SectionTitle title={lacranioData.TitleCranio} />
           <p className="text-justify lg:text-left lg:mb-4 lg:pt-5 lg:pl-10 leading-8 text-lg">
             {/* La thérapie craniosacrale libère les tensions du corps pour
@@ -69,7 +69,7 @@ export default async function Craniosacral({
           </p>
         </div>
 
-        <div className="lg:px-5 w-screen lg:pl-20 lg:w-1/2">
+        <div className="lg:px-5 lg:pl-20 lg:w-1/2">
           {/* Session Details */}
 
           {/* Déroulement d&apos;une Séance de Thérapie Craniosacrale */}
@@ -81,13 +81,13 @@ export default async function Craniosacral({
             améliorer le mouvement du liquide céphalorachidien. */}
             {lacranioData.contentTH22[0].children[0].text}
           </p>
-          <p className="text-justify  lg:text-left lg:mb-4 pt-5 lg:pl-10 leading-8 text-lg">
+          <p className="text-justify lg:text-left lg:mb-4 pt-5 lg:pl-10 leading-8 text-lg">
             {/* Cette approche délicate permet de libérer les blocages, réduire les
             tensions et restaurer la mobilité naturelle des structures
             crâniennes et vertébrales. */}
             {lacranioData.contentTH22[1].children[0].text}
           </p>
-          <p className="text-justify  lg:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
+          <p className="text-justify lg:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
             {/* Au fil de la séance, le patient ressent souvent une profonde
             relaxation, ce qui favorise la réduction du stress et de
             l&apos;anxiété. La thérapie craniosacrale peut également aider à

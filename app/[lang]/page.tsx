@@ -36,16 +36,16 @@ export default async function Home({
   console.log("Home locale: " + lang);
   console.log("Home data: " + data);
   return (
-    <section className="px-10 lg:px-20 pt-80 text-amber-950 mt-20 pb-10 ">
+    <section className="px-5 pt-60 lg:px-20 lg:pt-80 text-amber-950 mt-20 pb-10">
       <div
-        className="flex flew-row mb-80 items-stretch content-around"
+        className="flex flew-row mb-80 items-stretch lg:content-around"
         id="Home"
       >
-        <div className="basis-2/3">
-          <h1 className="uppercase text-8xl py-10 font-alegreya ">
+        <div className="lg:basis-2/3">
+          <h1 className="uppercase text-7xl md:text-8xl py-10 font-alegreya ">
             Mélissa Patot
           </h1>
-          <h2 className="text-xl pl-2 font-alegreya">
+          <h2 className="text-l md:text-xl pl-2 font-alegreya">
             {/* Kinésithérapeute spécialisé en thérapie craniosacrale */}
             {data.data[0].attributes.subNameFirstCard}
           </h2>
@@ -54,7 +54,7 @@ export default async function Home({
 
         {/* Masquer l'image sur les appareils mobiles */}
         <div
-          className="hidden md:block p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 basis-2/5 mr-52"
+          className="hidden lg:block p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-52"
           style={{ backgroundImage: "url('/static/image0.jpeg')" }}
         ></div>
       </div>
@@ -79,13 +79,13 @@ export default async function Home({
           }}
         />
       </div>
-      {/* <div id="Tarifs">
+      <div id="Tarifs">
         <Prices
           params={{
             lang: lang,
           }}
         />
-      </div> */}
+      </div>
       <div id="Contact">
         <Contact />
       </div>
