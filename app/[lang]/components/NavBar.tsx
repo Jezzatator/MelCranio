@@ -48,11 +48,19 @@ export default async function NavBar({ params }: { params: Locale }) {
         </Link>
 
         {/* Nav links */}
-        <ul className="flex flex-col justify-around lg:flex-row items-center space-x-20 text-rights lg:px-10">
-          {links.map((link) => (
+        <ul className="flex flex-wrap justify-around lg:flex-row items-center space-x-20 text-rights lg:px-10">
+          <div className="hidden lg:block">
+            <Link
+              className="text-amber-950 hover:text-cyan-950 transition-colors p-1"
+              href={links[0].href}
+            >
+              {links[0].label}
+            </Link>
+          </div>
+          {links.slice(1).map((link) => (
             <Link
               key={link.href}
-              className="text-amber-950 hover:text-cyan-950 transition-colors"
+              className="text-amber-950 hover:text-cyan-950 transition-colors p-1"
               href={link.href}
             >
               {link.label}
