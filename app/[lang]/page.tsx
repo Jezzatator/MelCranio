@@ -55,7 +55,9 @@ export default async function Home({
         {/* Masquer l'image sur les appareils mobiles */}
         <Suspense
           fallback={
-            <Skeleton className="hidden lg:block rounded-full w-96 h-96 lg:basis-2/5 lg:mr-52" />
+            <div className="hidden lg:block p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-52">
+              <Skeleton className="rounded-full w-96 h-96 lg:basis-2/5 lg:mr-52" />
+            </div>
           }
         >
           <div
