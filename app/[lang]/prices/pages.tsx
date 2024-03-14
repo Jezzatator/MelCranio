@@ -86,7 +86,7 @@ export default async function Prices({
       <div
         className="w-full h-96 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/static/mains.jpg')",
+          backgroundImage: "url('/static/mains.webp')",
         }}
       ></div>
     </div>

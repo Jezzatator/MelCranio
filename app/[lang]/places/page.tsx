@@ -46,7 +46,7 @@ export default async function Lieux({
             <div
               className="bg-cover bg-center flex z-0 container"
               style={{
-                backgroundImage: "url('/static/schaffhauserplatz.jpg')",
+                backgroundImage: "url('/static/schaffhauserplatz.webp')",
               }}
             >
               <div
@@ -158,7 +158,7 @@ export default async function Lieux({
             <div
               className="bg-cover bg-center flex z-0 container"
               style={{
-                backgroundImage: "url('/static/candelaflor.jpg')",
+                backgroundImage: "url('/static/candelaflor.webp')",
               }}
             >
               <div

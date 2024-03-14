@@ -99,7 +99,7 @@ export default async function Craniosacral({
         <div
           className="bg-cover bg-center flex flex-row z-0"
           style={{
-            backgroundImage: "url('/static/image3.jpg')",
+            backgroundImage: "url('/static/image3.webp')",
           }}
         >
           <div

@@ -31,10 +31,14 @@ export default async function Home({
         <div className="lg:basis-2/3">
           <Suspense
             fallback={
-              <div className="w-full flex flex-col gap-2">
-                <Skeleton className="h-3 w-3/5 rounded-lg" />
-                <Skeleton className="h-3 w-4/5 rounded-lg" />
-              </div>
+              <>
+                <h1 className="uppercase text-7xl md:text-8xl py-10 font-alegreya ">
+                  Mélissa Patot
+                </h1>
+                <h2 className="text-l md:text-xl pl-2 font-alegreya">
+                  Loading...
+                </h2>
+              </>
             }
           >
             <h1 className="uppercase text-7xl md:text-8xl py-10 font-alegreya ">
@@ -56,7 +60,7 @@ export default async function Home({
         >
           <div
             className="hidden lg:block p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-52"
-            style={{ backgroundImage: "url('/static/image0.jpeg')" }}
+            style={{ backgroundImage: "url('/static/image0.webp')" }}
           ></div>
         </Suspense>
       </div>
