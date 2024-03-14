@@ -108,53 +108,105 @@ export default async function Craniosacral({
           >
             <ul className="text-left space-y-3 p-4 z-30">
               {/* Bénéfices de la Thérapie Craniosacrale */}
-              <H3Title title={lacranioData.beneficesTitle} />
-              <li className="px-2" key="0">
-                <p className="font-semibold">
-                  {/* Réduction du stress et de l&apos;anxiété : */}
-                  {lacranioData.beneficesContent[0].children[0].text}
-                </p>
-                {/* En favorisant la relaxation, la thérapie craniosacrale contribue
+              <Suspense fallback={<H3Title title={"Loading..."} />}>
+                <H3Title title={lacranioData.beneficesTitle} />
+              </Suspense>
+              <Suspense
+                fallback={
+                  <li className="px-2" key="0">
+                    <p className="font-semibold">Loading...</p>
+                    Loading...
+                  </li>
+                }
+              >
+                <li className="px-2" key="0">
+                  <p className="font-semibold">
+                    {/* Réduction du stress et de l&apos;anxiété : */}
+                    {lacranioData.beneficesContent[0].children[0].text}
+                  </p>
+
+                  {/* En favorisant la relaxation, la thérapie craniosacrale contribue
                 à réduire les niveaux de stress et d&apos;anxiété. */}
-                {lacranioData.beneficesContent[1].children[0].text}
-              </li>
-              <li className="px-2" key="1">
-                <p className="font-semibold">
-                  {/* Amélioration du sommeil : */}
-                  {lacranioData.beneficesContent[2].children[0].text}
-                </p>
-                {/* La détente induite par la thérapie craniosacrale peut favoriser un
+                  {lacranioData.beneficesContent[1].children[0].text}
+                </li>
+              </Suspense>
+
+              <Suspense
+                fallback={
+                  <li className="px-2" key="1">
+                    <p className="font-semibold">Loading...</p>
+                    Loading...
+                  </li>
+                }
+              >
+                <li className="px-2" key="1">
+                  <p className="font-semibold">
+                    {/* Amélioration du sommeil : */}
+                    {lacranioData.beneficesContent[2].children[0].text}
+                  </p>
+                  {/* La détente induite par la thérapie craniosacrale peut favoriser un
                 sommeil plus profond et réparateur. */}
-                {lacranioData.beneficesContent[3].children[0].text}
-              </li>
-              <li className="px-2" key="2">
-                <p className="font-semibold">
-                  {/* Soulagement des maux de tête et des migraines : */}
-                  {lacranioData.beneficesContent[4].children[0].text}
-                </p>
-                {/* En libérant les tensions au niveau du crâne, elle peut atténuer
+                  {lacranioData.beneficesContent[3].children[0].text}
+                </li>
+              </Suspense>
+
+              <Suspense
+                fallback={
+                  <li className="px-2" key="2">
+                    <p className="font-semibold">Loading...</p>
+                    Loading...
+                  </li>
+                }
+              >
+                <li className="px-2" key="2">
+                  <p className="font-semibold">
+                    {/* Soulagement des maux de tête et des migraines : */}
+                    {lacranioData.beneficesContent[4].children[0].text}
+                  </p>
+                  {/* En libérant les tensions au niveau du crâne, elle peut atténuer
                 les maux de tête et les migraines. */}
-                {lacranioData.beneficesContent[5].children[0].text}
-              </li>
-              <li className="px-2" key="3">
-                <p className="font-semibold">
-                  {/* Renforcement du système immunitaire : */}
-                  {lacranioData.beneficesContent[6].children[0].text}
-                </p>
-                {/* En optimisant le fonctionnement du système craniosacral, cette
+                  {lacranioData.beneficesContent[5].children[0].text}
+                </li>
+              </Suspense>
+
+              <Suspense
+                fallback={
+                  <li className="px-2" key="3">
+                    <p className="font-semibold">Loading...</p>
+                    Loading...
+                  </li>
+                }
+              >
+                <li className="px-2" key="3">
+                  <p className="font-semibold">
+                    {/* Renforcement du système immunitaire : */}
+                    {lacranioData.beneficesContent[6].children[0].text}
+                  </p>
+                  {/* En optimisant le fonctionnement du système craniosacral, cette
                 approche peut contribuer à renforcer le système immunitaire. */}
-                {lacranioData.beneficesContent[7].children[0].text}
-              </li>
-              <li className="px-2" key="4">
-                <p className="font-semibold">
-                  {/* Équilibre émotionnel et mental : */}
-                  {lacranioData.beneficesContent[8].children[0].text}
-                </p>
-                {/* En libérant les tensions physiques, la thérapie craniosacrale
+                  {lacranioData.beneficesContent[7].children[0].text}
+                </li>
+              </Suspense>
+
+              <Suspense
+                fallback={
+                  <li className="px-2" key="4">
+                    <p className="font-semibold">Loading...</p>
+                    Loading...
+                  </li>
+                }
+              >
+                <li className="px-2" key="4">
+                  <p className="font-semibold">
+                    {/* Équilibre émotionnel et mental : */}
+                    {lacranioData.beneficesContent[8].children[0].text}
+                  </p>
+                  {/* En libérant les tensions physiques, la thérapie craniosacrale
                 peut également avoir des effets positifs sur l&apos;équilibre
                 émotionnel et mental. */}
-                {lacranioData.beneficesContent[9].children[0].text}
-              </li>
+                  {lacranioData.beneficesContent[9].children[0].text}
+                </li>
+              </Suspense>
             </ul>
           </div>
         </div>

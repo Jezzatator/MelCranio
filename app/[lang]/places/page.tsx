@@ -25,9 +25,12 @@ export default async function Lieux({
         <div className="w-full text-left px-5">
           <Suspense
             fallback={
-              <p className="text-center md:text-left mb-4 leading-8">
-                Loading title...
-              </p>
+              <>
+                <SectionTitle title="Loading..." />
+                <p className="text-center md:text-left mb-4 leading-8">
+                  Loading...
+                </p>
+              </>
             }
           >
             <SectionTitle title={placeData.LesLieux} />
@@ -50,30 +53,52 @@ export default async function Lieux({
                 className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
                 style={{ backgroundColor: "rgba(26,74,90, 0.3)" }}
               >
-                <h2 className="text-l p-4 text-center md:text-left font-semibold">
-                  {placeData.TitreLieu1}
-                  {/* PhysioBalance - Thalwil */}
-                </h2>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.DescriptionLieu1}
-                  {/* À Thalwil, les sessions ont lieu dans un cabinet de
+                <Suspense
+                  fallback={
+                    <>
+                      <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                        Loading...
+                      </h2>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        Loading...
+                      </p>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        Loading...
+                        <a href="">Praxisgemeinschaft </a>
+                      </p>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
+                          Loading...
+                        </a>
+                      </p>
+                    </>
+                  }
+                >
+                  <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                    {placeData.TitreLieu1}
+                    {/* PhysioBalance - Thalwil */}
+                  </h2>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    {placeData.DescriptionLieu1}
+                    {/* À Thalwil, les sessions ont lieu dans un cabinet de
                   physiothérapie idéalement situé sur les rives du lac de
                   Zurich. Niché dans un petit oasis, loin de l&apos;agitation
                   urbaine, cet endroit est facilement accessible et à proximité
                   de la gare. Vous trouverez ici un environnement paisible qui
                   favorise la détente et le bien-être. */}
-                </p>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  {" "}
-                  {placeData.PourPlusDInformations}
-                  {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                  <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
-                </p>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
-                    {placeData.PourPrendreRdz}
-                  </a>
-                </p>
+                  </p>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    {" "}
+                    {placeData.PourPlusDInformations}
+                    {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
+                    <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
+                  </p>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
+                      {placeData.PourPrendreRdz}
+                    </a>
+                  </p>
+                </Suspense>
               </div>
             </div>
           </div>
@@ -89,25 +114,42 @@ export default async function Lieux({
                 className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(82, 104, 109,0.2)]"
                 style={{ backgroundColor: "rgba(82, 104, 109, 0.3)" }}
               >
-                <h2 className="text-l p-4 text-center md:text-left font-semibold">
-                  {placeData.TitreLieu2}
-                  {/* Can de la Flor - Ibiza */}
-                </h2>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.DescriptionLieu2}
-                  {/* Chez Lia, dans la salle dédiée au bien-être à San Carlo,
+                <Suspense
+                  fallback={
+                    <>
+                      <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                        Loading...
+                      </h2>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        Loading...
+                      </p>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        Loading...
+                        <a href="">physiobalance-thalwil.ch</a>
+                      </p>
+                    </>
+                  }
+                >
+                  <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                    {placeData.TitreLieu2}
+                    {/* Can de la Flor - Ibiza */}
+                  </h2>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    {placeData.DescriptionLieu2}
+                    {/* Chez Lia, dans la salle dédiée au bien-être à San Carlo,
                   Ibiza, vous découvrirez un espace de guérison unique. La salle
                   est située au cœur de l&apos;île, dans une magnifique
                   propriété à l&apos;est, imprégnée de calme et de sérénité.
                   Elle est adjacente à une finca traditionnelle ibérique,
                   offrant une expérience enveloppée de tranquillité au sein de
                   la nature paisible de l&apos;île. */}
-                </p>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.PourPlusDInformations}
-                  {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                  <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
-                </p>
+                  </p>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    {placeData.PourPlusDInformations}
+                    {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
+                    <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
+                  </p>
+                </Suspense>
               </div>
             </div>
           </div>
@@ -123,21 +165,38 @@ export default async function Lieux({
                 className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
                 style={{ backgroundColor: "rgba(157,167,70, 0.3)" }}
               >
-                <h2 className="text-l p-4 text-center md:text-left font-semibold">
-                  {placeData.TitreLieu3}
-                  {/* Praxisgemeinschaft am Schaffhauserplatz - Zurich */}
-                </h2>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.DescriptionLieu3}
-                </p>
-                <p className="text-center md:text-left mb-4 leading-8">
-                  {placeData.PourPlusDInformations}
-                  {/* Pour plus d&apos;information rendez-vous sur :{" "}
+                <Suspense
+                  fallback={
+                    <>
+                      <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                        Loading...
+                      </h2>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        Loading...
+                      </p>
+                      <p className="text-center md:text-left mb-4 leading-8">
+                        Loading...
+                        <a href="">Can de la Flor</a>
+                      </p>
+                    </>
+                  }
+                >
+                  <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                    {placeData.TitreLieu3}
+                    {/* Praxisgemeinschaft am Schaffhauserplatz - Zurich */}
+                  </h2>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    {placeData.DescriptionLieu3}
+                  </p>
+                  <p className="text-center md:text-left mb-4 leading-8">
+                    {placeData.PourPlusDInformations}
+                    {/* Pour plus d&apos;information rendez-vous sur :{" "}
                   + Lien pour prendre RDV  lien sur iMessage 
                   Lieu 3 en premier 
                   */}
-                  <a href={placeData.LienLieu3}>Can de la Flor</a>
-                </p>
+                    <a href={placeData.LienLieu3}>Can de la Flor</a>
+                  </p>
+                </Suspense>
               </div>
             </div>
           </div>

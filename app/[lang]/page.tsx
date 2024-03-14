@@ -9,7 +9,7 @@ import { HomeModel } from "@/src/strapi/Home";
 import { RequeteStrapi } from "@/src/strapi/Request";
 import { getData } from "@/src/strapi/FetchData";
 import { Suspense } from "react";
-import { Skeleton } from "@nextui-org/react";
+import { Skeleton } from "@nextui-org/skeleton";
 
 export default async function Home({
   params: { lang },
