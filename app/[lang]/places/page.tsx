@@ -18,7 +18,7 @@ export default async function Lieux({
   const placeData = data.data[0]?.attributes;
 
   return (
-    <div className="px-20 py-20 text-amber-950 mt-10">
+    <div className="px-5 py-5 lg:px-20 lg:py-20 text-amber-950 mt-10">
       {/* Craniosacral introduction */}
 
       <div className="flex flex-row m-5 pb-20">
@@ -34,7 +34,7 @@ export default async function Lieux({
             }
           >
             <SectionTitle title={placeData.LesLieux} />
-            <p className="text-center md:text-left mb-4 leading-8">
+            <p className="text-justify md:text-left mb-4 leading-8">
               {placeData.SoustitreLesLieux}
               {/* Vous avez la possibilité de bénéficier de séances à trois endroits
             distincts, offrant chacun une atmosphère unique. */}
@@ -42,9 +42,9 @@ export default async function Lieux({
           </Suspense>
           {/* Test Images */}
 
-          <div className="pt-10 text-[#F7F0EE] lg:container w-screen">
+          <div className="pt-10 text-[#F7F0EE] md:container md:w-screen w-full">
             <div
-              className="bg-cover bg-center flex z-0 lg:container"
+              className="bg-cover bg-center flex z-0 md:container"
               style={{
                 backgroundImage: "url('/static/schaffhauserplatz.webp')",
               }}
@@ -103,15 +103,15 @@ export default async function Lieux({
             </div>
           </div>
 
-          <div className="pt-10 text-[#F7F0EE] container w-screen">
+          <div className="pt-10 text-[#F7F0EE] md:container md:w-screen w-full">
             <div
-              className="bg-cover bg-center flex z-0 container"
+              className="bg-cover bg-center flex z-0 md:container"
               style={{
                 backgroundImage: "url('/static/physiobalance-icone.webp')",
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(82, 104, 109,0.2)]"
+                className="lg:basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(82, 104, 109,0.2)]"
                 style={{ backgroundColor: "rgba(82, 104, 109, 0.3)" }}
               >
                 <Suspense
@@ -144,7 +144,7 @@ export default async function Lieux({
                   offrant une expérience enveloppée de tranquillité au sein de
                   la nature paisible de l&apos;île. */}
                   </p>
-                  <p className="text-center md:text-left mb-4 leading-8">
+                  <p className="text-justify md:text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
                     <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
@@ -154,15 +154,15 @@ export default async function Lieux({
             </div>
           </div>
 
-          <div className="pt-10 text-[#F7F0EE] container w-screen">
+          <div className="pt-10 text-[#F7F0EE] md:container md:w-screen w-full">
             <div
-              className="bg-cover bg-center flex z-0 container"
+              className="bg-cover bg-center flex z-0 md:container"
               style={{
                 backgroundImage: "url('/static/candelaflor.webp')",
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
+                className="lg:basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
                 style={{ backgroundColor: "rgba(157,167,70, 0.3)" }}
               >
                 <Suspense
@@ -185,10 +185,10 @@ export default async function Lieux({
                     {placeData.TitreLieu3}
                     {/* Praxisgemeinschaft am Schaffhauserplatz - Zurich */}
                   </h2>
-                  <p className="text-center md:text-left mb-4 leading-8">
+                  <p className="text-justify md:text-left mb-4 leading-8">
                     {placeData.DescriptionLieu3}
                   </p>
-                  <p className="text-center md:text-left mb-4 leading-8">
+                  <p className="text-justify md:text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "}
                   + Lien pour prendre RDV  lien sur iMessage 
