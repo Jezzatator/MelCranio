@@ -84,11 +84,19 @@ export default async function Prices({
         </div>
       </div>
       <div
-        className="w-full h-96 bg-cover bg-center"
+        className="w-full h-96 bg-cover bg-center lg:bg-no-repeat"
         style={{
-          backgroundImage: "url('/static/mains.webp')",
+          backgroundImage: "url('/static/mainsmobile.webp')",
         }}
-      ></div>
+      >
+        {/* Contenu affiché uniquement sur les écrans larges */}
+        <div
+          className="hidden lg:block bg-cover bg-center w-full h-96"
+          style={{
+            backgroundImage: "url('/static/mains.webp')",
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
