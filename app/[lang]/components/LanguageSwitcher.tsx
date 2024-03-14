@@ -1,15 +1,20 @@
-"use client";
 import React from "react";
 import { i18n, Locale } from "@/src/i18nConfig";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; // Import useRouter from next/router
 
-const LanguageSwitcher = ({ currentLocale }: { currentLocale: Locale }) => {
-  const router = useRouter();
-
+const LanguageSwitcher = ({
+  currentLocale,
+  router,
+}: {
+  currentLocale: Locale;
+  router: any;
+}) => {
+  // Accept router prop
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLocale = e.target.value;
+    const newLocale = e.target.value as Locale;
     router.push(`/${newLocale}`);
   };
+
   return (
     <div>
       <form className="max-w-sm mx-auto">

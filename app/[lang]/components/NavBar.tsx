@@ -1,47 +1,112 @@
+"use client";
 import { Locale } from "@/src/i18nConfig";
 import Link from "next/link";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter from next/router
 import LanguageSwitcher from "./LanguageSwitcher";
 import { RequeteStrapi } from "@/src/strapi/Request";
 import { NavBarModel } from "@/src/strapi/NavBarModel";
 import { getData } from "@/src/strapi/FetchData";
 import { Skeleton } from "@nextui-org/react";
 
-export default async function NavBar({ params }: { params: Locale }) {
-  const request: RequeteStrapi<NavBarModel> = {
-    endpoint: "nav-bars",
-  };
-  const data = await getData(request, params);
+export default function NavBar({ params }: { params: Locale }) {
+  const router = useRouter();
 
   const links = [
     {
-      label: data.data[0].attributes.Accueil,
+      label:
+        params === "fr"
+          ? "Accueil"
+          : params === "de"
+          ? "Startseite"
+          : params === "en"
+          ? "Home"
+          : params === "es"
+          ? "Inicio"
+          : params === "ca"
+          ? "Inici"
+          : "Home",
       href: `/${params ? params : ""}`,
       key: 0,
     },
     {
-      label: data.data[0].attributes.LaTherapie,
-      href: `#Craniosacral`,
+      label:
+        params === "fr"
+          ? "La Thérapie"
+          : params === "de"
+          ? "Die Therapie"
+          : params === "en"
+          ? "Therapy"
+          : params === "es"
+          ? "Terapia"
+          : params === "ca"
+          ? "Teràpia"
+          : "La Thérapie",
+      href: "#Craniosacral",
       key: 1,
     },
     {
-      label: data.data[0].attributes.APropos,
-      href: `#About`,
+      label:
+        params === "fr"
+          ? "A Propos"
+          : params === "de"
+          ? "Über uns"
+          : params === "en"
+          ? "About Us"
+          : params === "es"
+          ? "Sobre Nosotros"
+          : params === "ca"
+          ? "Sobre Nosaltres"
+          : "A Propos",
+      href: "#About",
       key: 2,
     },
     {
-      label: data.data[0].attributes.LesLieux,
-      href: `#Lieux`,
+      label:
+        params === "fr"
+          ? "Les Lieux"
+          : params === "de"
+          ? "Orte"
+          : params === "en"
+          ? "Locations"
+          : params === "es"
+          ? "Lugares"
+          : params === "ca"
+          ? "Llocs"
+          : "Les Lieux",
+      href: "#Lieux",
       key: 3,
     },
     {
-      label: data.data[0].attributes.Tarifs,
-      href: `#Tarifs`,
+      label:
+        params === "fr"
+          ? "Tarifs"
+          : params === "de"
+          ? "Preise"
+          : params === "en"
+          ? "Rates"
+          : params === "es"
+          ? "Tarifas"
+          : params === "ca"
+          ? "Tarifes"
+          : "Tarifs",
+      href: "#Tarifs",
       key: 4,
     },
     {
-      label: data.data[0].attributes.Contact,
-      href: `#Contact`,
+      label:
+        params === "fr"
+          ? "Contact"
+          : params === "de"
+          ? "Kontakt"
+          : params === "en"
+          ? "Contact"
+          : params === "es"
+          ? "Contacto"
+          : params === "ca"
+          ? "Contacte"
+          : "Contact",
+      href: "#Contact",
       key: 5,
     },
   ];
@@ -104,7 +169,8 @@ export default async function NavBar({ params }: { params: Locale }) {
               </Link>
             ))}
           </Suspense>
-          <LanguageSwitcher currentLocale={params} />
+          <LanguageSwitcher currentLocale={params} router={router} />{" "}
+          {/* Pass router prop */}
         </ul>
       </div>
     </nav>
