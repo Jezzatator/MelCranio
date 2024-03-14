@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { type Locale } from "../../../src/i18nConfig";
 import { Price, Attributes } from "../../../src/strapi/Price";
 import SectionTitle from "../components/SectionTitle";
 import { getData } from "@/src/strapi/FetchData";
 import { RequeteStrapi } from "@/src/strapi/Request";
+import { Skeleton } from "@nextui-org/react";
 
 export default async function Prices({
   params: { lang },
@@ -14,24 +15,40 @@ export default async function Prices({
     endpoint: "tarifs",
   };
   const data = await getData(request, lang);
-  const pricesData: Attributes = data.data[0]?.attributes;
+  const pricesData = data.data[0]?.attributes;
 
   return (
     <div className="flex flex-col mt-10">
       <div className="flex flex-row text-left  pb-20 px-20 py-20">
         <div className="px-5 pr-40 basis-1/2">
-          <SectionTitle title={pricesData.TitreTarifs} />
-          <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
-            {pricesData.DescTarifs}
-          </p>
+          <Suspense fallback={<Skeleton className="h-3 w-3/5 rounded-lg" />}>
+            <SectionTitle title={pricesData?.TitreTarifs} />
+          </Suspense>
 
-          <ul className="text-center md:text-left mb-4 pl-20 leading-8 text-lg">
-            {pricesData.PrixTarifs.map((parap) => (
-              <li className="pt-2">{parap.children[0].text} </li>
-            ))}
-            {/* <li className="pt-2">60min / 140CHF </li>
+          <Suspense fallback={<Skeleton className="h-3 w-3/5 rounded-lg" />}>
+            <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+              {pricesData?.DescTarifs}
+            </p>
+          </Suspense>
+
+          <Suspense
+            fallback={
+              <div className="w-full flex flex-col gap-2">
+                <Skeleton className="h-3 w-3/5 rounded-lg" />
+                <Skeleton className="h-3 w-4/5 rounded-lg" />
+              </div>
+            }
+          >
+            <ul className="text-center md:text-left mb-4 pl-20 leading-8 text-lg">
+              {pricesData?.PrixTarifs.map((parap) => (
+                <li className="pt-2" key={parap.children[0].text}>
+                  {parap.children[0].text}
+                </li>
+              ))}
+              {/* <li className="pt-2">60min / 140CHF </li>
             <li className="pt-2">90min / 210CHF </li> */}
-          </ul>
+            </ul>
+          </Suspense>
         </div>
         <div className="px-5 pr-40 basis-1/2">
           <SectionTitle title={pricesData.TitreAssurSuisse} />

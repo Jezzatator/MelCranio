@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { type Locale } from "../../../src/i18nConfig";
 import { Place } from "../../../src/strapi/Place";
 import SectionTitle from "../components/SectionTitle";
@@ -23,13 +23,20 @@ export default async function Lieux({
 
       <div className="flex flex-row m-5 pb-20">
         <div className="w-full text-left px-5">
-          <SectionTitle title={placeData.LesLieux} />
-          <p className="text-center md:text-left mb-4 leading-8">
-            {placeData.SoustitreLesLieux}
-            {/* Vous avez la possibilité de bénéficier de séances à trois endroits
+          <Suspense
+            fallback={
+              <p className="text-center md:text-left mb-4 leading-8">
+                Loading title...
+              </p>
+            }
+          >
+            <SectionTitle title={placeData.LesLieux} />
+            <p className="text-center md:text-left mb-4 leading-8">
+              {placeData.SoustitreLesLieux}
+              {/* Vous avez la possibilité de bénéficier de séances à trois endroits
             distincts, offrant chacun une atmosphère unique. */}
-          </p>
-
+            </p>
+          </Suspense>
           {/* Test Images */}
 
           <div className="pt-10 text-[#F7F0EE] container w-screen">
