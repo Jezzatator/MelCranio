@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col items-center border-t border-amber-950 text-center text-white dark:bg-neutral-600 mb-10">
+    <footer className="flex flex-col items-center border-t border-amber-950 text-center dark:bg-neutral-600 mb-10 text-amber-950">
       <div className="container pt-9">
         <div className="mb-9 flex justify-center">
           {links.map((link) => (
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+      <div className="w-full p-4 text-center dark:bg-neutral-700 dark:text-neutral-200">
         © 2023 Copyright:
         <span> </span>
         <a
@@ -52,7 +52,7 @@ const Footer = () => {
           Jérémie Patot
         </a>
       </div>
-      <div className="w-full text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+      <div className="w-full text-center dark:bg-neutral-700 dark:text-neutral-200">
         <a
           className="text-amber-950 dark:text-neutral-400"
           href="https://mel-cranio-jeremiepatot.koyeb.app/admin"
