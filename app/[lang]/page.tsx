@@ -23,9 +23,9 @@ export default async function Home({
   console.log("Home locale: " + lang);
   console.log("Home data: " + data);
   return (
-    <section className="px-5 pt-60 lg:px-20 lg:pt-80 text-amber-950 mt-20 pb-10">
+    <section className="px-5 pt-60 lg:px-20 lg:pt-80 text-amber-950 mt-20 pb-10 ">
       <div
-        className="flex flew-row mb-80 items-stretch lg:content-around"
+        className="flex flew-row mb-80 items-stretch lg:content-around gap-10"
         id="Home"
       >
         <div className="lg:basis-2/3">
@@ -61,7 +61,7 @@ export default async function Home({
           }
         >
           <div
-            className="hidden lg:block p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-52"
+            className="hidden lg:block lg:aspect-[4/3] p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-auto"
             style={{ backgroundImage: "url('/static/image0.webp')" }}
           ></div>
         </Suspense>
