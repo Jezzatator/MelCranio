@@ -42,15 +42,15 @@ export default async function Lieux({
           </Suspense>
           {/* Test Images */}
 
-          <div className="pt-10 text-[#F7F0EE] container w-screen">
+          <div className="pt-10 text-[#F7F0EE] lg:container w-screen">
             <div
-              className="bg-cover bg-center flex z-0 container"
+              className="bg-cover bg-center flex z-0 lg:container"
               style={{
                 backgroundImage: "url('/static/schaffhauserplatz.webp')",
               }}
             >
               <div
-                className="basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
+                className="lg:basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
                 style={{ backgroundColor: "rgba(26,74,90, 0.3)" }}
               >
                 <Suspense
@@ -74,11 +74,11 @@ export default async function Lieux({
                     </>
                   }
                 >
-                  <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                  <h2 className="text-l p-4 text-left font-semibold">
                     {placeData.TitreLieu1}
                     {/* PhysioBalance - Thalwil */}
                   </h2>
-                  <p className="text-center md:text-left mb-4 leading-8">
+                  <p className="text-justify md:text-left mb-4 leading-8">
                     {placeData.DescriptionLieu1}
                     {/* À Thalwil, les sessions ont lieu dans un cabinet de
                   physiothérapie idéalement situé sur les rives du lac de

@@ -26,8 +26,8 @@ export default async function About({
   return (
     <div className="pt-20">
       {/* <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950 mt-10"></div> */}
-      <div className="text-left flex flex-row Deuxieme Card Parcourd px-20 py-20">
-        <div className=" px-5 basis-2/3">
+      <div className="text-left flex flex-col lg:flex-row Deuxieme Card Parcourd lg:px-20 py-20">
+        <div className="px-5 lg:basis-2/3">
           <SectionTitle title={data.data[0]?.attributes.TitleAbout} />
 
           {data.data[0]?.attributes.Content.map(
@@ -53,7 +53,7 @@ export default async function About({
             ) => (
               <p
                 key={index}
-                className="text-center md:text-left mb-5 pt-5 pl-10 leading-loose text-lg"
+                className="text-justify md:text-left mb-5 pt-5 lg:pl-10 leading-loose text-lg"
               >
                 {paragraph.children[0].text}
               </p>
@@ -91,7 +91,7 @@ export default async function About({
             plus encore.
           </p> */}
         </div>
-        <div className="p-5 basis-2/3">
+        <div className="lg:p-5 lg:basis-2/3">
           <Timeline
           // params={{
           //   data: aboutData,

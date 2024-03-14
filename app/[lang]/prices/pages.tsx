@@ -19,14 +19,14 @@ export default async function Prices({
 
   return (
     <div className="flex flex-col mt-10">
-      <div className="flex flex-row text-left  pb-20 px-20 py-20">
-        <div className="px-5 pr-40 basis-1/2">
+      <div className="flex flex-col lg:flex-row text-left pb-20 lg:px-20 lg:py-20">
+        <div className="px-5 lg:pr-40 lg:basis-1/2">
           <Suspense fallback={<Skeleton className="h-3 w-3/5 rounded-lg" />}>
             <SectionTitle title={pricesData?.TitreTarifs} />
           </Suspense>
 
           <Suspense fallback={<Skeleton className="h-3 w-3/5 rounded-lg" />}>
-            <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+            <p className="text-justify md:text-left mb-4 pt-5 pl-5 lg:pl-10 leading-8 text-lg">
               {pricesData?.DescTarifs}
             </p>
           </Suspense>
@@ -39,7 +39,7 @@ export default async function Prices({
               </div>
             }
           >
-            <ul className="text-center md:text-left mb-4 pl-20 leading-8 text-lg">
+            <ul className="text-justify md:text-left mb-4 pl-10 lg:pl-20 leading-8 text-lg">
               {pricesData?.PrixTarifs.map((parap) => (
                 <li className="pt-2" key={parap.children[0].text}>
                   {parap.children[0].text}
@@ -50,7 +50,7 @@ export default async function Prices({
             </ul>
           </Suspense>
         </div>
-        <div className="px-5 pr-40 basis-1/2">
+        <div className="px-5 lg:pr-40 lg:basis-1/2">
           <SectionTitle title={pricesData.TitreAssurSuisse} />
           {pricesData.DescAssurSuiss &&
             pricesData.DescAssurSuiss.map((parap) => {
@@ -58,7 +58,7 @@ export default async function Prices({
                 (child) => child.type === "link"
               );
               return (
-                <p className="text-center md:text-left mb-4 pt-5 pl-10 leading-8 text-lg">
+                <p className="text-justify md:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
                   {parap.children.map((child, index) =>
                     child.type === "text" ? (
                       <React.Fragment key={index}>

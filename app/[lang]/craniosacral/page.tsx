@@ -103,7 +103,7 @@ export default async function Craniosacral({
           }}
         >
           <div
-            className="basis-1/3 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)]"
+            className="lg:basis-1/3 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)]"
             style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}
           >
             <ul className="text-left space-y-3 p-4 z-30">
