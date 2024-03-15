@@ -161,7 +161,7 @@ export default function NavBar({ params }: { params: Locale }) {
           <NavbarItem key={`${link.key}`} className=" md:px-2 lg:px-5">
             <Link
               color={"primary"}
-              className="w-full"
+              className="w-full text-lg"
               href={link.href}
               size="lg"
               underline="hover"
