@@ -142,13 +142,9 @@ export default function NavBar({ params }: { params: Locale }) {
           className="h-full w-10"
           icon={
             isMenuOpen ? (
-              <IconContext.Provider value={{ size: "auto" }}>
-                <RxCross2 />
-              </IconContext.Provider>
+              <RxCross2 className="w-auto h-auto" />
             ) : (
-              <IconContext.Provider value={{ size: "auto" }}>
-                <IoMdMenu />
-              </IconContext.Provider>
+              <IoMdMenu className="w-auto h-auto" />
             )
           }
         />
