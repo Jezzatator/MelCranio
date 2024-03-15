@@ -18,11 +18,11 @@ export default async function Lieux({
   const placeData = data.data[0]?.attributes;
 
   return (
-    <div className="px-5 py-5 lg:px-20 lg:py-20 text-amber-950 mt-10">
+    <div className="md:px-10 md:py-10 lg:px-20 lg:py-20 text-amber-950 mt-10">
       {/* Craniosacral introduction */}
 
-      <div className="flex flex-row m-5 pb-20">
-        <div className="w-full text-left px-5">
+      <div className="flex flex-row lg:m-5 pb-20">
+        <div className="w-full text-left lg:px-5">
           <Suspense
             fallback={
               <>

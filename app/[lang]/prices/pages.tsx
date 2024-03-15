@@ -19,14 +19,14 @@ export default async function Prices({
 
   return (
     <div className="flex flex-col mt-10">
-      <div className="flex flex-col lg:flex-row text-left pb-20 lg:px-20 lg:py-20">
-        <div className="px-5 lg:pr-40 lg:basis-1/2">
+      <div className="flex flex-col lg:flex-row text-justify pb-20 md:px-10 md:py-10 lg:px-20 lg:py-20">
+        <div className="lg:px-5 lg:pr-40 lg:basis-1/2">
           <Suspense fallback={<Skeleton className="h-3 w-3/5 rounded-lg" />}>
             <SectionTitle title={pricesData?.TitreTarifs} />
           </Suspense>
 
           <Suspense fallback={<Skeleton className="h-3 w-3/5 rounded-lg" />}>
-            <p className="text-justify md:text-left mb-4 pt-5 pl-5 lg:pl-10 leading-8 text-lg">
+            <p className="text-justify md:text-left mb-4 pt-5 md:pl-5 lg:pl-10 leading-8 text-lg">
               {pricesData?.DescTarifs}
             </p>
           </Suspense>
@@ -50,7 +50,7 @@ export default async function Prices({
             </ul>
           </Suspense>
         </div>
-        <div className="px-5 lg:pr-40 lg:basis-1/2">
+        <div className="md:px-5 lg:pr-40 lg:basis-1/2">
           <SectionTitle title={pricesData.TitreAssurSuisse} />
           {pricesData.DescAssurSuiss &&
             pricesData.DescAssurSuiss.map((parap) => {

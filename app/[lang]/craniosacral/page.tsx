@@ -22,7 +22,7 @@ export default async function Craniosacral({
   const lacranioData = data.data[0].attributes;
 
   return (
-    <div className=" text-amber-950 pt-20">
+    <div className="text-amber-950 pt-20">
       {/* Craniosacral introduction */}
 
       <div className="flex flex-col lg:flex-row text-left lg:pb-20 md:px-10 md:py-10 lg:px-20 lg:py-20">

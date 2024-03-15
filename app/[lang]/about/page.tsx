@@ -26,8 +26,8 @@ export default async function About({
   return (
     <div className="pt-20">
       {/* <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950 mt-10"></div> */}
-      <div className="text-left flex flex-col lg:flex-row Deuxieme Card Parcourd lg:px-20 py-20">
-        <div className="px-5 lg:basis-2/3">
+      <div className="text-left flex flex-col lg:flex-row Deuxieme Card Parcourd md:px-10 md:py-10 lg:px-20 lg:py-20">
+        <div className="lg:px-5 lg:basis-2/3">
           <SectionTitle title={data.data[0]?.attributes.TitleAbout} />
 
           {data.data[0]?.attributes.Content.map(
