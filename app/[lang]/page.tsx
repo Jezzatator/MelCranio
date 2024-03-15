@@ -23,7 +23,7 @@ export default async function Home({
   console.log("Home locale: " + lang);
   console.log("Home data: " + data);
   return (
-    <section className="px-5 pt-60 lg:px-20 lg:pt-80 text-amber-950 lg:mt-20 pb-10 ">
+    <section className="px-5 pt-40 md:pt-60 lg:px-20 lg:pt-80 text-amber-950 lg:mt-20 pb-10 ">
       <div
         className="flex flew-row mb-80 items-stretch lg:content-around gap-10 h-[360px] md:h-[720px]"
         id="Home"
