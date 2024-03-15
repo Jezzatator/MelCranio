@@ -8,7 +8,10 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Link,
+  Dropdown,
 } from "@nextui-org/react";
+import { IoMdMenu } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 import { Locale } from "@/src/i18nConfig";
 //import Link from "next/link";
 import React, { Suspense, useEffect, useState } from "react";
@@ -133,9 +136,9 @@ export default function NavBar({ params }: { params: Locale }) {
       position="sticky"
     >
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
+          {isMenuOpen ? <RxCross2 /> : <IoMdMenu />}
+        </NavbarMenuToggle>
       </NavbarContent>
 
       <NavbarContent>
@@ -144,17 +147,15 @@ export default function NavBar({ params }: { params: Locale }) {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4 sm:flex-row" justify="end">
         {links.map((link) => (
-          <NavbarItem
-            key={`${link.key}`}
-            className="flex flex-row md:px-2 lg:px-5"
-          >
+          <NavbarItem key={`${link.key}`} className=" md:px-2 lg:px-5">
             <Link
               color={"primary"}
               className="w-full"
               href={link.href}
-              //size="lg"
+              size="lg"
+              underline="hover"
             >
               {link.label}
             </Link>
@@ -173,6 +174,7 @@ export default function NavBar({ params }: { params: Locale }) {
               className="w-full"
               href={link.href}
               size="lg"
+              underline="hover"
             >
               {link.label}
             </Link>
