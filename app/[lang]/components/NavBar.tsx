@@ -21,6 +21,7 @@ import { RequeteStrapi } from "@/src/strapi/Request";
 import { NavBarModel } from "@/src/strapi/NavBarModel";
 import { getData } from "@/src/strapi/FetchData";
 import { Skeleton } from "@nextui-org/react";
+import { IconContext } from "react-icons/lib";
 
 export default function NavBar({ params }: { params: Locale }) {
   const router = useRouter();
@@ -136,9 +137,21 @@ export default function NavBar({ params }: { params: Locale }) {
       position="sticky"
     >
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
-          {isMenuOpen ? <RxCross2 /> : <IoMdMenu />}
-        </NavbarMenuToggle>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="h-full w-10"
+          icon={
+            isMenuOpen ? (
+              <IconContext.Provider value={{ size: "auto" }}>
+                <RxCross2 />
+              </IconContext.Provider>
+            ) : (
+              <IconContext.Provider value={{ size: "auto" }}>
+                <IoMdMenu />
+              </IconContext.Provider>
+            )
+          }
+        />
       </NavbarContent>
 
       <NavbarContent>

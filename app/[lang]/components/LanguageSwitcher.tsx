@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { i18n, Locale } from "@/src/i18nConfig";
+import { Select, SelectItem } from "@nextui-org/react";
 import {
   Navbar,
   NavbarBrand,
@@ -12,7 +13,7 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const LanguageSwitcher = ({
   currentLocale,
@@ -21,37 +22,64 @@ const LanguageSwitcher = ({
   currentLocale: Locale;
   router: any;
 }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   // Accept router prop
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value as Locale;
     router.push(`/${newLocale}`);
   };
 
+  function capitalizeFirstLetter(string: String | Locale) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <>
+      {/* <Dropdown>
+        <Select
+          items={i18n.locales}
+          placeholder={currentLocale}
+          className="max-w-xs"
+          defaultSelectedKeys={currentLocale}
+        >
+          {i18n.locales.map((locale) => (
+            <SelectItem key={locale} value={locale} href={"/" + locale}>
+              {locale}
+            </SelectItem>
+          ))}
+        </Select> */}
+
       <Dropdown>
         <DropdownTrigger>
           <Button
             disableRipple
-            className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-            endContent={<FaChevronDown />}
+            className="p-0 bg-transparent data-[hover=true]:bg-transparen gap-2"
+            //endContent={<FaChevronDown />}
+            onClick={toggleMenu}
             radius="sm"
             variant="light"
           >
-            Lang
+            {capitalizeFirstLetter(currentLocale)}
+            {isMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
           </Button>
         </DropdownTrigger>
 
         <DropdownMenu
           aria-label="Language Switcher"
-          className="w-[340px]"
+          className="flex flex-col backdrop-blur-xl rounded border-2"
+          selectionMode="single"
           itemClasses={{
             base: "gap-4",
           }}
         >
           {i18n.locales.map((locale) => (
             <DropdownItem key={locale} value={locale} href={"/" + locale}>
-              {locale}
+              {capitalizeFirstLetter(locale)}
             </DropdownItem>
           ))}
         </DropdownMenu>
