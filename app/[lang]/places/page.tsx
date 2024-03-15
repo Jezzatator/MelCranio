@@ -74,7 +74,7 @@ export default async function Lieux({
                     </>
                   }
                 >
-                  <h2 className="text-l p-4 text-left font-semibold">
+                  <h2 className="text-xl p-4 text-left font-semibold font-alegreya italic">
                     {placeData.TitreLieu1}
                     {/* PhysioBalance - Thalwil */}
                   </h2>
@@ -129,7 +129,7 @@ export default async function Lieux({
                     </>
                   }
                 >
-                  <h2 className="text-l p-4 text-left font-semibold">
+                  <h2 className="text-xl p-4 text-left font-semibold font-alegreya italic">
                     {placeData.TitreLieu2}
                     {/* Can de la Flor - Ibiza */}
                   </h2>
@@ -180,7 +180,7 @@ export default async function Lieux({
                     </>
                   }
                 >
-                  <h2 className="text-l p-4 text-left font-semibold">
+                  <h2 className="text-xl p-4 text-left font-semibold font-alegreya italic">
                     {placeData.TitreLieu3}
                     {/* Praxisgemeinschaft am Schaffhauserplatz - Zurich */}
                   </h2>

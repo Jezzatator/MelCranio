@@ -25,7 +25,7 @@ export default async function Home({
   return (
     <section className="px-5 pt-40 md:pt-60 lg:px-20 lg:pt-80 text-amber-950 lg:mt-20 pb-10 ">
       <div
-        className="flex flew-row mb-80 items-stretch lg:content-around gap-10 h-[360px] md:h-[720px]"
+        className="flex flew-row sm:mb-48 mb:mb-54 lg:mb-80 items-stretch lg:content-around gap-10 h-[360px] md:h-[720px]"
         id="Home"
       >
         <div className="lg:basis-2/3">
