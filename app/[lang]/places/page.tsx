@@ -87,13 +87,12 @@ export default async function Lieux({
                   de la gare. Vous trouverez ici un environnement paisible qui
                   favorise la détente et le bien-être. */}
                   </p>
-                  <p className="text-center md:text-left mb-4 leading-8">
-                    {" "}
+                  <p className="text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
                     <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                   </p>
-                  <p className="text-center md:text-left mb-4 leading-8">
+                  <p className="text-left mb-4 leading-8">
                     <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
                       {placeData.PourPrendreRdz}
                     </a>
@@ -130,11 +129,11 @@ export default async function Lieux({
                     </>
                   }
                 >
-                  <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                  <h2 className="text-l p-4 text-left font-semibold">
                     {placeData.TitreLieu2}
                     {/* Can de la Flor - Ibiza */}
                   </h2>
-                  <p className="text-center md:text-left mb-4 leading-8">
+                  <p className="text-justify md:text-left mb-4 leading-8">
                     {placeData.DescriptionLieu2}
                     {/* Chez Lia, dans la salle dédiée au bien-être à San Carlo,
                   Ibiza, vous découvrirez un espace de guérison unique. La salle
@@ -144,7 +143,7 @@ export default async function Lieux({
                   offrant une expérience enveloppée de tranquillité au sein de
                   la nature paisible de l&apos;île. */}
                   </p>
-                  <p className="text-justify md:text-left mb-4 leading-8">
+                  <p className="text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
                     <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
@@ -181,14 +180,14 @@ export default async function Lieux({
                     </>
                   }
                 >
-                  <h2 className="text-l p-4 text-center md:text-left font-semibold">
+                  <h2 className="text-l p-4 text-left font-semibold">
                     {placeData.TitreLieu3}
                     {/* Praxisgemeinschaft am Schaffhauserplatz - Zurich */}
                   </h2>
                   <p className="text-justify md:text-left mb-4 leading-8">
                     {placeData.DescriptionLieu3}
                   </p>
-                  <p className="text-justify md:text-left mb-4 leading-8">
+                  <p className="text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "}
                   + Lien pour prendre RDV  lien sur iMessage 
