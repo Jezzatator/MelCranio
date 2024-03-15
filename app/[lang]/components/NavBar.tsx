@@ -1,6 +1,16 @@
 "use client";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+} from "@nextui-org/react";
 import { Locale } from "@/src/i18nConfig";
-import Link from "next/link";
+//import Link from "next/link";
 import React, { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter from next/router
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -11,6 +21,8 @@ import { Skeleton } from "@nextui-org/react";
 
 export default function NavBar({ params }: { params: Locale }) {
   const router = useRouter();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
     {
@@ -112,67 +124,90 @@ export default function NavBar({ params }: { params: Locale }) {
   ];
 
   return (
-    <nav className="nav px-5 pt-5 fixed top-0 w-screen bg-[var(--background)] border-b border-amber-950 z-40 font-alegreyaSans">
-      <div className="flex flex-row justify-between items-center lg:h-20">
-        {/* Logo */}
-        <Link className="" href="/">
-          Logo
-        </Link>
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      isBordered
+      shouldHideOnScroll
+      className="backdrop-blur-xl md:h-12 lg:h-16"
+      position="sticky"
+    >
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+      </NavbarContent>
 
-        {/* Nav links */}
-        <ul className="flex flex-wrap justify-around lg:flex-row items-center space-x-20 text-rights lg:px-10">
-          <div className="hidden lg:block">
-            <Suspense
-              fallback={
-                <Link
-                  className="text-amber-950 hover:text-cyan-950 transition-colors p-1"
-                  href="/"
-                  key="0"
-                >
-                  Logo
-                </Link>
-              }
-            >
-              <Link
-                className="text-amber-950 hover:text-cyan-950 transition-colors p-1"
-                href={links[0].href}
-                key={links[0].key}
-              >
-                {links[0].label}
-              </Link>
-            </Suspense>
-          </div>
-          <Suspense
-            fallback={
-              <div>
-                {[...Array(5)].map((_, i) => (
-                  <Link
-                    className="text-amber-950 hover:text-cyan-950 transition-colors p-1"
-                    href=""
-                    key={i}
-                  >
-                    <Skeleton className="w-2/5 rounded-lg">
-                      <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
-                    </Skeleton>
-                  </Link>
-                ))}
-              </div>
-            }
+      <NavbarContent>
+        <NavbarBrand>
+          <p className="font-bold text-inherit">LOGO</p>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        {links.map((link) => (
+          <NavbarItem
+            key={`${link.key}`}
+            className="flex flex-row md:px-2 lg:px-5"
           >
-            {links.slice(1).map((link) => (
-              <Link
-                key={link.key}
-                className="text-amber-950 hover:text-cyan-950 transition-colors p-1"
-                href={link.href}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </Suspense>
-          <LanguageSwitcher currentLocale={params} router={router} />{" "}
-          {/* Pass router prop */}
-        </ul>
-      </div>
-    </nav>
+            <Link
+              color={"primary"}
+              className="w-full"
+              href={link.href}
+              //size="lg"
+            >
+              {link.label}
+            </Link>
+          </NavbarItem>
+        ))}
+        <NavbarItem>
+          <LanguageSwitcher currentLocale={params} router={router} />
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarMenu>
+        {links.map((link, index) => (
+          <NavbarMenuItem key={`${link.label}-${index}`}>
+            <Link
+              color={"foreground"}
+              className="w-full"
+              href={link.href}
+              size="lg"
+            >
+              {link.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+        <NavbarMenuItem key={66}>
+          <LanguageSwitcher currentLocale={params} router={router} />
+        </NavbarMenuItem>
+      </NavbarMenu>
+    </Navbar>
   );
 }
+// return (
+//   <Navbar
+//     isBordered
+//     isMenuOpen={isMenuOpen}
+//     onMenuOpenChange={setIsMenuOpen}
+//     shouldHideOnScroll
+//     className="sm:hidden backdrop-blur-xl"
+//     position="sticky"
+//   >
+//     <NavbarContent>
+//       <NavbarBrand>Logo</NavbarBrand>
+//       <NavbarMenuToggle
+//         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+//       />
+//     </NavbarContent>
+
+//     <NavbarMenu>
+//       {links.map((link) => (
+//         <NavbarMenuItem key={link.key}>
+//           <Link href={link.href}>{link.label}</Link>
+//         </NavbarMenuItem>
+//       ))}
+//     </NavbarMenu>
+//   </Navbar>
+// );
+// }
