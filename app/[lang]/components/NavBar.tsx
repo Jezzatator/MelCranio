@@ -142,9 +142,9 @@ export default function NavBar({ params }: { params: Locale }) {
           className="h-full w-10"
           icon={
             isMenuOpen ? (
-              <RxCross2 className="w-auto h-auto" />
+              <RxCross2 className="w-auto h-10" />
             ) : (
-              <IoMdMenu className="w-auto h-auto" />
+              <IoMdMenu className="w-auto h-10" />
             )
           }
         />
