@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import React, { useState } from "react";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { i18n, type Locale } from "../../src/i18nConfig";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,6 +33,7 @@ export default function LocaleLayout({
         <main className="font-robotoFlex">{children}</main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
