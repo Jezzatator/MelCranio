@@ -133,7 +133,7 @@ export default function NavBar({ params }: { params: Locale }) {
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="backdrop-blur-xl md:h-12 lg:h-16"
+      className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex"
       position="sticky"
     >
       <NavbarContent className="sm:hidden" justify="start">
