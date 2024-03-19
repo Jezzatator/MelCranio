@@ -4,16 +4,16 @@ const Contact = () => {
   const rawHTML = `
 
   
+  
   <iframe
   id="JotFormIFrame-240363435011342"
   title="Contact"
   onload="window.parent.scrollTo(0,0)"
   allowtransparency="true"
-  allowfullscreen="true"
-  allow="geolocation; microphone; camera"
+  allow="geolocation; microphone; camera; fullscreen"
   src="https://form.jotform.com/240363435011342"
   frameborder="0"
-  style="min-width:100%;max-width:100%;height:57rem;border:none;"
+  style="min-width:100%;max-width:100%;height:539px;border:none;"
   scrolling="no"
 >
 </iframe>
