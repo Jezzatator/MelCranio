@@ -15,7 +15,8 @@
   --bi-blue: #C0D6D8FF; 
 
   --craton-gey: #746164FF;
-  --stone-blue: #083344;
+  --foreground: #083344;
+  --foreground-highlight: #C0D6D8FF;
 }
 
 @layer base {
@@ -26,14 +27,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #2A3128; /* Couleur de fond */
+    --foreground: #F9F0EEFF; /* Couleur du texte */
+    --foreground-highlight: #D67D3EFF; /* Exemple de couleur */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--stone-blue);
+  background: var(--background); 
+  color: var(--foreground);
   font-family: 'Roboto Flex', sans-serif;
+}
+
+.foreground-highlight {
+  color: var(--foreground-highlight);
 }
