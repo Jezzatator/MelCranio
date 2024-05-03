@@ -13,7 +13,6 @@ import {
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Locale } from "@/src/i18nConfig";
-//import Link from "next/link";
 import React, { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter from next/router
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -22,6 +21,8 @@ import { NavBarModel } from "@/src/strapi/NavBarModel";
 import { getData } from "@/src/strapi/FetchData";
 import { Skeleton } from "@nextui-org/react";
 import { IconContext } from "react-icons/lib";
+import Icon from "@/app/MelissaCranioLogo";
+import MelissaCranioLogo from "@/app/MelissaCranioLogo";
 
 export default function NavBar({ params }: { params: Locale }) {
   const router = useRouter();
@@ -29,22 +30,22 @@ export default function NavBar({ params }: { params: Locale }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    {
-      label:
-        params === "fr"
-          ? "Accueil"
-          : params === "de"
-          ? "Startseite"
-          : params === "en"
-          ? "Home"
-          : params === "es"
-          ? "Inicio"
-          : params === "ca"
-          ? "Inici"
-          : "Home",
-      href: `/${params ? params : ""}`,
-      key: 0,
-    },
+    // {
+    //   label:
+    //     params === "fr"
+    //       ? "Accueil"
+    //       : params === "de"
+    //       ? "Startseite"
+    //       : params === "en"
+    //       ? "Home"
+    //       : params === "es"
+    //       ? "Inicio"
+    //       : params === "ca"
+    //       ? "Inici"
+    //       : "Home",
+    //   href: `/${params ? params : ""}`,
+    //   key: 0,
+    // },
     {
       label:
         params === "fr"
@@ -133,10 +134,10 @@ export default function NavBar({ params }: { params: Locale }) {
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex"
+      className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex flex-grow"
       position="sticky"
     >
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="sm:hidden justify-start" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="h-full w-10"
@@ -150,13 +151,16 @@ export default function NavBar({ params }: { params: Locale }) {
         />
       </NavbarContent>
 
-      <NavbarContent>
+      <NavbarContent className="justify-between">
         <NavbarBrand>
-          <p className="font-bold text-inherit">LOGO</p>
+          <MelissaCranioLogo />
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4 sm:flex-row" justify="end">
+      <NavbarContent
+        className="hidden sm:flex gap-4 sm:flex-row justify-end"
+        justify="end"
+      >
         {links.map((link) => (
           <NavbarItem key={`${link.key}`} className=" md:px-2 lg:px-5">
             <Link
