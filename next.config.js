@@ -20,10 +20,10 @@
 module.exports = {
   async rewrites() {
     return [
-      // Redirige vers /fr par défaut
+      // Redirige vers /en par défaut
       {
         source: "/",
-        destination: "/fr",
+        destination: "/en",
       },
       // Redirige vers les routes i18n
       {

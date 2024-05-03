@@ -137,7 +137,7 @@ export default function NavBar({ params }: { params: Locale }) {
       className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex flex-grow"
       position="sticky"
     >
-      <NavbarContent className="sm:hidden justify-start" justify="start">
+      <NavbarContent className="sm:hidden justify-start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="h-full w-10"
@@ -151,16 +151,13 @@ export default function NavBar({ params }: { params: Locale }) {
         />
       </NavbarContent>
 
-      <NavbarContent className="justify-between sm:justify-end">
-        <NavbarBrand>
+      <NavbarContent className="justify-between sm:flex sm:justify-end">
+        <NavbarBrand className="sm:justify-end">
           <MelissaCranioLogo />
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex gap-4 sm:flex-row justify-end"
-        justify="end"
-      >
+      <NavbarContent className="hidden sm:flex gap-4 sm:flex-row justify-end">
         {links.map((link) => (
           <NavbarItem key={`${link.key}`} className=" md:px-2 lg:px-5">
             <Link
