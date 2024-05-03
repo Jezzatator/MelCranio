@@ -13,7 +13,7 @@ export default function Timeline() {
     <VerticalTimeline layout="1-column-left" className="text-amber-950">
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        // contentStyle={{ background: "rgb(33, 150, 243, 0)", color: "#153142" }}
+        contentStyle={{ background: "var(--timeline-background)" }}
         // contentArrowStyle={{ borderRight: "7px solid  rgb(217, 119, 5)" }}
         date="2023"
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
@@ -29,6 +29,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         date="2020"
+        contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
         icon={""}
         visible={true}
@@ -39,6 +40,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         date="2019"
+        contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
         icon={""}
         visible={true}
@@ -51,6 +53,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         date="2018"
+        contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
         icon={""}
         visible={true}
@@ -63,6 +66,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
         date="2016"
+        contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
         icon={""}
         visible={true}
@@ -75,6 +79,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
         date="2015"
+        contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
         icon={""}
         visible={true}
@@ -87,6 +92,7 @@ export default function Timeline() {
       <VerticalTimelineElement
         className="vertical-timeline-element--education"
         date="2015"
+        contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
         icon={""}
         visible={true}

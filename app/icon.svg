@@ -1,34 +1,12 @@
-"use client";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="943.000000pt" height="751.000000pt" viewBox="0 0 943.000000 751.000000"
+ preserveAspectRatio="xMidYMid meet" fill="var(--icon)" stroke="var(--icon)">
 
-export default function MelissaCranioLogo() {
-  const logoStyle = {
-    fill: "var(--icon)",
-  };
-  return (
-    <div>
-      <Head>
-        <link rel="icon" href="/icon.ico" />
-        <link rel="apple-touch-icon" href="/icon.ico" />
-      </Head>
-
-      <Link href="/[lang]" as="/en" className="flex">
-        <svg
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="943.000000pt"
-          height="751.000000pt"
-          viewBox="0 0 943.000000 751.000000"
-          preserveAspectRatio="xMidYMid meet"
-          fill="var(--icon)"
-          className="h-8 md:h-10 lg:h-12 xl:h-14 w-auto"
-        >
-          <g transform="translate(0.000000,751.000000) scale(0.100000,-0.100000)">
-            <path
-              fill="var(--icon)"
-              d="M3010 7393 c-1206 -416 -1826 -636 -1915 -681 -27 -13 -81 -45 -120
+<g transform="translate(0.000000,751.000000) scale(0.100000,-0.100000)">
+<path fill="var(--icon)" d="M3010 7393 c-1206 -416 -1826 -636 -1915 -681 -27 -13 -81 -45 -120
 -70 -38 -25 -142 -89 -230 -142 -569 -345 -710 -437 -729 -475 -16 -32 -17
 -43 -7 -76 15 -50 44 -69 105 -69 40 0 111 25 375 131 179 72 364 149 411 170
 50 22 117 43 160 50 84 13 311 6 372 -11 51 -15 107 -61 310 -258 212 -206
@@ -45,11 +23,8 @@ export default function MelissaCranioLogo() {
 -887 2466 l-888 2453 -57 29 -57 29 -523 -1 -523 0 -305 -106z m379 -303 c21
 -11 118 -153 154 -225 32 -66 47 -138 47 -234 0 -166 -29 -239 -140 -347 -248
 -242 -521 -340 -872 -313 -170 12 -251 31 -328 77 -83 49 -142 108 -282 284
--122 151 -135 179 -100 211 25 22 1232 505 1347 538 67 20 147 24 174 9z"
-            />
-            <path
-              fill="var(--icon)"
-              d="M8280 3744 c-14 -2 -59 -9 -100 -15 -195 -28 -510 -114 -657 -180
+-122 151 -135 179 -100 211 25 22 1232 505 1347 538 67 20 147 24 174 9z"/>
+<path fill="var(--icon)" d="M8280 3744 c-14 -2 -59 -9 -100 -15 -195 -28 -510 -114 -657 -180
 -139 -62 -326 -207 -392 -303 -74 -107 -211 -355 -268 -485 -76 -172 -109
 -277 -162 -508 -58 -251 -70 -319 -86 -505 -35 -401 -32 -482 31 -813 59 -306
 121 -459 281 -686 96 -138 154 -192 224 -213 99 -30 159 -14 208 55 44 60 52
@@ -63,25 +38,6 @@ export default function MelissaCranioLogo() {
 19z m155 -353 c71 -33 81 -52 145 -277 89 -320 133 -491 210 -833 66 -291 71
 -318 60 -360 -26 -102 -57 -133 -147 -145 -64 -9 -469 32 -507 51 -108 55
 -155 111 -251 301 -60 118 -68 142 -114 342 -72 315 -81 365 -83 475 -3 91 0
-105 24 158 72 154 177 222 438 283 118 28 173 29 225 5z"
-            />
-          </g>
-        </svg>
-
-        {/* <svg className="h-8 md:h-10 lg:h-14 xl:h-16 icon">
-          <use href="/icon.svg"></use>
-        </svg> */}
-        {/* <img
-          src="/icon.svg"
-          alt="Logo"
-          className="h-4 md:h-4 lg:h-8 xl:h-10 icon"
-        /> */}
-        {/* <img
-          src="/icon.ico"
-          alt="Logo"
-          className="h-4 md:h-4 lg:h-8 xl:h-10 hidden dark:block"
-        /> */}
-      </Link>
-    </div>
-  );
-}
+105 24 158 72 154 177 222 438 283 118 28 173 29 225 5z"/>
+</g>
+</svg>

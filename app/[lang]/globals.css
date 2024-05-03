@@ -13,10 +13,14 @@
   --calm-gren: #B8C5BDFF;
   --pi-pink: #D9BCD1FF;
   --bi-blue: #C0D6D8FF; 
+  --timeline-background: #D9BCD1FF;
+
 
   --craton-gey: #746164FF;
   --foreground: #083344;
   --foreground-highlight: #C0D6D8FF;
+  --icon: #444F40FF;
+
 }
 
 @layer base {
@@ -28,8 +32,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #2A3128; /* Couleur de fond */
+    --timeline-background: #444F40FF;
     --foreground: #F9F0EEFF; /* Couleur du texte */
     --foreground-highlight: #D67D3EFF; /* Exemple de couleur */
+    --icon: #D67D3EFF;
   }
 }
 
@@ -41,4 +47,18 @@ body {
 
 .foreground-highlight {
   color: var(--foreground-highlight);
+}
+
+.VerticalTimelineElement-custom {
+  background: var(--background);
+}
+
+.icon path {
+  fill: var(--icon);
+  stroke: var(--icon);
+}
+
+.icon {
+  fill: var(--icon);
+  stroke: var(--icon);
 }

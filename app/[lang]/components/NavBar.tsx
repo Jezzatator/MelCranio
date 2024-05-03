@@ -151,7 +151,7 @@ export default function NavBar({ params }: { params: Locale }) {
         />
       </NavbarContent>
 
-      <NavbarContent className="justify-between">
+      <NavbarContent className="justify-between sm:justify-end">
         <NavbarBrand>
           <MelissaCranioLogo />
         </NavbarBrand>
