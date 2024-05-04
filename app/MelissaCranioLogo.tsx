@@ -23,7 +23,7 @@ export default function MelissaCranioLogo() {
           viewBox="0 0 943.000000 751.000000"
           preserveAspectRatio="xMidYMid meet"
           fill="var(--icon)"
-          className="h-8 md:h-10 lg:h-12 xl:h-14 w-auto"
+          className="h-10 md:h-12 lg:h-12 xl:h-14 w-auto"
         >
           <g transform="translate(0.000000,751.000000) scale(0.100000,-0.100000)">
             <path

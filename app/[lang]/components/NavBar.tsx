@@ -134,7 +134,7 @@ export default function NavBar({ params }: { params: Locale }) {
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex flex-grow"
+      className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex flex-grow justify-around"
       position="sticky"
     >
       <NavbarContent className="sm:hidden justify-start">
@@ -152,7 +152,7 @@ export default function NavBar({ params }: { params: Locale }) {
       </NavbarContent>
 
       <NavbarContent className="justify-between sm:flex sm:justify-end">
-        <NavbarBrand className="sm:justify-end">
+        <NavbarBrand>
           <MelissaCranioLogo />
         </NavbarBrand>
       </NavbarContent>
