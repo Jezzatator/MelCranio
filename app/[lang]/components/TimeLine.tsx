@@ -17,7 +17,6 @@ export default function Timeline() {
         // contentArrowStyle={{ borderRight: "7px solid  rgb(217, 119, 5)" }}
         date="2023"
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
-        icon={""}
         visible={true}
       >
         <h3 className="vertical-timeline-element-title">
@@ -81,7 +80,7 @@ export default function Timeline() {
         date="2015"
         contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
-        icon={""}
+        // icon={""}
         visible={true}
       >
         <h3 className="vertical-timeline-element-title">
@@ -94,7 +93,7 @@ export default function Timeline() {
         date="2015"
         contentStyle={{ background: "var(--timeline-background)" }}
         iconStyle={{ background: "rgb(217, 119, 5)", color: "#153142" }}
-        icon={""}
+        // icon={""}
         visible={true}
       >
         <h3 className="vertical-timeline-element-title">
