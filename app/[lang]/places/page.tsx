@@ -93,7 +93,7 @@ export default async function Lieux({
                     <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                   </p>
                   <p className="text-left mb-4 leading-8">
-                    <h2 className="text-l font-bold font-alegreya">
+                    <h2 className="text-xl font-bold">
                       <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
                         {placeData.PourPrendreRdz}
                       </a>
