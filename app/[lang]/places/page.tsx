@@ -87,16 +87,16 @@ export default async function Lieux({
                   de la gare. Vous trouverez ici un environnement paisible qui
                   favorise la détente et le bien-être. */}
                   </p>
-                  {/* <p className="text-left mb-4 leading-8">
+                  <p className="text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                  {/* <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
+                    <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                   </p>
                   <p className="text-left mb-4 leading-8">
                     <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
                       {placeData.PourPrendreRdz}
                     </a>
-                  </p> */}
+                  </p>
                 </Suspense>
               </div>
             </div>
@@ -143,11 +143,11 @@ export default async function Lieux({
                   offrant une expérience enveloppée de tranquillité au sein de
                   la nature paisible de l&apos;île. */}
                   </p>
-                  <p className="text-left mb-4 leading-8">
-                    {placeData.PourPlusDInformations}
-                    {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                    <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
-                  </p>
+                  {/* <p className="text-left mb-4 leading-8">
+                    {placeData.PourPlusDInformations} */}
+                  {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
+                  {/* <a href={placeData.LienLieu2}>physiobalance-thalwil.ch</a>
+                  </p> */}
                 </Suspense>
               </div>
             </div>
