@@ -87,16 +87,16 @@ export default async function Lieux({
                   de la gare. Vous trouverez ici un environnement paisible qui
                   favorise la détente et le bien-être. */}
                   </p>
-                  <p className="text-left mb-4 leading-8">
+                  {/* <p className="text-left mb-4 leading-8">
                     {placeData.PourPlusDInformations}
                     {/* Pour plus d&apos;information rendez-vous sur :{" "} */}
-                    <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
+                  {/* <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                   </p>
                   <p className="text-left mb-4 leading-8">
                     <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
                       {placeData.PourPrendreRdz}
                     </a>
-                  </p>
+                  </p> */}
                 </Suspense>
               </div>
             </div>
@@ -106,7 +106,7 @@ export default async function Lieux({
             <div
               className="bg-cover bg-center flex z-0 md:container"
               style={{
-                backgroundImage: "url('/static/physiobalance-icone.webp')",
+                backgroundImage: "url('/static/perpignan.webp')",
               }}
             >
               <div
@@ -124,7 +124,7 @@ export default async function Lieux({
                       </p>
                       <p className="text-center md:text-left mb-4 leading-8">
                         Loading...
-                        <a href="">physiobalance-thalwil.ch</a>
+                        <a href=""></a>
                       </p>
                     </>
                   }
