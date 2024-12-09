@@ -195,7 +195,7 @@ export default async function Lieux({
                   + Lien pour prendre RDV  lien sur iMessage 
                   Lieu 3 en premier 
                   */}
-                    <a href={placeData.LienLieu3}>Can de la Flor</a>
+                    <a href={placeData.LienLieu3}>KSC Wiedikon</a>
                   </p>
                 </Suspense>
               </div>
