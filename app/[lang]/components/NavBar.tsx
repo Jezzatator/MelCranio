@@ -65,15 +65,15 @@ export default function NavBar({ params }: { params: Locale }) {
     {
       label:
         params === "fr"
-          ? "A Propos"
+          ? "À Propos"
           : params === "de"
-          ? "Über uns"
+          ? "Über"
           : params === "en"
-          ? "About Us"
+          ? "About"
           : params === "es"
-          ? "Sobre Nosotros"
+          ? "Sobre"
           : params === "ca"
-          ? "Sobre Nosaltres"
+          ? "Sobre"
           : "A Propos",
       href: "#About",
       key: 2,
