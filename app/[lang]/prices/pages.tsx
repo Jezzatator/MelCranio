@@ -51,7 +51,7 @@ export default async function Prices({
           </Suspense>
         </div>
         <div className="md:px-5 lg:pr-40 lg:basis-1/2">
-          <SectionTitle title={pricesData.TitreAssurSuisse} />
+          <SectionTitle title={pricesData?.TitreAssurSuisse} />
           {pricesData.DescAssurSuiss &&
             pricesData.DescAssurSuiss.map((parap) => {
               const linkObject = parap.children.find(
