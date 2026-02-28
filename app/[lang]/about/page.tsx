@@ -8,10 +8,11 @@ import { RequeteStrapi } from "@/src/strapi/Request";
 import { getData } from "@/src/strapi/FetchData";
 
 export default async function About({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const request: RequeteStrapi<AboutModel> = {
     endpoint: "abouts",
   };
@@ -30,35 +31,13 @@ export default async function About({
         <div className="lg:px-5 lg:basis-2/3">
           <SectionTitle title={data.data[0]?.attributes.TitleAbout} />
 
-          {data.data[0]?.attributes.Content.map(
-            (
-              paragraph: {
-                children: {
-                  text:
-                    | string
-                    | number
-                    | boolean
-                    | React.ReactElement<
-                        any,
-                        string | React.JSXElementConstructor<any>
-                      >
-                    | Iterable<React.ReactNode>
-                    | React.ReactPortal
-                    | React.PromiseLikeOfReactNode
-                    | null
-                    | undefined;
-                }[];
-              },
-              index: React.Key | null | undefined
-            ) => (
-              <p
-                key={index}
-                className="text-justify md:text-left mb-5 pt-5 lg:pl-10 leading-loose text-lg"
-              >
-                {paragraph.children[0].text}
-              </p>
-            )
-          )}
+            {
+              data.data[0]?.attributes.Content.map(
+              (paragraph: { children: { text: React.ReactNode }[] }, index: React.Key) => (
+              <p key={index} className="...">{paragraph.children[0].text}</p>
+              )
+              )
+            }
 
           {/* <p className="text-center md:text-left mb-5 pt-5 pl-10 leading-loose text-lg">
             Après avoir terminé mes études de physiothérapie à Gérone (Espagne),

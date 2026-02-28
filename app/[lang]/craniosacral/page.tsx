@@ -5,13 +5,14 @@ import H3Title from "../components/H3Title";
 import { CranioModel } from "@/src/strapi/Cranio";
 import { RequeteStrapi } from "@/src/strapi/Request";
 import { getData } from "@/src/strapi/FetchData";
-import { Skeleton } from "@nextui-org/react";
+import { Skeleton } from "@heroui/react";
 
 export default async function Craniosacral({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   console.log("LOCALE cranio: " + lang);
 
   const request: RequeteStrapi<CranioModel> = {

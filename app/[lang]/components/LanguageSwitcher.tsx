@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { i18n, Locale } from "@/src/i18nConfig";
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem } from "@heroui/react";
 import {
   Navbar,
   NavbarBrand,
@@ -12,7 +12,7 @@ import {
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const LanguageSwitcher = ({

@@ -9,7 +9,7 @@ import {
   NavbarMenuItem,
   Link,
   Dropdown,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Locale } from "@/src/i18nConfig";
@@ -19,7 +19,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { RequeteStrapi } from "@/src/strapi/Request";
 import { NavBarModel } from "@/src/strapi/NavBarModel";
 import { getData } from "@/src/strapi/FetchData";
-import { Skeleton } from "@nextui-org/react";
+import { Skeleton } from "@heroui/react";
 import { IconContext } from "react-icons/lib";
 import Icon from "@/app/MelissaCranioLogo";
 import MelissaCranioLogo from "@/app/MelissaCranioLogo";
@@ -161,7 +161,7 @@ export default function NavBar({ params }: { params: Locale }) {
         {links.map((link) => (
           <NavbarItem key={`${link.key}`} className=" md:px-2 lg:px-5">
             <Link
-              color={"primary"}
+              color={"foreground"}
               className="w-full text-lg hover:text-foreground-highlight"
               href={link.href}
               size="lg"

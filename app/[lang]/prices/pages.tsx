@@ -4,13 +4,14 @@ import { Price, Attributes } from "../../../src/strapi/Price";
 import SectionTitle from "../components/SectionTitle";
 import { getData } from "@/src/strapi/FetchData";
 import { RequeteStrapi } from "@/src/strapi/Request";
-import { Skeleton } from "@nextui-org/react";
+import { Skeleton } from "@heroui/react";
 
 export default async function Prices({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const request: RequeteStrapi<Price> = {
     endpoint: "tarifs",
   };
@@ -40,8 +41,8 @@ export default async function Prices({
             }
           >
             <ul className="text-justify md:text-left mb-4 pl-10 lg:pl-20 leading-8 text-lg">
-              {pricesData?.PrixTarifs.map((parap) => (
-                <li className="pt-2" key={parap.children[0].text}>
+              {pricesData?.PrixTarifs.map((parap, index) => (
+                <li className="pt-2" key={index}>
                   {parap.children[0].text}
                 </li>
               ))}
@@ -53,12 +54,12 @@ export default async function Prices({
         <div className="md:px-5 lg:pr-40 lg:basis-1/2">
           <SectionTitle title={pricesData?.TitreAssurSuisse} />
           {pricesData.DescAssurSuiss &&
-            pricesData.DescAssurSuiss.map((parap) => {
+            pricesData.DescAssurSuiss.map((parap, index) => {
               const linkObject = parap.children.find(
                 (child) => child.type === "link"
               );
               return (
-                <p className="text-justify md:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
+                <p key={index} className="text-justify md:text-left mb-4 pt-5 lg:pl-10 leading-8 text-lg">
                   {parap.children.map((child, index) =>
                     child.type === "text" ? (
                       <React.Fragment key={index}>

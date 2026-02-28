@@ -5,17 +5,14 @@ import { Place } from "../../../src/strapi/Place";
 import SectionTitle from "../components/SectionTitle";
 import { RequeteStrapi } from "@/src/strapi/Request";
 import { getData } from "@/src/strapi/FetchData";
-
-const MapComponent = dynamic(() => import('../components/MapComponent'), {
-  ssr: false,
-  loading: () => <div className="w-full h-[300px] bg-gray-200 animate-pulse rounded-lg"></div>
-});
+import MapWrapper from '../components/MapWrapper';
 
 export default async function Lieux({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const request: RequeteStrapi<Place> = {
     endpoint: "lieuxes",
   };
@@ -69,16 +66,17 @@ export default async function Lieux({
                     {placeData.PourPlusDInformations}
                     <a href={placeData.LienLieu1}>Praxisgemeinschaft </a>
                   </p>
-                  <p className="text-left mb-4 leading-8">
+                  <div className="text-left mb-4 leading-8">
                     <h2 className="text-xl font-bold underline">
                       <a href="https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr">
                         {placeData.PourPrendreRdz}
                       </a>
                     </h2>
-                  </p>
+                  </div>
                   
                   {/* Carte pour le lieu 1 */}
-                  <MapComponent
+                  <MapWrapper
+                    key="map-lieu1"
                     latitude={lieu1Coords.lat}
                     longitude={lieu1Coords.lng}
                     title="Praxisgemeinschaft am Schaffhauserplatz"
@@ -111,7 +109,8 @@ export default async function Lieux({
                   </p>
                   
                   {/* Carte pour le lieu 2 */}
-                  <MapComponent
+                  <MapWrapper
+                    key="map-lieu2"
                     latitude={lieu2Coords.lat}
                     longitude={lieu2Coords.lng}
                     title="Colorado Cranial Institute, Future Health GmbH"

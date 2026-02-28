@@ -18,6 +18,7 @@
 // next.config.js
 
 module.exports = {
+  reactStrictMode: false,
   async rewrites() {
     return [
       // Redirige vers /en par défaut

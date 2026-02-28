@@ -9,13 +9,14 @@ import { HomeModel } from "@/src/strapi/Home";
 import { RequeteStrapi } from "@/src/strapi/Request";
 import { getData } from "@/src/strapi/FetchData";
 import { Suspense } from "react";
-import { Skeleton } from "@nextui-org/skeleton";
+import { Skeleton } from "@heroui/react"; 
 
 export default async function Home({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const request: RequeteStrapi<HomeModel> = {
     endpoint: "homes",
   };
@@ -67,32 +68,16 @@ export default async function Home({
         </Suspense>
       </div>
       <div id="Craniosacral">
-        <Craniosacral
-          params={{
-            lang: lang,
-          }}
-        />
+        <Craniosacral params={Promise.resolve({ lang })} />
       </div>
       <div id="About">
-        <About
-          params={{
-            lang: lang,
-          }}
-        />
+        <About params={Promise.resolve({ lang })} />
       </div>
       <div id="Lieux">
-        <Lieux
-          params={{
-            lang: lang,
-          }}
-        />
+        <Lieux params={Promise.resolve({ lang })} />
       </div>
       <div id="Tarifs">
-        <Prices
-          params={{
-            lang: lang,
-          }}
-        />
+        <Prices params={Promise.resolve({ lang })} />
       </div>
       <div id="Contact">
         <Contact />
