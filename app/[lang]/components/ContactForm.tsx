@@ -2,10 +2,8 @@
 import React, { useState } from "react";
 import { type SiteContent } from "@/src/content";
 
-// Le formulaire envoie directement au formulaire Jotform existant :
-// les messages arrivent toujours dans le même compte Jotform.
-const JOTFORM_ID = "240363435011342";
-const JOTFORM_URL = `https://eu-submit.jotform.com/submit/${JOTFORM_ID}`;
+// Le formulaire passe par /api/contact, qui relaie au formulaire Jotform existant
+// (les messages arrivent toujours dans le même compte Jotform) et journalise l'envoi.
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -14,8 +12,10 @@ const inputClass =
 
 export default function ContactForm({
   labels,
+  locale,
 }: {
   labels: SiteContent["contact"]["form"];
+  locale: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
 
@@ -23,19 +23,17 @@ export default function ContactForm({
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    data.set("formID", JOTFORM_ID);
-    data.set("simple_spc", `${JOTFORM_ID}-${JOTFORM_ID}`);
-    data.set("submitSource", "form");
-    data.set("submitDate", String(Date.now()));
+    data.set("locale", locale);
 
     setStatus("sending");
     try {
-      // Jotform n'autorise pas la lecture de la réponse (CORS) : une requête
-      // qui aboutit sans erreur réseau est considérée comme envoyée.
-      await fetch(JOTFORM_URL, { method: "POST", body: data, mode: "no-cors" });
+      const res = await fetch("/api/contact", { method: "POST", body: data });
+      const result = await res.json().catch(() => ({ ok: false, error: `http_${res.status}` }));
+      if (!result.ok) throw new Error(result.error ?? `http_${res.status}`);
       form.reset();
       setStatus("success");
-    } catch {
+    } catch (error) {
+      console.error("[contact] envoi échoué :", error);
       setStatus("error");
     }
   }

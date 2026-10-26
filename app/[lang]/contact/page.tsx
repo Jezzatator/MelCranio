@@ -30,7 +30,7 @@ export default async function Contact({
         </p>
 
         <div className="mt-10 rounded-[40px] bg-[var(--panel)] backdrop-blur-xl p-8 md:p-12 drop-shadow-[0_35px_35px_rgba(113,97,100,0.15)]">
-          <ContactForm labels={contact.form} />
+          <ContactForm labels={contact.form} locale={lang} />
         </div>
       </div>
     </div>
