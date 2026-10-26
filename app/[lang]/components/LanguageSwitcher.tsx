@@ -4,6 +4,39 @@ import Link from "next/link";
 import { i18n, Locale } from "@/src/i18nConfig";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
+const SECTION_IDS = ["Home", "Craniosacral", "About", "Lieux", "Tarifs", "Contact"];
+const NAVBAR_HEIGHT = 64;
+const STORAGE_KEY = "scroll-before-locale-change";
+
+// Mémorise la section visible et la position relative dans celle-ci,
+// pour la retrouver dans l'autre langue (les textes n'ont pas la même longueur).
+function saveScrollPosition() {
+  let current: { id: string; ratio: number } | null = null;
+  for (const id of SECTION_IDS) {
+    const rect = document.getElementById(id)?.getBoundingClientRect();
+    if (rect && rect.top <= NAVBAR_HEIGHT && rect.height > 0) {
+      current = { id, ratio: (NAVBAR_HEIGHT - rect.top) / rect.height };
+    }
+  }
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(current ?? { y: window.scrollY }));
+  } catch {}
+}
+
+export function restoreScrollPosition() {
+  let saved: { id?: string; ratio?: number; y?: number } | null = null;
+  try {
+    saved = JSON.parse(sessionStorage.getItem(STORAGE_KEY) ?? "null");
+    sessionStorage.removeItem(STORAGE_KEY);
+  } catch {}
+  if (!saved) return;
+  const section = saved.id ? document.getElementById(saved.id) : null;
+  const top = section
+    ? section.getBoundingClientRect().top + window.scrollY + (saved.ratio ?? 0) * section.offsetHeight - NAVBAR_HEIGHT
+    : saved.y ?? 0;
+  window.scrollTo({ top, behavior: "instant" });
+}
+
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -45,9 +78,13 @@ const LanguageSwitcher = ({ currentLocale }: { currentLocale: Locale }) => {
               <Link
                 role="menuitem"
                 href={"/" + locale}
+                scroll={false}
                 className="block px-2 py-1.5 rounded text-sm hover:opacity-70 aria-[current=true]:font-semibold"
                 aria-current={locale === currentLocale}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  saveScrollPosition();
+                  setIsMenuOpen(false);
+                }}
               >
                 {capitalizeFirstLetter(locale)}
               </Link>

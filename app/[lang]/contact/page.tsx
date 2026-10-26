@@ -5,7 +5,6 @@ const darkRawHTML = `
   <iframe
     id="JotFormIFrame-241242340611340"
     title="Clone of Contact"
-    onload="window.parent.scrollTo(0,0)"
     allowtransparency="true"
     allow="geolocation; microphone; camera; fullscreen"
     src="https://form.jotform.com/241242340611340"

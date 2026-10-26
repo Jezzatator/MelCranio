@@ -3,12 +3,18 @@ import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Locale } from "@/src/i18nConfig";
 import React, { useEffect, useState } from "react";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageSwitcher, { restoreScrollPosition } from "./LanguageSwitcher";
 import MelissaCranioLogo from "@/app/MelissaCranioLogo";
 
 export default function NavBar({ params }: { params: Locale }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+
+  // Après un changement de langue, revient à la même position dans la page
+  useEffect(() => {
+    setIsMenuOpen(false);
+    restoreScrollPosition();
+  }, [params]);
 
   // Masque la barre quand on descend, la réaffiche quand on remonte
   useEffect(() => {
