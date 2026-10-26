@@ -3,7 +3,7 @@ import { i18n, type Locale } from "./src/i18nConfig";
 
 // "/" redirige vers la langue préférée du navigateur (Accept-Language),
 // à défaut vers la langue par défaut.
-function preferredLocale(acceptLanguage: string | null): Locale {
+export function preferredLocale(acceptLanguage: string | null): Locale {
   const ranked = (acceptLanguage ?? "")
     .split(",")
     .map((part) => {

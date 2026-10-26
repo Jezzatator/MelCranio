@@ -2,10 +2,20 @@
 // Chaque envoi est journalisé (logs Vercel > Functions) sans données personnelles :
 // on ne logge ni nom, ni e-mail, ni contenu du message.
 
+import { isAllowedOrigin } from "@/src/origin";
+
 const JOTFORM_ID = "240363435011342";
 const JOTFORM_URL = `https://eu-submit.jotform.com/submit/${JOTFORM_ID}`;
 
-const FIELDS = ["q15_fullName15[first]", "q15_fullName15[last]", "q7_email", "q4_message4"];
+// Champ Jotform -> longueur maximale acceptée
+const FIELDS: Record<string, number> = {
+  "q15_fullName15[first]": 100,
+  "q15_fullName15[last]": 100,
+  q7_email: 200,
+  q4_message4: 5_000,
+};
+const MAX_BODY = 20_000;
+const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function log(level: "info" | "warn" | "error", event: string, details: Record<string, unknown>) {
   const line = JSON.stringify({ level, event, ...details, at: new Date().toISOString() });
@@ -16,6 +26,16 @@ function log(level: "info" | "warn" | "error", event: string, details: Record<st
 
 export async function POST(request: Request) {
   const started = Date.now();
+
+  if (!isAllowedOrigin(request)) {
+    log("warn", "contact.forbidden_origin", { origin: request.headers.get("origin") });
+    return Response.json({ ok: false, error: "forbidden" }, { status: 403 });
+  }
+  if (Number(request.headers.get("content-length") ?? 0) > MAX_BODY) {
+    log("warn", "contact.too_large", {});
+    return Response.json({ ok: false, error: "too_large" }, { status: 413 });
+  }
+
   const form = await request.formData();
   const locale = String(form.get("locale") ?? "unknown");
 
@@ -25,14 +45,20 @@ export async function POST(request: Request) {
     return Response.json({ ok: true });
   }
 
-  const missing = FIELDS.filter((name) => !String(form.get(name) ?? "").trim());
+  const names = Object.keys(FIELDS);
+  const missing = names.filter((name) => !String(form.get(name) ?? "").trim());
   if (missing.length > 0) {
     log("warn", "contact.invalid", { locale, missing });
     return Response.json({ ok: false, error: "missing_fields" }, { status: 400 });
   }
+  const tooLong = names.filter((name) => String(form.get(name)).length > FIELDS[name]);
+  if (tooLong.length > 0 || !EMAIL.test(String(form.get("q7_email")).trim())) {
+    log("warn", "contact.invalid", { locale, tooLong, invalidEmail: tooLong.length === 0 });
+    return Response.json({ ok: false, error: "invalid_fields" }, { status: 400 });
+  }
 
   const payload = new FormData();
-  for (const name of FIELDS) payload.set(name, String(form.get(name)));
+  for (const name of names) payload.set(name, String(form.get(name)).trim());
   payload.set("formID", JOTFORM_ID);
   payload.set("simple_spc", `${JOTFORM_ID}-${JOTFORM_ID}`);
   payload.set("submitSource", "form");

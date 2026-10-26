@@ -1,6 +1,8 @@
 // Reçoit les erreurs envoyées par les navigateurs (src/reportError.ts) et les
 // écrit dans les Runtime Logs de Vercel, filtrables avec "client.error".
 
+import { isAllowedOrigin } from "@/src/origin";
+
 const MAX_BODY = 8_000;
 
 function clip(value: unknown, max: number) {
@@ -8,6 +10,7 @@ function clip(value: unknown, max: number) {
 }
 
 export async function POST(request: Request) {
+  if (!isAllowedOrigin(request)) return new Response(null, { status: 403 });
   const raw = await request.text();
   if (raw.length > MAX_BODY) return new Response(null, { status: 413 });
 

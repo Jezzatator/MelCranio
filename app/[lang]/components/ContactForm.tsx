@@ -57,6 +57,7 @@ export default function ContactForm({
             className={inputClass}
             name="q15_fullName15[first]"
             autoComplete="given-name"
+            maxLength={100}
             required
           />
         </label>
@@ -66,6 +67,7 @@ export default function ContactForm({
             className={inputClass}
             name="q15_fullName15[last]"
             autoComplete="family-name"
+            maxLength={100}
             required
           />
         </label>
@@ -78,13 +80,14 @@ export default function ContactForm({
           type="email"
           name="q7_email"
           autoComplete="email"
+          maxLength={200}
           required
         />
       </label>
 
       <label className="flex flex-col gap-2">
         <span className="font-semibold">{labels.message}</span>
-        <textarea className={`${inputClass} min-h-40`} name="q4_message4" rows={6} required />
+        <textarea className={`${inputClass} min-h-40`} name="q4_message4" rows={6} maxLength={5000} required />
       </label>
 
       {/* Champ piège anti-spam de Jotform : doit rester vide */}

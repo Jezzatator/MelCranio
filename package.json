@@ -8,7 +8,8 @@
     "start": "next start --webpack",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build"
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "test": "vitest run"
   },
   "engines": {
     "node": "24.x"
@@ -33,6 +34,7 @@
     "eslint-config-next": "^16.4.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^5.0.5"
   }
 }
