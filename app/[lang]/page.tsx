@@ -73,16 +73,7 @@ export default async function Home({
         <Prices params={Promise.resolve({ lang })} />
       </div>
       <div id="Contact">
-        <p className="text-center text-lg mt-10">
-          {content.contact.phoneLabel}{" "}
-          <a
-            className="underline"
-            href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
-          >
-            {content.contact.phone}
-          </a>
-        </p>
-        <Contact />
+        <Contact params={Promise.resolve({ lang })} />
       </div>
     </section>
   );

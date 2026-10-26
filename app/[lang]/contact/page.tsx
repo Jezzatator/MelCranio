@@ -1,47 +1,38 @@
-'use client';
-import { useEffect, useState } from 'react';
+import React from "react";
+import { FiPhone } from "react-icons/fi";
+import { type Locale } from "../../../src/i18nConfig";
+import SectionTitle from "../components/SectionTitle";
+import ContactForm from "../components/ContactForm";
+import { getContent } from "@/src/content";
 
-const darkRawHTML = `
-  <iframe
-    id="JotFormIFrame-241242340611340"
-    title="Clone of Contact"
-    allowtransparency="true"
-    allow="geolocation; microphone; camera; fullscreen"
-    src="https://form.jotform.com/241242340611340"
-    frameborder="0"
-    style="min-width:100%;max-width:100%;height:539px;border:none;"
-    scrolling="no"
-  ></iframe>
-  <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-  <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-241242340611340'", "https://form.jotform.com/")</script>
-`;
-
-const rawHTML = `
-  <script type="text/javascript" src="https://form.jotform.com/jsform/240363435011342"></script>
-`;
-
-const Contact = () => {
-  const [html, setHtml] = useState(rawHTML);  // ✅ rawHTML défini
-
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      setHtml(darkRawHTML);
-    }
-  }, []);
+export default async function Contact({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await params;
+  const contact = getContent(lang).contact;
 
   return (
-    <div className="flex justify-center items-center h-full w-full mt-10 dark:hidden">
-      <div className="w-full h-full text-left">
-        <div 
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: html }} 
-        />
+    <div className="pt-20 md:px-10 md:py-10 lg:px-20 lg:py-20">
+      <div className="mx-auto max-w-3xl">
+        <SectionTitle title={contact.title} />
+
+        <p className="mt-6 md:pl-5 lg:pl-10 flex items-center justify-center md:justify-start gap-3 text-lg">
+          <FiPhone aria-hidden className="text-[var(--accent)]" />
+          <span>{contact.phoneLabel}</span>
+          <a
+            className="underline underline-offset-4 hover:opacity-80"
+            href={`tel:${contact.phone.replace(/\s/g, "")}`}
+          >
+            {contact.phone}
+          </a>
+        </p>
+
+        <div className="mt-10 rounded-[40px] bg-[var(--panel)] backdrop-blur-xl p-8 md:p-12 drop-shadow-[0_35px_35px_rgba(113,97,100,0.15)]">
+          <ContactForm labels={contact.form} />
+        </div>
       </div>
     </div>
   );
-};
-
-export default Contact;
+}

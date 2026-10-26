@@ -45,7 +45,21 @@ export interface SiteContent {
     insuranceTitle: string;
     insurance: { text: string; link?: { url: string; label: string } }[];
   };
-  contact: { phoneLabel: string; phone: string };
+  contact: {
+    title: string;
+    phoneLabel: string;
+    phone: string;
+    form: {
+      firstName: string;
+      lastName: string;
+      email: string;
+      message: string;
+      submit: string;
+      sending: string;
+      success: string;
+      error: string;
+    };
+  };
 }
 
 const content: Record<Locale, SiteContent> = { fr, en, de, es, ca };

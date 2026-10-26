@@ -141,7 +141,18 @@
     ]
   },
   "contact": {
-    "phoneLabel": "Telèfon:",
-    "phone": "+41 78 318 02 07"
+    "title": "Contacte",
+    "phoneLabel": "Mélissa Patot:",
+    "phone": "+41 78 318 02 07",
+    "form": {
+      "firstName": "Nom",
+      "lastName": "Cognom",
+      "email": "Correu electrònic",
+      "message": "Missatge",
+      "submit": "Envia",
+      "sending": "S'està enviant…",
+      "success": "Gràcies, el vostre missatge s'ha enviat.",
+      "error": "No s'ha pogut enviar. Torneu-ho a provar o truqueu-me."
+    }
   }
 }
