@@ -3,6 +3,8 @@ import { type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
 import { getContent } from "@/src/content";
 import { Skeleton } from "../components/Skeleton";
+import Image from "next/image";
+import handsImage from "@/public/static/mains.webp";
 
 export default async function Prices({
   params,
@@ -65,19 +67,15 @@ export default async function Prices({
           </p> */}
         </div>
       </div>
-      <div
-        className="w-full h-96 bg-cover bg-center lg:bg-no-repeat"
-        style={{
-          backgroundImage: "url('/static/mainsmobile.webp')",
-        }}
-      >
-        {/* Contenu affiché uniquement sur les écrans larges */}
-        <div
-          className="hidden lg:block bg-cover bg-center w-full h-96"
-          style={{
-            backgroundImage: "url('/static/mains.webp')",
-          }}
-        ></div>
+      <div className="relative w-full h-96">
+        <Image
+          src={handsImage}
+          alt=""
+          fill
+          placeholder="blur"
+          sizes="100vw"
+          className="object-cover"
+        />
       </div>
     </div>
   );

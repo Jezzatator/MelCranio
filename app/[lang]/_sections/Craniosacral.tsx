@@ -4,6 +4,8 @@ import SectionTitle from "../components/SectionTitle";
 import H3Title from "../components/H3Title";
 import { getContent } from "@/src/content";
 import { Skeleton } from "../components/Skeleton";
+import Image from "next/image";
+import benefitsImage from "@/public/static/image3.webp";
 
 export default async function Craniosacral({
   params,
@@ -88,12 +90,15 @@ export default async function Craniosacral({
 
       {/* Benefits Section */}
       <div className="pt-10 text-[#F7F0EE]">
-        <div
-          className="bg-cover bg-center flex flex-row z-0"
-          style={{
-            backgroundImage: "url('/static/image3.webp')",
-          }}
-        >
+        <div className="relative flex flex-row z-0">
+          <Image
+            src={benefitsImage}
+            alt=""
+            fill
+            placeholder="blur"
+            sizes="100vw"
+            className="object-cover -z-10"
+          />
           <div
             className="lg:basis-1/3 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)]"
             style={{ backgroundColor: "rgba(88, 85, 84, 0.3)" }}

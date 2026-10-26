@@ -3,6 +3,8 @@ import { type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
 import { getContent } from "@/src/content";
 import MapWrapper from '../components/MapWrapper';
+import Image from "next/image";
+import practiceImage from "@/public/static/schaffhauserplatz.webp";
 
 export default async function Lieux({
   params,
@@ -26,12 +28,15 @@ export default async function Lieux({
 
           {/* Zurich, Schaffhauserplatz */}
           <div className="pt-10 text-[#F7F0EE] md:container md:w-screen w-full">
-            <div
-              className="bg-cover bg-center flex z-0 md:container"
-              style={{
-                backgroundImage: "url('/static/schaffhauserplatz.webp')",
-              }}
-            >
+            <div className="relative flex z-0 md:container">
+              <Image
+                src={practiceImage}
+                alt=""
+                fill
+                placeholder="blur"
+                sizes="(min-width: 768px) 90vw, 100vw"
+                className="object-cover -z-10"
+              />
               <div
                 className="lg:basis-3/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(26,74,90,0.2)]"
                 style={{ backgroundColor: "rgba(26,74,90, 0.3)" }}

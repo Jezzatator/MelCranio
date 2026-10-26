@@ -7,6 +7,9 @@ const securityHeaders = [
 
 module.exports = {
   reactStrictMode: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

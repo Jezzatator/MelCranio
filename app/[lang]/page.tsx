@@ -7,7 +7,8 @@ import Prices from "./_sections/Prices";
 import { Locale } from "../../src/i18nConfig";
 import { getContent } from "@/src/content";
 import { Suspense } from "react";
-import { Skeleton } from "./components/Skeleton";
+import Image from "next/image";
+import heroImage from "@/public/static/image0.webp";
 
 export default async function Home({
   params,
@@ -47,18 +48,17 @@ export default async function Home({
         {/* Conditionally render the image based on screen width */}
 
         {/* Masquer l'image sur les appareils mobiles */}
-        <Suspense
-          fallback={
-            <div className="hidden lg:block p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-52">
-              <Skeleton className="rounded-full w-96 h-96 lg:basis-2/5 lg:mr-52" />
-            </div>
-          }
-        >
-          <div
-            className="hidden lg:block lg:aspect-[4/3] p-5 bg-cover rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-auto"
-            style={{ backgroundImage: "url('/static/image0.webp')" }}
-          ></div>
-        </Suspense>
+        <div className="hidden lg:block relative lg:aspect-[4/3] overflow-hidden rounded-[122px] drop-shadow-[0_35px_35px_rgba(113,97,100,0.2)] h-96 lg:basis-2/5 lg:mr-auto">
+          <Image
+            src={heroImage}
+            alt="Mélissa Patot"
+            fill
+            priority
+            placeholder="blur"
+            sizes="(min-width: 1024px) 40vw, 1px"
+            className="object-cover"
+          />
+        </div>
       </div>
       <div id="Craniosacral">
         <Craniosacral params={Promise.resolve({ lang })} />
