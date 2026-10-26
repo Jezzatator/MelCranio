@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { type SiteContent } from "@/src/content";
+import { reportError, toReport } from "@/src/reportError";
 
 // Le formulaire passe par /api/contact, qui relaie au formulaire Jotform existant
 // (les messages arrivent toujours dans le même compte Jotform) et journalise l'envoi.
@@ -34,6 +35,7 @@ export default function ContactForm({
       setStatus("success");
     } catch (error) {
       console.error("[contact] envoi échoué :", error);
+      reportError(toReport("contact.submit-failed", error));
       setStatus("error");
     }
   }
