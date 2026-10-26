@@ -17,7 +17,13 @@ export interface SiteContent {
     benefitsTitle: string;
     benefits: { title: string; text: string }[];
   };
-  about: { title: string; paragraphs: string[] };
+  about: {
+    title: string;
+    paragraphs: string[];
+    trainingTitle: string;
+    unitsLabel: string;
+    training: { year: string; title: string; school: string; place: string; units?: number }[];
+  };
   places: {
     title: string;
     subtitle: string;

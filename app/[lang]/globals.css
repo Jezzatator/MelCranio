@@ -13,14 +13,15 @@
   --calm-gren: #B8C5BDFF;
   --pi-pink: #D9BCD1FF;
   --bi-blue: #C0D6D8FF; 
-  --timeline-background: #fff;
 
 
   --craton-gey: #746164FF;
   --foreground: #083344;
   --foreground-highlight: #C0D6D8FF;
   --icon: #444F40FF;
-
+  --accent: #D67D3EFF;
+  --panel: rgba(255, 255, 255, 0.55);
+  --line: rgba(8, 51, 68, 0.18);
 }
 
 @layer base {
@@ -32,10 +33,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #2A3128; /* Couleur de fond */
-    --timeline-background: #444F40FF;
     --foreground: #F9F0EEFF; /* Couleur du texte */
     --foreground-highlight: #D67D3EFF; /* Exemple de couleur */
     --icon: #D67D3EFF;
+    --panel: rgba(68, 79, 64, 0.55);
+    --line: rgba(249, 240, 238, 0.2);
   }
 }
 
@@ -47,10 +49,6 @@ body {
 
 .foreground-highlight {
   color: var(--foreground-highlight);
-}
-
-.VerticalTimelineElement-custom {
-  background: var(--background);
 }
 
 .icon path {

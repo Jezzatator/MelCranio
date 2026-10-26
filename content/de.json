@@ -44,6 +44,58 @@
       "Ich habe den Grundkurs in Craniosacraltherapie an der Internationalen Craniosacral Akademie (ICSA) in Salzburg (Österreich) besucht. Ich habe mich auf die viszerale Craniosacraltherapie spezialisiert, die für Patienten mit chronischen und unklaren Rückenschmerzen sehr hilfreich ist und gut in die Physiotherapie integriert werden kann.",
       "Als ich im Juli 2020 in die Schweiz auswanderte, war für mich klar, dass ich das industrielle Zertifikat Oda KT erlangen musste. Deshalb konnte ich mein Wissen über diese Methode vertiefen. Ich vertiefte mich in spezifische Techniken wie die Arbeit mit dem Schädelnerv, Unterstützung während der Schwangerschaft und soziales Engagement am Colorado Institute und bei Apamed (Zürich/Jona).",
       "Diese erlernten Techniken erweitern meine beruflichen Fähigkeiten, beispielsweise im Umgang mit Migräne, Tinnitus, Burnout, ADHS und vielem mehr."
+    ],
+    "trainingTitle": "Aus- und Weiterbildung",
+    "unitsLabel": "Unterrichtseinheiten",
+    "training": [
+      {
+        "year": "2023",
+        "title": "Branchenzertifikat OdA KT – Craniosacral Therapie",
+        "school": "Apamed",
+        "place": "Zürich/Jona, CH",
+        "units": 2710
+      },
+      {
+        "year": "2020",
+        "title": "Cranio Visceral",
+        "school": "ICSA",
+        "place": "Linz, AT",
+        "units": 114
+      },
+      {
+        "year": "2019",
+        "title": "Craniosacral Dynamics",
+        "school": "ICSA",
+        "place": "Salzburg, AT",
+        "units": 160
+      },
+      {
+        "year": "2018",
+        "title": "Manuelle Therapie – Kaltenborn-Evjenth-Konzept",
+        "school": "GAMT",
+        "place": "Zürich, CH",
+        "units": 176
+      },
+      {
+        "year": "2016",
+        "title": "Manuelle Triggerpunkt-Therapie",
+        "school": "ITF",
+        "place": "Frankfurt, DE",
+        "units": 23
+      },
+      {
+        "year": "2015",
+        "title": "Manuelle Lymphdrainage & Komplexe Physikalische Entstauungstherapie",
+        "school": "Földischule",
+        "place": "München, DE",
+        "units": 170
+      },
+      {
+        "year": "2015",
+        "title": "Diplom in Physiotherapie",
+        "school": "EUSES",
+        "place": "Universität Girona, ES"
+      }
     ]
   },
   "places": {
