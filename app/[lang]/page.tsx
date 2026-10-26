@@ -17,7 +17,7 @@ export default async function Home({
   const { lang } = await params;
   const content = getContent(lang);
   return (
-    <section className="px-5 pt-40 md:pt-60 lg:px-20 lg:pt-80 text-amber-950 lg:mt-20 pb-10 ">
+    <section className="px-5 pt-40 md:pt-60 lg:px-20 lg:pt-80 lg:mt-20 pb-10">
       <div
         className="flex flew-row sm:mb-6 mb:mb-10 lg:mb-20 items-stretch lg:content-around gap-10 h-[360px] md:h-[720px]"
         id="Home"

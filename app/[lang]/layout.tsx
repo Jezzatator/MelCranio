@@ -47,7 +47,7 @@ export default async function LocaleLayout({
         <ErrorReporter />
         <NavBar params={lang} />
         <main className="font-robotoFlex">{children}</main>
-        <Footer />
+        <Footer lang={lang} />
         <Analytics />
         <SpeedInsights />
       </body>

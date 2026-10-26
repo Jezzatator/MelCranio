@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const MapComponent = dynamic(() => import('./MapComponent'), {
   ssr: false, 
   loading: () => (
-    <div className="w-full mt-4 rounded-lg overflow-hidden bg-gray-200 animate-pulse" style={{ height: '250px' }} />
+    <div className="w-full mt-4 rounded-lg overflow-hidden bg-[var(--panel)] animate-pulse" style={{ height: '250px' }} />
   ),
 });
 

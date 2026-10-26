@@ -16,7 +16,7 @@ export default async function Lieux({
   const zurichCoords = { lat: 47.39308487944863, lng: 8.539379305049138 }; // Praxisgemeinschaft am Schaffhauserplatz
 
   return (
-    <div className="md:px-10 md:py-10 lg:px-20 lg:py-20 text-amber-950 mt-10">
+    <div className="md:px-10 md:py-10 lg:px-20 lg:py-20 mt-10">
       <div className="flex flex-row lg:m-5 pb-20">
         <div className="w-full text-left lg:px-5">
           <SectionTitle title={placeData.title} />

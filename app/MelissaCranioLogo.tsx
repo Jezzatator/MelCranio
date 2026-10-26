@@ -1,20 +1,12 @@
 "use client";
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function MelissaCranioLogo() {
-  const logoStyle = {
-    fill: "var(--icon)",
-  };
+  const { lang } = useParams<{ lang: string }>();
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/icon.ico" />
-        <link rel="apple-touch-icon" href="/icon.ico" />
-      </Head>
-
-      <Link href="/[lang]" as="/en" className="flex">
+      <Link href={`/${lang ?? "en"}`} aria-label="Mélissa Patot" className="flex">
         <svg
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
