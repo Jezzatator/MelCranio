@@ -48,7 +48,7 @@
   },
   "places": {
     "title": "Les Lieux",
-    "subtitle": "Vous avez la possibilité de bénéficier de séances à deux endroits distincts, offrant chacun une atmosphère unique.",
+    "subtitle": "Les séances ont lieu à Zurich, au cabinet Praxisgemeinschaft am Schaffhauserplatz.",
     "list": [
       {
         "id": "zurich",
@@ -59,11 +59,6 @@
         "moreInfoLabel": "Praxisgemeinschaft",
         "bookingLabel": "Pour prendre un rendez-vous, veuillez cliquer ici.",
         "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
-      },
-      {
-        "id": "perpignan",
-        "title": "Rue de la Garrigole - Perpignan",
-        "description": "À Perpignan, les séances se déroulent dans un lieu paisible, idéalement situé près de la Clinique Saint-Pierre. Niché dans une petite oasis, à l'écart de l'agitation urbaine, vous y trouverez un environnement propice à la détente et au bien-être."
       }
     ]
   },
@@ -71,12 +66,7 @@
     "title": "Tarifs",
     "description": "Les séances de craniosacral thérapie peuvent être facturées différemment selon les besoins de chacun.",
     "items": [
-      "Tarif varie entre 140CHF et 210CHF pour 13CHF les 5 min",
-      "",
-      "",
-      "* Tarifs différents à Perpignan :",
-      "60min / 80e ( offre découverte à 60e jusqu'à mai 2025 )",
-      "90min / 120e"
+      "Tarif varie entre 140CHF et 210CHF pour 13CHF les 5 min"
     ],
     "insuranceTitle": "Si vous êtes assuré en Suisse",
     "insurance": [

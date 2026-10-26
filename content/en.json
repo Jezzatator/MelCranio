@@ -48,7 +48,7 @@
   },
   "places": {
     "title": "Locations",
-    "subtitle": "You have the option to benefit from sessions in two distinct locations, each offering a unique atmosphere.",
+    "subtitle": "Sessions take place in Zurich, at the Praxisgemeinschaft am Schaffhauserplatz.",
     "list": [
       {
         "id": "zurich",
@@ -59,11 +59,6 @@
         "moreInfoLabel": "Praxisgemeinschaft",
         "bookingLabel": "To make an appointment, please click here.",
         "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
-      },
-      {
-        "id": "perpignan",
-        "title": "Rue de la Garrigole - Perpignan",
-        "description": "In Perpignan, the sessions take place in a peaceful location, ideally situated near Clinique Saint-Pierre. Nestled in a small oasis, away from the hustle and bustle of the city, this spot is easily accessible and close to the train station. Here, you'll find a tranquil environment that promotes relaxation and well-being."
       }
     ]
   },

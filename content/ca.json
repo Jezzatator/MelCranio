@@ -48,7 +48,7 @@
   },
   "places": {
     "title": "Llocs",
-    "subtitle": "Tens l'opció de beneficiar-te de sessions en dues ubicacions diferents, cadascuna amb una atmosfera única.",
+    "subtitle": "Les sessions tenen lloc a Zuric, a la Praxisgemeinschaft am Schaffhauserplatz.",
     "list": [
       {
         "id": "zurich",
@@ -59,11 +59,6 @@
         "moreInfoLabel": "Praxisgemeinschaft",
         "bookingLabel": "Per concertar una cita, si us plau, feu clic aquí.",
         "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
-      },
-      {
-        "id": "perpignan",
-        "title": "Carrer de la Garrigola - Perpinyà",
-        "description": "A Perpinyà, les sessions es fan en un lloc tranquil, idealment situat a prop de la Clínica Saint-Pierre. Situat en una petita oasi, allunyat de l'agitació urbana, aquest lloc és fàcilment accessible i proper a l'estació de tren. Aquí hi trobaràs un entorn tranquil que afavoreix la relaxació i el benestar."
       }
     ]
   },

@@ -48,7 +48,7 @@
   },
   "places": {
     "title": "Orte",
-    "subtitle": "Sie haben die Möglichkeit, Ihre Sitzungen an zwei verschiedenen Standorten zu buchen, von denen jeder eine einzigartige Atmosphäre bietet.",
+    "subtitle": "Die Sitzungen finden in Zürich in der Praxisgemeinschaft am Schaffhauserplatz statt.",
     "list": [
       {
         "id": "zurich",
@@ -59,11 +59,6 @@
         "moreInfoLabel": "Praxisgemeinschaft",
         "bookingLabel": "Um einen Termin zu vereinbaren, klicken Sie bitte hier.",
         "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
-      },
-      {
-        "id": "perpignan",
-        "title": "Rue de la Garrigole - Perpignan",
-        "description": "In Perpignan finden die Sitzungen in einer ruhigen Praxis statt, die ideal in der Nähe der Clinique Saint-Pierre gelegen ist. Eingebettet in eine kleine Oase, fernab vom städtischen Trubel, ist dieser Ort leicht erreichbar und nahe dem Bahnhof. Hier finden Sie eine friedliche Umgebung, die Entspannung und Wohlbefinden fördert."
       }
     ]
   },
@@ -71,8 +66,7 @@
     "title": "Preise",
     "description": "Die Sitzungen der Craniosacral-Therapie können je nach Bedarf jedes Einzelnen unterschiedlich in Rechnung gestellt werden.",
     "items": [
-      "Preis zwischen 140CHF und 210 CHF, 13CHF/5min",
-      ""
+      "Preis zwischen 140CHF und 210 CHF, 13CHF/5min"
     ],
     "insuranceTitle": "Wenn Sie in der Schweiz versichert sind",
     "insurance": [

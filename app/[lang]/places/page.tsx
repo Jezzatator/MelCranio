@@ -12,7 +12,6 @@ export default async function Lieux({
   const { lang } = await params;
   const placeData = getContent(lang).places;
   const zurich = placeData.list.find((place) => place.id === "zurich")!;
-  const perpignan = placeData.list.find((place) => place.id === "perpignan")!;
 
   const zurichCoords = { lat: 47.39308487944863, lng: 8.539379305049138 }; // Praxisgemeinschaft am Schaffhauserplatz
 
@@ -25,7 +24,7 @@ export default async function Lieux({
             {placeData.subtitle}
           </p>
 
-          {/* Lieu 1 - Zurich, Schaffhauserplatz */}
+          {/* Zurich, Schaffhauserplatz */}
           <div className="pt-10 text-[#F7F0EE] md:container md:w-screen w-full">
             <div
               className="bg-cover bg-center flex z-0 md:container"
@@ -61,28 +60,6 @@ export default async function Lieux({
                   description="Schaffhauserstrasse 74, 8057 Zürich, Suisse"
                   height="250px"
                 />
-              </div>
-            </div>
-          </div>
-
-          {/* Lieu 2 - Perpignan */}
-          <div className="pt-10 text-[#F7F0EE] md:container md:w-screen w-full">
-            <div
-              className="bg-cover bg-center flex z-0 md:container"
-              style={{
-                backgroundImage: "url('/static/perpignan.webp')",
-              }}
-            >
-              <div
-                className="lg:basis-2/5 p-4 backdrop-blur-xl z-20 drop-shadow-[0_35px_35px_rgba(157,167,70,0.2)]"
-                style={{ backgroundColor: "rgba(157,167,70, 0.3)" }}
-              >
-                <h2 className="text-xl p-4 text-left font-semibold font-alegreya italic">
-                  {perpignan.title}
-                </h2>
-                <p className="text-justify md:text-left mb-4 leading-8">
-                  {perpignan.description}
-                </p>
               </div>
             </div>
           </div>
