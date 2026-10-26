@@ -3,7 +3,7 @@ import { type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
 import H3Title from "../components/H3Title";
 import { getContent } from "@/src/content";
-import { Skeleton } from "@heroui/react";
+import { Skeleton } from "../components/Skeleton";
 
 export default async function Craniosacral({
   params,

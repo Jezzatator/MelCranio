@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { i18n, type Locale } from "../../src/i18nConfig";
-import { Providers } from '../providers';
 
 export const dynamicParams = false;
 
@@ -33,11 +32,9 @@ export default async function LocaleLayout({
   return (
     <html lang={lang}>
       <body className={inter.className}>
-        <Providers>
         <NavBar params={lang} />
         <main className="font-robotoFlex">{children}</main>
         <Footer />
-        </Providers>
         <Analytics />
         <SpeedInsights />
       </body>

@@ -7,7 +7,7 @@ import Prices from "./prices/pages";
 import { Locale } from "../../src/i18nConfig";
 import { getContent } from "@/src/content";
 import { Suspense } from "react";
-import { Skeleton } from "@heroui/react"; 
+import { Skeleton } from "./components/Skeleton";
 
 export default async function Home({
   params,

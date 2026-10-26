@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { type Locale } from "../../../src/i18nConfig";
 import SectionTitle from "../components/SectionTitle";
 import { getContent } from "@/src/content";
-import { Skeleton } from "@heroui/react";
+import { Skeleton } from "../components/Skeleton";
 
 export default async function Prices({
   params,

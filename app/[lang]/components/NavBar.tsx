@@ -1,30 +1,26 @@
 "use client";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Link,
-  Dropdown,
-} from "@heroui/react";
 import { IoMdMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { Locale } from "@/src/i18nConfig";
-import React, { Suspense, useEffect, useState } from "react";
-import { useRouter } from "next/navigation"; // Import useRouter from next/router
+import React, { useEffect, useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Skeleton } from "@heroui/react";
-import { IconContext } from "react-icons/lib";
-import Icon from "@/app/MelissaCranioLogo";
 import MelissaCranioLogo from "@/app/MelissaCranioLogo";
 
 export default function NavBar({ params }: { params: Locale }) {
-  const router = useRouter();
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+
+  // Masque la barre quand on descend, la réaffiche quand on remonte
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setIsHidden(y > lastY && y > 64);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const links = [
     // {
@@ -126,97 +122,69 @@ export default function NavBar({ params }: { params: Locale }) {
   ];
 
   return (
-    <Navbar
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-      isBordered
-      shouldHideOnScroll
-      className="backdrop-blur-xl md:h-12 lg:h-16 text-amber-950 font-robotoFlex flex-grow justify-around"
-      position="sticky"
+    <nav
+      data-menu-open={isMenuOpen}
+      className={`flex z-40 w-full items-center justify-around sticky top-0 inset-x-0 border-b data-[menu-open=true]:border-none backdrop-blur-xl backdrop-saturate-150 font-robotoFlex transition-transform duration-300 ${
+        isHidden && !isMenuOpen ? "-translate-y-full" : ""
+      }`}
     >
-      <NavbarContent className="sm:hidden justify-start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="h-full w-10"
-          icon={
-            isMenuOpen ? (
+      <header className="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-16 max-w-[1024px]">
+        <div className="flex sm:hidden h-full items-center">
+          <button
+            type="button"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            className="flex items-center justify-center h-full w-10"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
               <RxCross2 className="w-auto h-10" />
             ) : (
               <IoMdMenu className="w-auto h-10" />
-            )
-          }
-        />
-      </NavbarContent>
+            )}
+          </button>
+        </div>
 
-      <NavbarContent className="justify-between sm:flex sm:justify-end">
-        <NavbarBrand>
+        <div className="flex flex-grow basis-0 items-center justify-center sm:flex-grow-0 sm:basis-auto sm:justify-start">
           <MelissaCranioLogo />
-        </NavbarBrand>
-      </NavbarContent>
+        </div>
+        <div className="sm:hidden w-10" aria-hidden />
 
-      <NavbarContent className="hidden sm:flex gap-4 sm:flex-row justify-end">
-        {links.map((link) => (
-          <NavbarItem key={`${link.key}`} className=" md:px-2 lg:px-5">
-            <Link
-              color={"foreground"}
-              className="w-full text-lg hover:text-foreground-highlight"
-              href={link.href}
-              size="lg"
-              underline="hover"
-            >
-              {link.label}
-            </Link>
-          </NavbarItem>
-        ))}
-        <NavbarItem>
-          <LanguageSwitcher currentLocale={params} router={router} />
-        </NavbarItem>
-      </NavbarContent>
+        <ul className="hidden sm:flex h-full gap-4 flex-row flex-nowrap items-center justify-end">
+          {links.map((link) => (
+            <li key={link.key} className="whitespace-nowrap md:px-2 lg:px-5">
+              <a
+                className="text-lg underline-offset-4 hover:underline hover:opacity-80 transition-opacity"
+                href={link.href}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <LanguageSwitcher currentLocale={params} />
+          </li>
+        </ul>
+      </header>
 
-      <NavbarMenu>
-        {links.map((link, index) => (
-          <NavbarMenuItem key={`${link.label}-${index}`}>
-            <Link
-              color={"foreground"}
-              className="w-full"
-              href={link.href}
-              size="lg"
-              underline="hover"
-            >
-              {link.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-        <NavbarMenuItem key={66}>
-          <LanguageSwitcher currentLocale={params} router={router} />
-        </NavbarMenuItem>
-      </NavbarMenu>
-    </Navbar>
+      {isMenuOpen && (
+        <ul className="sm:hidden fixed inset-x-0 top-16 bottom-0 z-30 h-[calc(100dvh-4rem)] flex flex-col gap-4 px-6 pt-4 overflow-y-auto bg-[var(--background)]">
+          {links.map((link) => (
+            <li key={link.key} className="text-lg">
+              <a
+                className="block w-full underline-offset-4 hover:underline"
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <LanguageSwitcher currentLocale={params} />
+          </li>
+        </ul>
+      )}
+    </nav>
   );
 }
-// return (
-//   <Navbar
-//     isBordered
-//     isMenuOpen={isMenuOpen}
-//     onMenuOpenChange={setIsMenuOpen}
-//     shouldHideOnScroll
-//     className="sm:hidden backdrop-blur-xl"
-//     position="sticky"
-//   >
-//     <NavbarContent>
-//       <NavbarBrand>Logo</NavbarBrand>
-//       <NavbarMenuToggle
-//         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-//       />
-//     </NavbarContent>
-
-//     <NavbarMenu>
-//       {links.map((link) => (
-//         <NavbarMenuItem key={link.key}>
-//           <Link href={link.href}>{link.label}</Link>
-//         </NavbarMenuItem>
-//       ))}
-//     </NavbarMenu>
-//   </Navbar>
-// );
-// }
