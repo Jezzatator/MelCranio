@@ -59,20 +59,6 @@ export default function MelissaCranioLogo() {
             />
           </g>
         </svg>
-
-        {/* <svg className="h-8 md:h-10 lg:h-14 xl:h-16 icon">
-          <use href="/icon.svg"></use>
-        </svg> */}
-        {/* <img
-          src="/icon.svg"
-          alt="Logo"
-          className="h-4 md:h-4 lg:h-8 xl:h-10 icon"
-        /> */}
-        {/* <img
-          src="/icon.ico"
-          alt="Logo"
-          className="h-4 md:h-4 lg:h-8 xl:h-10 hidden dark:block"
-        /> */}
       </Link>
     </div>
   );

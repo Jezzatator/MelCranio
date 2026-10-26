@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# melissa-cranio.com
 
-## Getting Started
+Site vitrine de Mélissa Patot, kinésithérapeute spécialisée en thérapie craniosacrale à Zurich.
+Une seule page, en 5 langues (fr, en, de, es, ca), générée en statique avec Next.js et hébergée sur Vercel.
 
-First, run the development server:
+## Modifier un texte
+
+Tous les textes sont dans `content/<langue>.json` (`fr.json`, `en.json`, `de.json`, `es.json`, `ca.json`).
+Les 5 fichiers ont la même structure : modifier la même clé dans chaque langue.
+
+| Section du site | Clé JSON |
+|---|---|
+| Titre et description (Google, aperçus de partage) | `meta` |
+| Sous-titre d'accueil | `home` |
+| La thérapie, bénéfices | `cranio` |
+| Mon parcours, formations | `about` |
+| Lieu, prise de rendez-vous | `places` |
+| Tarifs, assurances | `prices` |
+| Contact, téléphone, formulaire | `contact` |
+
+Les intitulés du menu sont dans `app/[lang]/components/NavBar.tsx`.
+Les photos sont dans `public/static/` (elles sont redimensionnées et compressées automatiquement).
+
+## Lancer le site en local
+
+Prérequis : Node 24 (`nvm use` lit le fichier `.nvmrc`).
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir http://localhost:3000. Pour tester la version de production : `npm run build && npm start`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vérifier avant de pousser
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run check
+```
 
-## Learn More
+Lance ESLint, TypeScript puis le build. La même vérification tourne automatiquement sur GitHub à chaque push
+(onglet Actions) ; Dependabot propose une fois par mois les mises à jour de dépendances.
 
-To learn more about Next.js, take a look at the following resources:
+## Mettre en ligne
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pousser sur `main` : Vercel construit et déploie automatiquement (projet `mel-cranio`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Fonctionnement
 
-## Deploy on Vercel
+- `app/[lang]/page.tsx` : la page, composée des sections de `app/[lang]/_sections/`.
+- `proxy.ts` : `/` redirige vers la langue du navigateur.
+- `app/api/contact` : relaie le formulaire de contact au formulaire Jotform existant
+  (les messages arrivent dans le compte Jotform).
+- `app/api/log` : reçoit les erreurs des navigateurs des visiteurs.
+- `app/sitemap.ts`, `app/robots.ts`, métadonnées dans `app/[lang]/layout.tsx` : référencement.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Logs et erreurs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Dans Vercel → Logs, filtrer avec :
+
+- `client.error` : erreur JavaScript chez un visiteur
+- `server.error` : erreur dans une route `/api`
+- `contact.` : envois du formulaire (`contact.sent`, `contact.jotform_rejected`, …)
+
+Les logs ne contiennent ni nom, ni e-mail, ni contenu des messages.

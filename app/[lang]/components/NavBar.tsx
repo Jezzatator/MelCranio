@@ -12,7 +12,6 @@ export default function NavBar({ params }: { params: Locale }) {
 
   // Après un changement de langue, revient à la même position dans la page
   useEffect(() => {
-    setIsMenuOpen(false);
     restoreScrollPosition();
   }, [params]);
 
@@ -29,22 +28,6 @@ export default function NavBar({ params }: { params: Locale }) {
   }, []);
 
   const links = [
-    // {
-    //   label:
-    //     params === "fr"
-    //       ? "Accueil"
-    //       : params === "de"
-    //       ? "Startseite"
-    //       : params === "en"
-    //       ? "Home"
-    //       : params === "es"
-    //       ? "Inicio"
-    //       : params === "ca"
-    //       ? "Inici"
-    //       : "Home",
-    //   href: `/${params ? params : ""}`,
-    //   key: 0,
-    // },
     {
       label:
         params === "fr"
