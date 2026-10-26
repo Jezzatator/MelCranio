@@ -34,7 +34,7 @@ export function restoreScrollPosition() {
   const top = section
     ? section.getBoundingClientRect().top + window.scrollY + (saved.ratio ?? 0) * section.offsetHeight - NAVBAR_HEIGHT
     : saved.y ?? 0;
-  window.scrollTo({ top, behavior: "instant" });
+  window.scrollTo(0, top);
 }
 
 function capitalizeFirstLetter(string: string) {
@@ -71,7 +71,7 @@ const LanguageSwitcher = ({ currentLocale }: { currentLocale: Locale }) => {
       {isMenuOpen && (
         <ul
           role="menu"
-          className="absolute left-0 sm:left-auto sm:right-0 z-50 mt-1 min-w-20 flex flex-col gap-1 p-1 backdrop-blur-xl rounded border-2"
+          className="absolute left-0 sm:left-auto sm:right-0 z-50 mt-1 min-w-20 flex flex-col gap-1 p-1 bg-[var(--background)] rounded border-2"
         >
           {i18n.locales.map((locale) => (
             <li key={locale} role="none">
