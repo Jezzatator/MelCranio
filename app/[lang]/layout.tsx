@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Alegreya, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -18,7 +18,18 @@ export const metadata: Metadata = {
   description: "Physiotherapeutin spezialisiert auf craniosacrale Therapie",
 };
 
-const inter = Inter({ subsets: ["latin"] });
+const robotoFlex = Roboto_Flex({
+  subsets: ["latin"],
+  variable: "--font-roboto-flex",
+  display: "swap",
+});
+
+const alegreya = Alegreya({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-alegreya",
+  display: "swap",
+});
 
 export default async function LocaleLayout({
   children,
@@ -30,8 +41,8 @@ export default async function LocaleLayout({
   const { lang: langStr } = await params;
   const lang = langStr as Locale;  
   return (
-    <html lang={lang}>
-      <body className={inter.className}>
+    <html lang={lang} className={`${robotoFlex.variable} ${alegreya.variable}`}>
+      <body className="font-robotoFlex">
         <NavBar params={lang} />
         <main className="font-robotoFlex">{children}</main>
         <Footer />
