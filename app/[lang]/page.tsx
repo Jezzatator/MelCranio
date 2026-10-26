@@ -1,9 +1,9 @@
-import About from "./about/page";
-import Contact from "./contact/page";
-import Craniosacral from "./craniosacral/page";
+import About from "./_sections/About";
+import Contact from "./_sections/Contact";
+import Craniosacral from "./_sections/Craniosacral";
 import "./frontpage.css";
-import Lieux from "./places/page";
-import Prices from "./prices/pages";
+import Lieux from "./_sections/Places";
+import Prices from "./_sections/Prices";
 import { Locale } from "../../src/i18nConfig";
 import { getContent } from "@/src/content";
 import { Suspense } from "react";

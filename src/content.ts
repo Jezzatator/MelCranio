@@ -6,6 +6,7 @@ import es from "../content/es.json";
 import ca from "../content/ca.json";
 
 export interface SiteContent {
+  meta: { title: string; description: string };
   home: { subtitle: string };
   cranio: {
     title: string;
