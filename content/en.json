@@ -1,0 +1,100 @@
+{
+  "home": {
+    "subtitle": "Physiotherapist specialized in craniosacral therapy"
+  },
+  "cranio": {
+    "title": "What is Craniosacral Therapy?",
+    "intro": "Craniosacral therapy releases tension in the body to promote relaxation and healing. It explores the subtle connection between the physical, emotional, and mental aspects.",
+    "systemTitle": "Understanding the Craniosacral System",
+    "systemText": "Discover the craniosacral system, a delicate network consisting of the skull, spine, and sacrum. This system, housing the essential cerebrospinal fluid, plays a crucial role in the proper functioning of your body.",
+    "sessionTitle": "Process of a Craniosacral Therapy Session",
+    "sessionParagraphs": [
+      "During a craniosacral therapy session, the therapist uses gentle, non-invasive techniques to assess and improve the movement of cerebrospinal fluid.",
+      "This gentle approach helps to release emotional blockages, reduce tension, and restore the natural mobility of physical structures: bones and tissues.",
+      "Throughout the session, the patient often experiences profound relaxation, promoting the reduction of stress and anxiety. Craniosacral therapy can also help alleviate headaches, physical pain, and improve sleep quality."
+    ],
+    "benefitsTitle": "Benefits of Craniosacral Therapy",
+    "benefits": [
+      {
+        "title": "Stress and Anxiety Reduction:",
+        "text": "By promoting the regulation of the nervous system, craniosacral therapy helps to reduce stress and anxiety levels."
+      },
+      {
+        "title": "Improved Sleep:",
+        "text": "The relaxation induced by craniosacral therapy can promote deeper and more restorative sleep."
+      },
+      {
+        "title": "Headache and Migraine Relief:",
+        "text": "By releasing tensions in the skull, it can alleviate headaches and migraines."
+      },
+      {
+        "title": "Immune System Strengthening:",
+        "text": "By optimizing the functioning of the craniosacral system, this approach can contribute to strengthening the immune system."
+      },
+      {
+        "title": "Emotional and Mental Balance:",
+        "text": "By releasing physical tensions, craniosacral therapy can also have positive effects on emotional and mental balance."
+      }
+    ]
+  },
+  "about": {
+    "title": "My Journey",
+    "paragraphs": [
+      "After completing my physiotherapy studies in Girona (Spain), I discovered that in physiotherapy education, we are not optimally prepared for the mental or emotional stress of patients. As a result, I was drawn to craniosacral therapy because this method focuses on the direct link between emotional state and physical symptoms.",
+      "I took the basic craniosacral course at the International Craniosacral Academy (ICSA) in Salzburg (Austria). I specialize in visceral craniosacral therapy, which is highly beneficial for patients with chronic and unclear back pain and can be well-integrated into physiotherapy.",
+      "When I emigrated to Switzerland in July 2020, it was clear to me that I needed to obtain the Oda KT industrial certificate. That's why I was able to deepen my knowledge of this method. I delved into specific techniques, such as cranial nerve work, support during pregnancy, and social engagement at the Colorado Institute and Apamed (Zurich/Jona).",
+      "These learned techniques expand my professional skills, for example, in dealing with migraines, tinnitus, burnout, ADHD, and much more."
+    ]
+  },
+  "places": {
+    "title": "Locations",
+    "subtitle": "You have the option to benefit from sessions in two distinct locations, each offering a unique atmosphere.",
+    "list": [
+      {
+        "id": "zurich",
+        "title": "Praxisgemeinschaft am Schaffhauserplatz - Zurich",
+        "description": "Am Schafhauserplatz practice has been a privileged space for 30 years where you feel at home. It is a warm place in the heart of Zurich city that has specialized for several years in the association of shiatsu and classical physiotherapy. It is located near the central station and is very easy to access with tram lines 7, 11, 14 and 15.",
+        "moreInfo": "",
+        "moreInfoUrl": "https://www.praxisgemeinschaft-schaffhauserplatz.ch/",
+        "moreInfoLabel": "Praxisgemeinschaft",
+        "bookingLabel": "To make an appointment, please click here.",
+        "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
+      },
+      {
+        "id": "perpignan",
+        "title": "Rue de la Garrigole - Perpignan",
+        "description": "In Perpignan, the sessions take place in a peaceful location, ideally situated near Clinique Saint-Pierre. Nestled in a small oasis, away from the hustle and bustle of the city, this spot is easily accessible and close to the train station. Here, you'll find a tranquil environment that promotes relaxation and well-being."
+      }
+    ]
+  },
+  "prices": {
+    "title": "Rates",
+    "description": "Craniosacral therapy sessions may be billed differently depending on each person's needs.",
+    "items": [
+      "price between 140CHF and 210CHF, 13CHF/5min"
+    ],
+    "insuranceTitle": "If you are insured in Switzerland",
+    "insurance": [
+      {
+        "text": "Sessions can be billed individually for private payers."
+      },
+      {
+        "text": "Depending on your insurance contract, it is possible to bill sessions with supplementary health insurance. Please check with your insurer about the coverage of sessions."
+      },
+      {
+        "text": "For people in financial hardship, I work with the Zurich-based association Accompagno."
+      },
+      {
+        "text": "For more information: ",
+        "link": {
+          "url": "https://accompagno.org/",
+          "label": "https://accompagno.org/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "phoneLabel": "Phone:",
+    "phone": "+41 78 318 02 07"
+  }
+}

@@ -2,10 +2,8 @@ import React from "react";
 import Timeline from "../components/TimeLine";
 
 import { type Locale } from "../../../src/i18nConfig";
-import { AboutModel, Attributes } from "../../../src/strapi/About";
 import SectionTitle from "../components/SectionTitle";
-import { RequeteStrapi } from "@/src/strapi/Request";
-import { getData } from "@/src/strapi/FetchData";
+import { getContent } from "@/src/content";
 
 export default async function About({
   params,
@@ -13,30 +11,19 @@ export default async function About({
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await params;
-  const request: RequeteStrapi<AboutModel> = {
-    endpoint: "abouts",
-  };
-
-  console.log("LOCALE about: " + lang);
-  const data = await getData(request, lang);
-
-  console.log("Data about en: " + data.data[0]);
-
-  const aboutData: Attributes = data.data[0]?.attributes;
+  const aboutData = getContent(lang).about;
 
   return (
     <div className="pt-20">
       {/* <div className="flex flex-row m-5 pb-20 pt-20 px-20 py-20 text-amber-950 mt-10"></div> */}
       <div className="text-left flex flex-col lg:flex-row Deuxieme Card Parcourd md:px-10 md:py-10 lg:px-20 lg:py-20">
         <div className="lg:px-5 lg:basis-2/3">
-          <SectionTitle title={data.data[0]?.attributes.TitleAbout} />
+          <SectionTitle title={aboutData.title} />
 
             {
-              data.data[0]?.attributes.Content.map(
-              (paragraph: { children: { text: React.ReactNode }[] }, index: React.Key) => (
-              <p key={index} className="...">{paragraph.children[0].text}</p>
-              )
-              )
+              aboutData.paragraphs.map((paragraph, index) => (
+                <p key={index} className="...">{paragraph}</p>
+              ))
             }
 
           {/* <p className="text-center md:text-left mb-5 pt-5 pl-10 leading-loose text-lg">

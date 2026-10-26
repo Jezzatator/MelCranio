@@ -1,0 +1,101 @@
+{
+  "home": {
+    "subtitle": "Physiotherapeutin spezialisiert auf craniosacrale Therapie"
+  },
+  "cranio": {
+    "title": "Was ist die Craniosacrale Therapie?",
+    "intro": "Die Craniosacral-Therapie löst Spannungen im Körper, um Entspannung und Heilung zu fördern. Sie erforscht die subtile Verbindung zwischen dem Physischen, dem Emotionalen und dem Mentalen.",
+    "systemTitle": "Verständnis des Craniosacralen Systems",
+    "systemText": "Entdecken Sie das craniosacrale System, ein empfindliches Netzwerk aus Schädel, Wirbelsäule und Kreuzbein. Dieses System, das die essentielle Hirn-Rückenmarksflüssigkeit beherbergt, spielt eine entscheidende Rolle im reibungslosen Funktionieren Ihres Körpers.",
+    "sessionTitle": "Ablauf einer Craniosacralen Therapiesitzung",
+    "sessionParagraphs": [
+      "Während einer craniosacralen Therapiesitzung verwendet der Therapeut sanfte, nicht-invasive Techniken, um die Bewegung der Hirn-Rückenmarksflüssigkeit zu beurteilen und zu verbessern.",
+      "Dieser sanfte Ansatz hilft, emotionale Blockaden zu lösen, Spannungen zu reduzieren und die natürliche Beweglichkeit der physischen Strukturen wiederherzustellen: Knochen und Gewebe.",
+      "Im Laufe der Sitzung erlebt der Patient oft tiefe Entspannung, was die Reduzierung von Stress und Angst fördert. Die Craniosacrale Therapie kann auch dazu beitragen, Kopfschmerzen, körperliche Schmerzen zu lindern und die Schlafqualität zu verbessern."
+    ],
+    "benefitsTitle": "Vorteile der Craniosacralen Therapie",
+    "benefits": [
+      {
+        "title": "Reduktion von Stress und Angst:",
+        "text": "Durch die Förderung der Regulierung des Nervensystems trägt die Craniosacral-Therapie dazu bei, die Stress- und Angstniveaus zu senken."
+      },
+      {
+        "title": "Verbesserter Schlaf:",
+        "text": "Die durch die Craniosacrale Therapie induzierte Entspannung kann einen tieferen und erholsameren Schlaf fördern."
+      },
+      {
+        "title": "Linderung von Kopfschmerzen und Migräne:",
+        "text": "Durch Lösen von Spannungen im Schädel kann sie Kopfschmerzen und Migräne lindern."
+      },
+      {
+        "title": "Stärkung des Immunsystems:",
+        "text": "Durch Optimierung der Funktion des craniosacralen Systems kann dieser Ansatz dazu beitragen, das Immunsystem zu stärken."
+      },
+      {
+        "title": "Emotionales und mentales Gleichgewicht:",
+        "text": "Durch Lösen von körperlichen Spannungen kann die Craniosacrale Therapie auch positive Auswirkungen auf das emotionale und mentale Gleichgewicht haben."
+      }
+    ]
+  },
+  "about": {
+    "title": "Mein Weg",
+    "paragraphs": [
+      "Nach Abschluss meines Physiotherapie-Studiums in Girona (Spanien) habe ich festgestellt, dass wir in der Physiotherapieausbildung nicht optimal auf den mentalen oder emotionalen Stress der Patienten vorbereitet sind. Aus diesem Grund hat mich die craniosacrale Therapie angezogen, da diese Methode auf die direkte Verbindung zwischen dem emotionalen Zustand und den physischen Symptomen abzielt.",
+      "Ich habe den Grundkurs in Craniosacraltherapie an der Internationalen Craniosacral Akademie (ICSA) in Salzburg (Österreich) besucht. Ich habe mich auf die viszerale Craniosacraltherapie spezialisiert, die für Patienten mit chronischen und unklaren Rückenschmerzen sehr hilfreich ist und gut in die Physiotherapie integriert werden kann.",
+      "Als ich im Juli 2020 in die Schweiz auswanderte, war für mich klar, dass ich das industrielle Zertifikat Oda KT erlangen musste. Deshalb konnte ich mein Wissen über diese Methode vertiefen. Ich vertiefte mich in spezifische Techniken wie die Arbeit mit dem Schädelnerv, Unterstützung während der Schwangerschaft und soziales Engagement am Colorado Institute und bei Apamed (Zürich/Jona).",
+      "Diese erlernten Techniken erweitern meine beruflichen Fähigkeiten, beispielsweise im Umgang mit Migräne, Tinnitus, Burnout, ADHS und vielem mehr."
+    ]
+  },
+  "places": {
+    "title": "Orte",
+    "subtitle": "Sie haben die Möglichkeit, Ihre Sitzungen an zwei verschiedenen Standorten zu buchen, von denen jeder eine einzigartige Atmosphäre bietet.",
+    "list": [
+      {
+        "id": "zurich",
+        "title": "Praxisgemeinschaft am Schaffhauserplatz - Zürich",
+        "description": "Die Praxis am Schaffhauserplatz ist seit 30 Jahren ein bevorzugter Ort, an dem man sich wie zu Hause fühlt. Es ist ein warmer Ort mitten in der Stadt Zürich, der sich seit mehreren Jahren auf die Kombination von Shiatsu und klassischer Physiotherapie spezialisiert hat. Es liegt in der Nähe des Hauptbahnhofs und ist mit den Straßenbahnlinien 7, 11, 14 und 15 sehr gut erreichbar.",
+        "moreInfo": "",
+        "moreInfoUrl": "https://www.praxisgemeinschaft-schaffhauserplatz.ch/",
+        "moreInfoLabel": "Praxisgemeinschaft",
+        "bookingLabel": "Um einen Termin zu vereinbaren, klicken Sie bitte hier.",
+        "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
+      },
+      {
+        "id": "perpignan",
+        "title": "Rue de la Garrigole - Perpignan",
+        "description": "In Perpignan finden die Sitzungen in einer ruhigen Praxis statt, die ideal in der Nähe der Clinique Saint-Pierre gelegen ist. Eingebettet in eine kleine Oase, fernab vom städtischen Trubel, ist dieser Ort leicht erreichbar und nahe dem Bahnhof. Hier finden Sie eine friedliche Umgebung, die Entspannung und Wohlbefinden fördert."
+      }
+    ]
+  },
+  "prices": {
+    "title": "Preise",
+    "description": "Die Sitzungen der Craniosacral-Therapie können je nach Bedarf jedes Einzelnen unterschiedlich in Rechnung gestellt werden.",
+    "items": [
+      "Preis zwischen 140CHF und 210 CHF, 13CHF/5min",
+      ""
+    ],
+    "insuranceTitle": "Wenn Sie in der Schweiz versichert sind",
+    "insurance": [
+      {
+        "text": "Die Sitzungen können für private Zahler einzeln in Rechnung gestellt werden."
+      },
+      {
+        "text": "Je nach Ihrem Versicherungsvertrag ist es möglich, die Sitzungen mit einer Zusatzversicherung für die Gesundheitsversorgung in Rechnung zu stellen. Erkundigen Sie sich bei Ihrem Versicherer über die Erstattung der Sitzungen."
+      },
+      {
+        "text": "Für Personen in finanzieller Notlage arbeite ich mit dem Zürcher Verein Accompagno zusammen."
+      },
+      {
+        "text": "Weitere Informationen finden Sie unter: ",
+        "link": {
+          "url": "https://accompagno.org/",
+          "label": "https://accompagno.org/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "phoneLabel": "Telefon:",
+    "phone": "+41 78 318 02 07"
+  }
+}

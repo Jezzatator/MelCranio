@@ -1,0 +1,100 @@
+{
+  "home": {
+    "subtitle": "Fisioterapeuta especializada en terapia craneosacral"
+  },
+  "cranio": {
+    "title": "¿Qué es la Terapia Craneosacral?",
+    "intro": "La terapia craneosacral libera las tensiones del cuerpo para fomentar la relajación y la curación. Explora la conexión sutil entre lo físico, lo emocional y lo mental.",
+    "systemTitle": "Comprensión del Sistema Craneosacral",
+    "systemText": "Descubre el sistema craneosacral, una red delicada compuesta por el cráneo, la columna vertebral y el sacro. Este sistema, que alberga el fluido cerebroespinal esencial, desempeña un papel crucial en el buen funcionamiento de tu cuerpo.",
+    "sessionTitle": "Desarrollo de una Sesión de Terapia Craneosacral",
+    "sessionParagraphs": [
+      "Durante una sesión de terapia craneosacral, el terapeuta utiliza técnicas suaves y no invasivas para evaluar y mejorar el movimiento del líquido cerebroespinal.",
+      "Este enfoque delicado permite liberar los bloqueos emocionales, reducir las tensiones y restaurar la movilidad natural de las estructuras físicas: óseas y tejidos.",
+      "A lo largo de la sesión, el paciente a menudo experimenta una profunda relajación, lo que favorece la reducción del estrés y la ansiedad. La terapia craneosacral también puede ayudar a aliviar dolores de cabeza, dolores físicos y mejorar la calidad del sueño."
+    ],
+    "benefitsTitle": "Beneficios de la Terapia Craneosacral",
+    "benefits": [
+      {
+        "title": "Reducción de Estrés y Ansiedad:",
+        "text": "Al favorecer la regulación del sistema nervioso, la terapia craneosacral contribuye a reducir los niveles de estrés y ansiedad."
+      },
+      {
+        "title": "Mejora del Sueño:",
+        "text": "La relajación inducida por la terapia craneosacral puede favorecer un sueño más profundo y reparador."
+      },
+      {
+        "title": "Alivio de Dolores de Cabeza y Migrañas:",
+        "text": "Al liberar tensiones en el cráneo, puede aliviar dolores de cabeza y migrañas."
+      },
+      {
+        "title": "Fortalecimiento del Sistema Inmunológico:",
+        "text": "Al optimizar el funcionamiento del sistema craneosacral, este enfoque puede contribuir al fortalecimiento del sistema inmunológico."
+      },
+      {
+        "title": "Equilibrio Emocional y Mental:",
+        "text": "Al liberar tensiones físicas, la terapia craneosacral también puede tener efectos positivos en el equilibrio emocional y mental."
+      }
+    ]
+  },
+  "about": {
+    "title": "Mi Trayectoria",
+    "paragraphs": [
+      "Después de completar mis estudios de fisioterapia en Girona (España), descubrí que en la formación de fisioterapia no estamos preparados de manera óptima para el estrés mental o emocional del paciente. Como resultado, me atrajo la terapia craneosacral porque esta metodología se centra en la conexión directa entre el estado emocional y los síntomas físicos.",
+      "Realicé el curso básico de terapia craneosacral en la Academia Internacional Craneosacral (ICSA) en Salzburgo (Austria). Me especializo en terapia craneosacral visceral, que es muy beneficiosa para pacientes con dolor crónico de espalda poco claro y se puede integrar bien en la fisioterapia.",
+      "Cuando emigré a Suiza en julio de 2020, estaba claro para mí que debía obtener el certificado industrial Oda KT. Por eso pude profundizar mis conocimientos sobre este método. Me sumergí en técnicas específicas, como el trabajo con el nervio craneal, el apoyo durante el embarazo y el compromiso social en el Instituto Colorado y Apamed (Zúrich/Jona).",
+      "Estas técnicas aprendidas amplían mis habilidades profesionales, por ejemplo, en el manejo de migrañas, acúfenos, agotamiento laboral, TDAH y mucho más."
+    ]
+  },
+  "places": {
+    "title": "Lugares",
+    "subtitle": "Tiene la opción de beneficiarse de sesiones en dos ubicaciones distintas, cada una con un ambiente único.",
+    "list": [
+      {
+        "id": "zurich",
+        "title": "Praxisgemeinschaft am Schaffhauserplatz - Zúrich",
+        "description": "El consultorio am Schafhauserplatz es desde hace 30 años un espacio privilegiado donde uno se siente como en casa. Es un lugar cálido en el corazón de la ciudad de Zúrich que se ha especializado desde hace varios años en la asociación del shiatsu y la fisioterapia clásica. Se encuentra cerca de la estación central y es muy fácil de acceder con las líneas de tranvía 7, 11, 14 y 15.",
+        "moreInfo": "",
+        "moreInfoUrl": "https://www.praxisgemeinschaft-schaffhauserplatz.ch/",
+        "moreInfoLabel": "Praxisgemeinschaft",
+        "bookingLabel": "Para concertar una cita, haga clic aquí.",
+        "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
+      },
+      {
+        "id": "perpignan",
+        "title": "Calle de la Garrigole - Perpiñán",
+        "description": "En Perpiñán, las sesiones se realizan en un lugar tranquilo, idealmente situado cerca de la Clínica Saint-Pierre. Ubicado en un pequeño oasis, lejos del bullicio urbano, este lugar es de fácil acceso y está cerca de la estación de tren. Aquí encontrará un entorno tranquilo que favorece la relajación y el bienestar."
+      }
+    ]
+  },
+  "prices": {
+    "title": "Tarifas",
+    "description": "Las sesiones de terapia craneosacral pueden facturarse de manera diferente según las necesidades de cada persona.",
+    "items": [
+      "140CHF - 210CHF    13CHF/5min"
+    ],
+    "insuranceTitle": "Si está asegurado en Suiza",
+    "insurance": [
+      {
+        "text": "Las sesiones se pueden facturar individualmente para los pagadores privados."
+      },
+      {
+        "text": "Según su contrato de seguro, es posible facturar las sesiones con un seguro complementario de salud. Consulte con su aseguradora sobre la cobertura de las sesiones."
+      },
+      {
+        "text": "Para las personas en situación de precariedad financiera, colaboro con la asociación zuriquesa Accompagno."
+      },
+      {
+        "text": "Para más información: ",
+        "link": {
+          "url": "https://accompagno.org/",
+          "label": "https://accompagno.org/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "phoneLabel": "Teléfono:",
+    "phone": "+41 78 318 02 07"
+  }
+}

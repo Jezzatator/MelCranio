@@ -8,6 +8,14 @@ const config: Config = {
     "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+    colors: {
+      '--background': '#F9F0EEFF',
+      '--calm-gren': '#B8C5BDFF',
+      '--pi-pink': '#D9BCD1FF',
+      '--bi-blue': '#C0D6D8FF',
+      '--craton-gey': '#746164FF',
+      '--stone-blue': '#083344',
+    },
     extend: {
       fontFamily: {
         alegreyaSans: ['Alegreya Sans', "sans-serif"],
@@ -16,7 +24,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@heroui/theme').heroui()],
+  plugins: [],
   darkMode: 'selector',
 }
 export default config

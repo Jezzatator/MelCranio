@@ -1,0 +1,100 @@
+{
+  "home": {
+    "subtitle": "Fisioterapeuta especialitzada en teràpia craniosacral"
+  },
+  "cranio": {
+    "title": "Què és la Teràpia Craniosacral?",
+    "intro": "La teràpia craniosacral allibera les tensions del cos per afavorir la relaxació i la curació. Explora la connexió subtil entre el físic, l'emocional i el mental.",
+    "systemTitle": "Comprensió del Sistema Craniosacral",
+    "systemText": "Descobreix el sistema craniosacral, una xarxa delicada formada pel crani, la columna vertebral i el sacre. Aquest sistema, que alberga el fluid cerebroespinal essencial, juga un paper crucial en el bon funcionament del teu cos.",
+    "sessionTitle": "Desenvolupament d'una Sessió de Teràpia Craniosacral",
+    "sessionParagraphs": [
+      "Durant una sessió de teràpia craniosacral, el terapeuta utilitza tècniques suaus i no invasives per avaluar i millorar el moviment del líquid cerebroespinal.",
+      "Aquest enfocament delicat permet alliberar els blocatges emocionals, reduir les tensions i restaurar la mobilitat natural de les estructures físiques: òssies i teixits.",
+      "Al llarg de la sessió, el pacient sovint experimenta una profunda relaxació, la qual cosa fomenta la reducció de l'estrès i l'ansietat. La teràpia craniosacral també pot ajudar a alleujar mal de cap, dolors físics i millorar la qualitat del son."
+    ],
+    "benefitsTitle": "Beneficis de la Teràpia Craniosacral",
+    "benefits": [
+      {
+        "title": "Reducció d'Estrès i Ansietat:",
+        "text": "En afavorir la regulació del sistema nerviós, la teràpia craniosacral contribueix a reduir els nivells d'estrès i d'ansietat."
+      },
+      {
+        "title": "Millora del Son:",
+        "text": "La relaxació induïda per la teràpia craniosacral pot promoure un son més profund i reparador."
+      },
+      {
+        "title": "Al*liviament de Mal de Cap i Migranyes:",
+        "text": "Alliberant tensions al crani, pot alleujar mal de cap i migranyes."
+      },
+      {
+        "title": "Reforçament del Sistema Imunitari:",
+        "text": "Optimitzant el funcionament del sistema craniosacral, aquest enfocament pot contribuir al reforçament del sistema immunitari."
+      },
+      {
+        "title": "Equilibri Emocional i Mental:",
+        "text": "Alliberant tensions físiques, la teràpia craniosacral també pot tenir efectes positius en l'equilibri emocional i mental."
+      }
+    ]
+  },
+  "about": {
+    "title": "El Meu Camí",
+    "paragraphs": [
+      "Després de completar els meus estudis de fisioteràpia a Girona (Espanya), vaig descobrir que en la formació de fisioteràpia no estem preparats òptimament per a l'estrès mental o emocional del pacient. Com a resultat, em vaig sentir atret per la teràpia craniosacral, ja que aquesta metodologia es centra en la connexió directa entre l'estat emocional i els símptomes físics.",
+      "Vaig realitzar el curs bàsic de teràpia craniosacral a l'Acadèmia Internacional Craneosacral (ICSA) a Salzburg (Àustria). M'he especialitzat en la teràpia craniosacral visceral, que és molt beneficiosa per a pacients amb dolor crònic d'esquena poc clar i que es pot integrar bé en la fisioteràpia.",
+      "Quan vaig emigrar a Suïssa al juliol de 2020, va ser clar per a mi que havia d'obtenir el certificat industrial Oda KT. Per això vaig poder aprofundir els meus coneixements sobre aquest mètode. Em vaig endinsar en tècniques específiques, com ara el treball amb el nervi cranial, el suport durant l'embaràs i el compromís social a l'Institut Colorado i a l'Apamed (Zúrich/Jona).",
+      "Aquestes tècniques apreses amplien les meves habilitats professionals, per exemple, en el tractament de migranyes, acúfens, esgotament laboral, TDAH i moltes altres coses."
+    ]
+  },
+  "places": {
+    "title": "Llocs",
+    "subtitle": "Tens l'opció de beneficiar-te de sessions en dues ubicacions diferents, cadascuna amb una atmosfera única.",
+    "list": [
+      {
+        "id": "zurich",
+        "title": "Praxisgemeinschaft am Schaffhauserplatz - Zúric",
+        "description": "El consultori am Schafhauserplatz és des de fa 30 anys un espai privilegiat on un es sent com a casa. És un lloc càlid al centre de la ciutat de Zuric que s'ha especialitzat des de fa diversos anys en la combinació del shiatsu i la fisioteràpia clàssica. Es troba a prop de l'estació central i és molt fàcil d'accedir-hi amb les línies de tramvia 7, 11, 14 i 15.",
+        "moreInfo": "",
+        "moreInfoUrl": "https://www.praxisgemeinschaft-schaffhauserplatz.ch/",
+        "moreInfoLabel": "Praxisgemeinschaft",
+        "bookingLabel": "Per concertar una cita, si us plau, feu clic aquí.",
+        "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
+      },
+      {
+        "id": "perpignan",
+        "title": "Carrer de la Garrigola - Perpinyà",
+        "description": "A Perpinyà, les sessions es fan en un lloc tranquil, idealment situat a prop de la Clínica Saint-Pierre. Situat en una petita oasi, allunyat de l'agitació urbana, aquest lloc és fàcilment accessible i proper a l'estació de tren. Aquí hi trobaràs un entorn tranquil que afavoreix la relaxació i el benestar."
+      }
+    ]
+  },
+  "prices": {
+    "title": "Tarifes",
+    "description": "Les sessions de teràpia craniosacral poden facturar-se de manera diferent segons les necessitats de cadascú.",
+    "items": [
+      "140CHF - 210CHF    13CHF/5min"
+    ],
+    "insuranceTitle": "Si està assegurat a Suïssa",
+    "insurance": [
+      {
+        "text": "Les sessions es poden facturar individualment per als pagadors privats."
+      },
+      {
+        "text": "Segons el vostre contracte d'assegurança, és possible facturar les sessions amb una assegurança complementària de salut. Consulteu la vostra asseguradora sobre la cobertura de les sessions."
+      },
+      {
+        "text": "Per a les persones en situació de precarietat financera, col·laboro amb l'associació zúrica Accompagno."
+      },
+      {
+        "text": "Per a més informació: ",
+        "link": {
+          "url": "https://accompagno.org/",
+          "label": "https://accompagno.org/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "phoneLabel": "Telèfon:",
+    "phone": "+41 78 318 02 07"
+  }
+}

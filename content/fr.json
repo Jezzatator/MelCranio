@@ -1,0 +1,105 @@
+{
+  "home": {
+    "subtitle": "Kinésithérapeute spécialisée en thérapie craniosacrale"
+  },
+  "cranio": {
+    "title": "Qu'est-ce que la Thérapie Cranio-sacrale?",
+    "intro": "La thérapie cranio-sacrée libère les tensions du corps pour favoriser la détente et la guérison. Elle explore la connexion subtile entre le physique, l'émotionnel et le mental.",
+    "systemTitle": "Comprendre le Système Craniosacral",
+    "systemText": "Découvrez le système craniosacral, un réseau délicat composé du crâne, de la colonne vertébrale et du sacrum. Ce système, abritant le fluide céphalorachidien essentiel, joue un rôle crucial dans le bon fonctionnement de votre corps.",
+    "sessionTitle": "Déroulement d'une Séance de Thérapie Cranio-sacrée",
+    "sessionParagraphs": [
+      "Pendant une séance de thérapie craniosacrale, le ou la thérapeute utilise des techniques douces, non invasives, pour évaluer et améliorer le mouvement du liquide céphalorachidien.",
+      "Cette approche délicate permet de libérer les blocages émotionnels, réduire les tensions et restaurer la mobilité naturelle des structures physiques : osseuses et tissulaires.",
+      "Au fil de la séance, le patient ressent souvent une profonde relaxation, ce qui favorise la réduction du stress et de l'anxiété. La thérapie craniosacrale peut également aider à soulager les maux de tête, les douleurs physiques, et à améliorer la qualité du sommeil."
+    ],
+    "benefitsTitle": "Bénéfices de la Thérapie Craniosacrale",
+    "benefits": [
+      {
+        "title": "Réduction du stress et de l'anxiété :",
+        "text": "En favorisant la régulation du système nerveux, la thérapie craniosacrale contribue à réduire les niveaux de stress et d'anxiété."
+      },
+      {
+        "title": "Amélioration du sommeil :",
+        "text": "La détente induite par la thérapie craniosacrale peut favoriser un sommeil plus profond et réparateur."
+      },
+      {
+        "title": "Soulagement des maux de tête et des migraines :",
+        "text": "En libérant les tensions au niveau du crâne, elle peut atténuer les maux de tête et les migraines."
+      },
+      {
+        "title": "Renforcement du système immunitaire :",
+        "text": "En optimisant le fonctionnement du système craniosacral, cette approche peut contribuer à renforcer le système immunitaire."
+      },
+      {
+        "title": "Équilibre émotionnel et mental :",
+        "text": "En libérant les tensions physiques, la thérapie craniosacrale peut également avoir des effets positifs sur l'équilibre émotionnel et mental."
+      }
+    ]
+  },
+  "about": {
+    "title": "Mon Parcours",
+    "paragraphs": [
+      "Après avoir terminé mes études de physiothérapie à Gérone (Espagne), j'ai découvert que dans les études de physiothérapie, nous ne sommes pas préparés de manière optimale au stress mental ou émotionnel du patient. En conséquence, j’ai été attiré par la thérapie cranio-sacré car cette méthode se concentre sur le lien direct entre l’état émotionnel et les symptômes physiques.",
+      "J'ai suivi le cours de base cranio-sacré à l'Académie internationale cranio-sacrée ICSA à Salzbourg (Autriche). Je me spécialise dans la thérapie viscérale cranio-sacré, qui est très utile pour les patients souffrant de maux de dos chroniques et peu clairs et qui peut très bien être intégrée à la physiothérapie.",
+      "Lorsque j'ai émigré en Suisse en Juillet 2020, il était clair pour moi que je devais obtenir le certificat industriel Oda KT. C'est pourquoi j'ai pu approfondir mes connaissances sur cette méthode. J'ai approfondi, notamment dans des techniques spécifiques, telles que le nerf crânien, le soutien pendant la grossesse et l'engagement social au Colorado Institute et à l'Apamed (Zurich/Jona).",
+      "Ces techniques apprises élargissent mes compétences professionnelles, par exemple en matière de migraines, d'acouphènes, d'épuisement professionnel, de TDAH et bien plus encore."
+    ]
+  },
+  "places": {
+    "title": "Les Lieux",
+    "subtitle": "Vous avez la possibilité de bénéficier de séances à deux endroits distincts, offrant chacun une atmosphère unique.",
+    "list": [
+      {
+        "id": "zurich",
+        "title": "Praxisgemeinschaft am Schaffhauserplatz - Zurich",
+        "description": "Le cabinet am Schafhauserplatz est depuis 30 ans un espace privilégié où l'on se sent comme à la maison. C'est un lieu chaleureux en plein cœur de la ville de Zurich qui s'est spécialisé depuis plusieurs années dans l'association du shiatsu et de la physiothérapie classique. Il est situé près de la gare centrale et très facile d'accès avec les lignes de tram 7, 11, 14 et 15.",
+        "moreInfo": "Pour en savoir plus sur les lieux : ",
+        "moreInfoUrl": "https://www.praxisgemeinschaft-schaffhauserplatz.ch/",
+        "moreInfoLabel": "Praxisgemeinschaft",
+        "bookingLabel": "Pour prendre un rendez-vous, veuillez cliquer ici.",
+        "bookingUrl": "https://onlinecalendar.medidoc.ch/BookAppointment?cgid=hwG.Ne.NcU6VsmctLAPf0w&ssid=zQiSgPSU.0KMxgWQTfu4hA&lang=fr"
+      },
+      {
+        "id": "perpignan",
+        "title": "Rue de la Garrigole - Perpignan",
+        "description": "À Perpignan, les séances se déroulent dans un lieu paisible, idéalement situé près de la Clinique Saint-Pierre. Niché dans une petite oasis, à l'écart de l'agitation urbaine, vous y trouverez un environnement propice à la détente et au bien-être."
+      }
+    ]
+  },
+  "prices": {
+    "title": "Tarifs",
+    "description": "Les séances de craniosacral thérapie peuvent être facturées différemment selon les besoins de chacun.",
+    "items": [
+      "Tarif varie entre 140CHF et 210CHF pour 13CHF les 5 min",
+      "",
+      "",
+      "* Tarifs différents à Perpignan :",
+      "60min / 80e ( offre découverte à 60e jusqu'à mai 2025 )",
+      "90min / 120e"
+    ],
+    "insuranceTitle": "Si vous êtes assuré en Suisse",
+    "insurance": [
+      {
+        "text": "Les séances peuvent être facturées individuellement pour les payeurs privés."
+      },
+      {
+        "text": "Selon votre contrat d'assurance, il est possible de facturer les séances avec une assurance complémentaire de soins. Renseignez-vous auprès de votre assureur sur la prise en charge des séances."
+      },
+      {
+        "text": "Pour les personnes en situation de précarité financière, je collabore avec l'association zurichoise Accompagno."
+      },
+      {
+        "text": "Pour plus d'informations : ",
+        "link": {
+          "url": "https://accompagno.org/",
+          "label": "https://accompagno.org/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "phoneLabel": "Téléphone :",
+    "phone": "+41 78 318 02 07"
+  }
+}

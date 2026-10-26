@@ -5,9 +5,7 @@ import "./frontpage.css";
 import Lieux from "./places/page";
 import Prices from "./prices/pages";
 import { Locale } from "../../src/i18nConfig";
-import { HomeModel } from "@/src/strapi/Home";
-import { RequeteStrapi } from "@/src/strapi/Request";
-import { getData } from "@/src/strapi/FetchData";
+import { getContent } from "@/src/content";
 import { Suspense } from "react";
 import { Skeleton } from "@heroui/react"; 
 
@@ -17,12 +15,7 @@ export default async function Home({
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await params;
-  const request: RequeteStrapi<HomeModel> = {
-    endpoint: "homes",
-  };
-  const data = await getData(request, lang);
-  console.log("Home locale: " + lang);
-  console.log("Home data: " + data);
+  const content = getContent(lang);
   return (
     <section className="px-5 pt-40 md:pt-60 lg:px-20 lg:pt-80 text-amber-950 lg:mt-20 pb-10 ">
       <div
@@ -47,7 +40,7 @@ export default async function Home({
             </h1>
             <h2 className="text-l md:text-xl pl-2 font-alegreya">
               {/* Kinésithérapeute spécialisé en thérapie craniosacrale */}
-              {data.data[0].attributes.subNameFirstCard}
+              {content.home.subtitle}
             </h2>
           </Suspense>
         </div>
@@ -80,6 +73,15 @@ export default async function Home({
         <Prices params={Promise.resolve({ lang })} />
       </div>
       <div id="Contact">
+        <p className="text-center text-lg mt-10">
+          {content.contact.phoneLabel}{" "}
+          <a
+            className="underline"
+            href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
+          >
+            {content.contact.phone}
+          </a>
+        </p>
         <Contact />
       </div>
     </section>

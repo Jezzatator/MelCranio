@@ -16,9 +16,6 @@ import { Locale } from "@/src/i18nConfig";
 import React, { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter from next/router
 import LanguageSwitcher from "./LanguageSwitcher";
-import { RequeteStrapi } from "@/src/strapi/Request";
-import { NavBarModel } from "@/src/strapi/NavBarModel";
-import { getData } from "@/src/strapi/FetchData";
 import { Skeleton } from "@heroui/react";
 import { IconContext } from "react-icons/lib";
 import Icon from "@/app/MelissaCranioLogo";
